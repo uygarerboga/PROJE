@@ -100,6 +100,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cikis = new System.Windows.Forms.Button();
             this.arabtn = new System.Windows.Forms.Button();
             this.refresh = new System.Windows.Forms.Button();
             this.update = new System.Windows.Forms.Button();
@@ -282,7 +283,7 @@
             this.uretimEmirleri.TabIndex = 0;
             this.uretimEmirleri.Text = "Üretim Emirleri";
             this.uretimEmirleri.Enter += new System.EventHandler(this.uretimEmirleri_Enter);
-            this.uretimEmirleri.Leave += new System.EventHandler(this.uretimEmirleri_Leave);
+            this.uretimEmirleri.Leave += new System.EventHandler(this.cariler_Leave);
             // 
             // uretimemridata
             // 
@@ -330,7 +331,7 @@
             this.makinalar.Text = "Makinalar";
             this.makinalar.UseVisualStyleBackColor = true;
             this.makinalar.Enter += new System.EventHandler(this.makinalar_Enter);
-            this.makinalar.Leave += new System.EventHandler(this.makinalar_Leave);
+            this.makinalar.Leave += new System.EventHandler(this.cariler_Leave);
             // 
             // makinadata
             // 
@@ -355,7 +356,7 @@
             this.gunlukRapor.Text = "Günlük Üretim Raporları";
             this.gunlukRapor.UseVisualStyleBackColor = true;
             this.gunlukRapor.Enter += new System.EventHandler(this.gunlukRaporEkle_Enter);
-            this.gunlukRapor.Leave += new System.EventHandler(this.gunlukRaporEkle_Leave);
+            this.gunlukRapor.Leave += new System.EventHandler(this.cariler_Leave);
             // 
             // gunlukdata
             // 
@@ -380,7 +381,7 @@
             this.operasyonlar.Text = "Operasyonlar";
             this.operasyonlar.UseVisualStyleBackColor = true;
             this.operasyonlar.Enter += new System.EventHandler(this.operasyonEkle_Enter);
-            this.operasyonlar.Leave += new System.EventHandler(this.operasyonEkle_Leave);
+            this.operasyonlar.Leave += new System.EventHandler(this.cariler_Leave);
             // 
             // operasyondata
             // 
@@ -405,7 +406,7 @@
             this.rotalar.Text = "Rotalar";
             this.rotalar.UseVisualStyleBackColor = true;
             this.rotalar.Enter += new System.EventHandler(this.rotalar_Enter);
-            this.rotalar.Leave += new System.EventHandler(this.rotalar_Leave);
+            this.rotalar.Leave += new System.EventHandler(this.cariler_Leave);
             // 
             // rotadata
             // 
@@ -459,7 +460,7 @@
             this.hakedisler.Text = "Hakedişler";
             this.hakedisler.UseVisualStyleBackColor = true;
             this.hakedisler.Enter += new System.EventHandler(this.hakedisler_Enter);
-            this.hakedisler.Leave += new System.EventHandler(this.hakedisler_Leave);
+            this.hakedisler.Leave += new System.EventHandler(this.cariler_Leave);
             // 
             // hakedisdata
             // 
@@ -484,7 +485,7 @@
             this.satinalimfaturası.Text = "Satın Alım Faturaları";
             this.satinalimfaturası.UseVisualStyleBackColor = true;
             this.satinalimfaturası.Enter += new System.EventHandler(this.satinalimfaturası_Enter);
-            this.satinalimfaturası.Leave += new System.EventHandler(this.satısfaturaları_Leave);
+            this.satinalimfaturası.Leave += new System.EventHandler(this.cariler_Leave);
             // 
             // satinalimfaturasidata
             // 
@@ -532,7 +533,7 @@
             this.satısfaturaları.Text = "Satış Faturaları";
             this.satısfaturaları.UseVisualStyleBackColor = true;
             this.satısfaturaları.Enter += new System.EventHandler(this.satısfaturaları_Enter);
-            this.satısfaturaları.Leave += new System.EventHandler(this.satısfaturaları_Leave);
+            this.satısfaturaları.Leave += new System.EventHandler(this.cariler_Leave);
             // 
             // satisfaturalaridata
             // 
@@ -610,6 +611,8 @@
             this.ticariurunler.TabIndex = 0;
             this.ticariurunler.Text = "Ticari Ürünler";
             this.ticariurunler.UseVisualStyleBackColor = true;
+            this.ticariurunler.Enter += new System.EventHandler(this.ticariurunler_Enter);
+            this.ticariurunler.Leave += new System.EventHandler(this.cariler_Leave);
             // 
             // Ticaridata
             // 
@@ -634,6 +637,8 @@
             this.mamuller.TabIndex = 1;
             this.mamuller.Text = "Mamüller";
             this.mamuller.UseVisualStyleBackColor = true;
+            this.mamuller.Enter += new System.EventHandler(this.ticariurunler_Enter);
+            this.mamuller.Leave += new System.EventHandler(this.cariler_Leave);
             // 
             // mamuldata
             // 
@@ -657,6 +662,8 @@
             this.yarimamul.TabIndex = 2;
             this.yarimamul.Text = "Yarı Mamüller";
             this.yarimamul.UseVisualStyleBackColor = true;
+            this.yarimamul.Enter += new System.EventHandler(this.ticariurunler_Enter);
+            this.yarimamul.Leave += new System.EventHandler(this.cariler_Leave);
             // 
             // ymamuldata
             // 
@@ -680,6 +687,8 @@
             this.hammadeler.TabIndex = 3;
             this.hammadeler.Text = "Hammaddeler";
             this.hammadeler.UseVisualStyleBackColor = true;
+            this.hammadeler.Enter += new System.EventHandler(this.ticariurunler_Enter);
+            this.hammadeler.Leave += new System.EventHandler(this.cariler_Leave);
             // 
             // hammaddedata
             // 
@@ -956,7 +965,7 @@
             this.personeller.Text = "Personeller";
             this.personeller.UseVisualStyleBackColor = true;
             this.personeller.Enter += new System.EventHandler(this.personeller_Enter);
-            this.personeller.Leave += new System.EventHandler(this.personeller_Leave);
+            this.personeller.Leave += new System.EventHandler(this.cariler_Leave);
             // 
             // personelTabControl
             // 
@@ -1004,6 +1013,8 @@
             this.cariler.TabIndex = 8;
             this.cariler.Text = "Cari Hesaplar";
             this.cariler.UseVisualStyleBackColor = true;
+            this.cariler.Enter += new System.EventHandler(this.cariler_Enter);
+            this.cariler.Leave += new System.EventHandler(this.cariler_Leave);
             // 
             // carihesapdata
             // 
@@ -1023,7 +1034,7 @@
             this.label1.BackColor = System.Drawing.Color.DimGray;
             this.label1.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(1691, 9);
+            this.label1.Location = new System.Drawing.Point(1673, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(380, 23);
             this.label1.TabIndex = 2;
@@ -1036,7 +1047,7 @@
             this.label2.BackColor = System.Drawing.Color.DimGray;
             this.label2.Font = new System.Drawing.Font("Montserrat Medium", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(1764, 50);
+            this.label2.Location = new System.Drawing.Point(1746, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(384, 23);
             this.label2.TabIndex = 3;
@@ -1045,17 +1056,33 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.panel1.Controls.Add(this.cikis);
             this.panel1.Controls.Add(this.arabtn);
             this.panel1.Controls.Add(this.refresh);
             this.panel1.Controls.Add(this.update);
             this.panel1.Controls.Add(this.delete);
             this.panel1.Controls.Add(this.eklebtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 1045);
+            this.panel1.Location = new System.Drawing.Point(0, 1012);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1942, 43);
+            this.panel1.Size = new System.Drawing.Size(1924, 43);
             this.panel1.TabIndex = 1;
+            // 
+            // cikis
+            // 
+            this.cikis.BackColor = System.Drawing.Color.Transparent;
+            this.cikis.BackgroundImage = global::ERP_PROJESİ.Properties.Resources.logout;
+            this.cikis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.cikis.FlatAppearance.BorderSize = 0;
+            this.cikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cikis.Location = new System.Drawing.Point(1836, 0);
+            this.cikis.Margin = new System.Windows.Forms.Padding(4);
+            this.cikis.Name = "cikis";
+            this.cikis.Size = new System.Drawing.Size(75, 43);
+            this.cikis.TabIndex = 5;
+            this.cikis.UseVisualStyleBackColor = false;
+            this.cikis.Click += new System.EventHandler(this.cikis_Click);
             // 
             // arabtn
             // 
@@ -1184,14 +1211,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1942, 1088);
+            this.ClientSize = new System.Drawing.Size(1924, 1055);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AnaTabControl);
             this.Controls.Add(this.panel1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.HelpButton = true;
-            this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "Ana";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -1354,6 +1380,6 @@
         private System.Windows.Forms.DataGridView gidenirsaliyeiadedata;
 
         private System.Windows.Forms.Button arabtn;
-
+        private System.Windows.Forms.Button cikis;
     }
 }

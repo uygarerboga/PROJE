@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DevExpress.Xpf.Core;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace ERP_PROJESİ
 {
     public partial class EklemeEkranı : Form
     {
+
         public string selectedPage { get; set; }
         string giriskelimesi;
         public EklemeEkranı()
@@ -458,6 +460,168 @@ namespace ERP_PROJESİ
                     Controls.Add(iadecheck);
                     #endregion
                     break;
+                case "cariler":
+                    #region cariler
+                    giriskelimesi = "Cariler";
+                    Label cariadiLBL = new Label();
+                    cariadiLBL.Text = "Adı";
+                    cariadiLBL.Location = new Point(50, 50);
+                    cariadiLBL.Size = new Size(150, 25);
+                    Controls.Add(cariadiLBL);
+                    TextBox cariadiTXT = new TextBox();
+                    cariadiTXT.Location = new Point(250, 50);
+                    cariadiTXT.Size = new Size(250, 25);
+                    Controls.Add(cariadiTXT);
+                    Label caritelefonTXT = new Label();
+                    caritelefonTXT.Text = "Telefon";
+                    caritelefonTXT.Location = new Point(50, 75);
+                    caritelefonTXT.Size = new Size(150, 25);
+                    Controls.Add(caritelefonTXT);
+                    TextBox caritelefonLBL = new TextBox();
+                    caritelefonLBL.Location = new Point(250, 75);
+                    caritelefonLBL.Size = new Size(250, 25);
+                    Controls.Add(caritelefonLBL);
+                    Label cariadresLBL = new Label();
+                    cariadresLBL.Text = "Adres";
+                    cariadresLBL.Location = new Point(50, 100);
+                    cariadresLBL.Size = new Size(150, 25);
+                    Controls.Add(cariadresLBL);
+                    TextBox cariadresTXT = new TextBox();
+                    cariadresTXT.Location = new Point(250, 100);
+                    cariadresTXT.Size = new Size(250, 100);
+                    cariadresTXT.Multiline = true;
+                    Controls.Add(cariadresTXT);
+                    Label carimailLBL = new Label();
+                    carimailLBL.Text = "Mail";
+                    carimailLBL.Location = new Point(50, 210);
+                    carimailLBL.Size = new Size(150, 25);
+                    Controls.Add(carimailLBL);
+                    TextBox carimailTXT = new TextBox();
+                    carimailTXT.Location = new Point(250, 210);
+                    carimailTXT.Size = new Size(250, 25);
+                    Controls.Add(carimailTXT);
+                    Label hesapnumarasıLBL = new Label();
+                    hesapnumarasıLBL.Text = "Hesap Numarası";
+                    hesapnumarasıLBL.Location = new Point(50, 235);
+                    hesapnumarasıLBL.Size = new Size(150, 25);
+                    Controls.Add(hesapnumarasıLBL);
+                    TextBox hesapnumarasıTXT = new TextBox();
+                    hesapnumarasıTXT.Location = new Point(250, 235);
+                    hesapnumarasıTXT.Size = new Size(250, 25);
+                    Controls.Add(hesapnumarasıTXT);
+                    Label cariülkeLBL = new Label();
+                    cariülkeLBL.Text = "Ülke";
+                    cariülkeLBL.Location = new Point(50, 260);
+                    cariülkeLBL.Size = new Size(150, 25);
+                    Controls.Add(cariülkeLBL);
+                    TextBox cariülkeTXT = new TextBox();
+                    cariülkeTXT.Location = new Point(250, 260);
+                    cariülkeTXT.Size = new Size(250, 25);
+                    Controls.Add(cariülkeTXT);
+                    Label carisehirLBL = new Label();
+                    carisehirLBL.Text = "Sehir";
+                    carisehirLBL.Location = new Point(50, 285);
+                    carisehirLBL.Size = new Size(150, 25);
+                    Controls.Add(carisehirLBL);
+                    TextBox carisehirTXT = new TextBox();
+                    carisehirTXT.Location = new Point(250, 285);
+                    carisehirTXT.Size = new Size(250, 25);
+                    Controls.Add(carisehirTXT);
+                    Label caripostakoduLBL = new Label();
+                    caripostakoduLBL.Text = "Posta Kodu";
+                    caripostakoduLBL.Location = new Point(50, 310);
+                    caripostakoduLBL.Size = new Size(150, 25);
+                    Controls.Add(caripostakoduLBL);
+                    TextBox caripostakoduTXT = new TextBox();
+                    caripostakoduTXT.Location = new Point(250, 310);
+                    caripostakoduTXT.Size = new Size(250, 25);
+                    Controls.Add(caripostakoduTXT);
+                    Label caritürüLBL = new Label();
+                    caritürüLBL.Text = "Tür Seçiniz";
+                    caritürüLBL.Location = new Point(550, 50);
+                    caritürüLBL.Size = new Size(150, 25);
+                    Controls.Add(caritürüLBL);
+                    RadioButton caritürüRD3 = new RadioButton();
+                    caritürüRD3.Text = "Tedarikçi";
+                    caritürüRD3.Location = new Point(550, 75);
+                    caritürüRD3.Size = new Size(200, 25);
+                    Controls.Add(caritürüRD3);
+                    RadioButton caritürüRB = new RadioButton();
+                    caritürüRB.Text = "Müşteri";
+                    caritürüRB.Location = new Point(550, 100);
+                    caritürüRB.Size = new Size(200, 25);
+                    Controls.Add(caritürüRB);
+                    RadioButton caritürüRB1 = new RadioButton();
+                    caritürüRB1.Text = "Her İkisi";
+                    caritürüRB1.Location = new Point(550, 125);
+                    caritürüRB1.Size = new Size(200, 25);
+                    Controls.Add(caritürüRB1);
+
+                    break;
+                #endregion
+                case "ürünler":
+                    #region ürünler
+                    giriskelimesi = "ürünler";
+                    Label ürünadıLBL = new Label();
+                    ürünadıLBL.Text = "Adı";
+                    ürünadıLBL.Location = new Point(50, 50);
+                    ürünadıLBL.Size = new Size(150, 25);
+                    Controls.Add(ürünadıLBL);
+                    TextBox ürünadıTXT = new TextBox();
+                    ürünadıTXT.Location = new Point(250, 50);
+                    ürünadıTXT.Size = new Size(250, 25);
+                    Controls.Add(ürünadıTXT);
+                    Label ürünacıklamaLBL = new Label();
+                    ürünacıklamaLBL.Text = "Acıklama";
+                    ürünacıklamaLBL.Location = new Point(50, 75);
+                    ürünacıklamaLBL.Size = new Size(150, 25);
+                    Controls.Add(ürünacıklamaLBL);
+                    TextBox ürünacıklamaTXT = new TextBox();
+                    ürünacıklamaTXT.Location = new Point(250, 75);
+                    ürünacıklamaTXT.Size = new Size(250, 100);
+                    ürünacıklamaTXT.Multiline = true;
+                    Controls.Add(ürünacıklamaTXT);
+                    Label ürünfiyatLBL = new Label();
+                    ürünfiyatLBL.Text = "Fiyat";
+                    ürünfiyatLBL.Location = new Point(50, 185);
+                    ürünfiyatLBL.Size = new Size(150, 25);
+                    Controls.Add(ürünfiyatLBL);
+                    TextBox ürünfiyatTXT = new TextBox();
+                    ürünfiyatTXT.Location = new Point(250, 185);
+                    ürünfiyatTXT.Size = new Size(250, 25);
+                    Controls.Add(ürünfiyatTXT);
+                    Label ürünkategorisiLBL = new Label();
+                    ürünkategorisiLBL.Text = "Kategori";
+                    ürünkategorisiLBL.Location = new Point(50, 210);
+                    ürünkategorisiLBL.Size = new Size(150, 25);
+                    Controls.Add(ürünkategorisiLBL);
+                    ComboBox ürünkategorisiTXT = new ComboBox();
+                    ürünkategorisiTXT.Location = new Point(250, 210);
+                    ürünkategorisiTXT.Size = new Size(250, 25);
+                    Controls.Add(ürünkategorisiTXT);
+                    RadioButton ürüntürüRD = new RadioButton();
+                    ürüntürüRD.Text = "Ticari Ürünler";
+                    ürüntürüRD.Location = new Point(250, 245);
+                    ürüntürüRD.Size = new Size(200, 25);
+                    Controls.Add(ürüntürüRD);
+                    RadioButton ürüntürüRD1 = new RadioButton();
+                    ürüntürüRD1.Text = "Mamüller";
+                    ürüntürüRD1.Location = new Point(250, 270);
+                    ürüntürüRD1.Size = new Size(200, 25);
+                    Controls.Add(ürüntürüRD1);
+                    RadioButton ürüntürüRD2 = new RadioButton();
+                    ürüntürüRD2.Text = "Yari Mamüller";
+                    ürüntürüRD2.Location = new Point(250, 295);
+                    ürüntürüRD2.Size = new Size(200, 25);
+                    Controls.Add(ürüntürüRD2);
+                    RadioButton ürüntürüRD3 = new RadioButton();
+                    ürüntürüRD3.Text = "Hammaddeler";
+                    ürüntürüRD3.Location = new Point(250, 320);
+                    ürüntürüRD3.Size = new Size(200, 25);
+                    Controls.Add(ürüntürüRD3);
+
+                    break;
+                #endregion
                 default:
                     break;
             }
@@ -472,6 +636,18 @@ namespace ERP_PROJESİ
             ad.Size = new Size(120, 75);
             ad.Text = "Ekle";
             Controls.Add(ad);
+            ad.Click += new EventHandler(ekle);
+
+        }
+
+        void ekle(object sender, EventArgs e)
+        {
+            MessageBox.Show("Veri Girildi");
+            this.Close();
+            
+        }
+        private void EklemeEkranı_FormClosing(object sender, FormClosingEventArgs e)
+        {
 
         }
     }

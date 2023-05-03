@@ -38,6 +38,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "EklemeEkranı";
             this.Text = "EklemeEkranı";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.EklemeEkranı_FormClosing);
             this.Load += new System.EventHandler(this.EklemeEkranı_Load);
             this.ResumeLayout(false);
 

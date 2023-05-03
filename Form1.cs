@@ -26,13 +26,18 @@ namespace ERP_PROJESİ
         private void button1_Click(object sender, EventArgs e)
         {
             Ana anaa = new Ana();
-            anaa.Show();
             this.Hide();
+            anaa.ShowDialog();
         }
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

@@ -13,8 +13,8 @@ namespace ERP_PROJESİ
     
     public partial class Ana : Form
     {
+        
         public string selectedPage { get; set; }
-        bool izin;
         public Ana()
         {
             InitializeComponent();
@@ -87,10 +87,6 @@ namespace ERP_PROJESİ
             selectedPage = "üretimemri";
         }
 
-        private void uretimEmirleri_Leave(object sender, EventArgs e)
-        {
-            AnaTabControl.ContextMenuStrip = null;
-        }
 
         #endregion
         #region makinalar
@@ -100,10 +96,6 @@ namespace ERP_PROJESİ
             selectedPage = "makinalar";
         }
 
-        private void makinalar_Leave(object sender, EventArgs e)
-        {
-            AnaTabControl.ContextMenuStrip = null;
-        }
         #endregion
         #region rotalar
         private void rotalar_Enter(object sender, EventArgs e)
@@ -112,10 +104,6 @@ namespace ERP_PROJESİ
             selectedPage = "rotalar";
         }
 
-        private void rotalar_Leave(object sender, EventArgs e)
-        {
-            AnaTabControl.ContextMenuStrip = null;
-        }
         #endregion
         #region günlükrapor
 
@@ -123,10 +111,6 @@ namespace ERP_PROJESİ
         {
             AnaTabControl.ContextMenuStrip = contextMenuStrip1;
             selectedPage = "günlükraporekle";
-        }
-        private void gunlukRaporEkle_Leave(object sender, EventArgs e)
-        {
-            AnaTabControl.ContextMenuStrip = null;
         }
         #endregion
         #region operasyon
@@ -137,10 +121,6 @@ namespace ERP_PROJESİ
             selectedPage = "operasyonekle";
         }
 
-        private void operasyonEkle_Leave(object sender, EventArgs e)
-        {
-            AnaTabControl.ContextMenuStrip = null;
-        }
         #endregion
         #region personel
 
@@ -148,10 +128,6 @@ namespace ERP_PROJESİ
         {
             AnaTabControl.ContextMenuStrip = contextMenuStrip1;
             selectedPage = "personeller";
-        }
-        private void personeller_Leave(object sender, EventArgs e)
-        {
-            AnaTabControl.ContextMenuStrip = null;
         }
         #endregion
         #region Hakedişler
@@ -161,10 +137,6 @@ namespace ERP_PROJESİ
             selectedPage = "hakedis";
         }
 
-        private void hakedisler_Leave(object sender, EventArgs e)
-        {
-            AnaTabControl.ContextMenuStrip = null;
-        }
         #endregion
         #region Faturalar
         private void satısfaturaları_Enter(object sender, EventArgs e)
@@ -179,25 +151,51 @@ namespace ERP_PROJESİ
             selectedPage = "fatura";
         }
 
-        private void satısfaturaları_Leave(object sender, EventArgs e)
+        #endregion
+        #region CARİLER
+        private void cariler_Enter(object sender, EventArgs e)
+        {
+            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
+            selectedPage = "cariler";
+        }
+
+        private void cariler_Leave(object sender, EventArgs e)
         {
             AnaTabControl.ContextMenuStrip = null;
         }
         #endregion
+        #region ÜRÜNLER
+        private void ticariurunler_Enter(object sender, EventArgs e)
+        {
+            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
+            selectedPage = "ürünler";
+        }
+
+        #endregion
+
         #endregion
         #region Ekleme Ekranı
         private void ekle_Click(object sender, EventArgs e)
         {
-            EklemeEkranı ekle = new EklemeEkranı();
-            ekle.selectedPage = selectedPage;
-            ekle.Show();
-            
+            if (selectedPage != "")
+            {
+                EklemeEkranı ekle = new EklemeEkranı();
+                ekle.selectedPage = selectedPage;   
+                ekle.ShowDialog();
+            }
+
+
         }
         private void eklebtn_Click(object sender, EventArgs e)
         {
-            EklemeEkranı ekle = new EklemeEkranı();
-            ekle.selectedPage = selectedPage;
-            ekle.Show();
+            if (selectedPage != "")
+            {
+                EklemeEkranı ekle = new EklemeEkranı();
+                ekle.selectedPage = selectedPage;
+                ekle.ShowDialog();
+
+            }
+
         }
         #endregion
         #region find ekranı
@@ -207,21 +205,21 @@ namespace ERP_PROJESİ
             if (e.Control && e.KeyCode == Keys.F)
             {
                 Find find = new Find();
-                find.Show();
+                find.ShowDialog();
             }
         }
 
         private void ara_Click(object sender, EventArgs e)
         {
             Find find = new Find();
-            find.Show();
+            find.ShowDialog();
         }
 
         private void arabtn_Click(object sender, EventArgs e)
         {
 
             Find find = new Find();
-            find.Show();
+            find.ShowDialog();
         }
         #endregion
         private void timer1_Tick(object sender, EventArgs e)
@@ -230,6 +228,10 @@ namespace ERP_PROJESİ
             label2.Text = DateTime.Now.ToLongTimeString();
         }
 
+        private void cikis_Click(object sender, EventArgs e)
+        {
 
+
+        }
     }
 }
