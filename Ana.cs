@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Dapper;
+using ERP_PROJESİ.Classes;
 
 namespace ERP_PROJESİ
 {
@@ -16,8 +17,10 @@ namespace ERP_PROJESİ
     public partial class Ana : Form
     {
 
-        SqlConnection SqlCon = new SqlConnection(@"Data Source=DESKTOP-PRMBC7J; initial Catalog = Musteri; Integrated Security = True");
+        SqlConnection SqlCon = new SqlConnection(@"Data Source=DESKTOP-PRMBC7J; initial Catalog = ERP; Integrated Security = True");
         public string selectedPage { get; set; }
+
+        public string arama;
         public Ana()
         {
             InitializeComponent();
@@ -76,12 +79,9 @@ namespace ERP_PROJESİ
             Application.Exit();
         }
         #endregion
-        #region seçilen ekran
-
-        #endregion
-        #region Right click
+        #region tab geçişleri
         // sağ click için ekrana girmesi lazım bunu geçerli sayfalarda tekrarlıcaz fakat ilk girişte afallıyabiliyor. tekrar tab seçmen lazım.
-
+        // selected page ayarlama
         #region üretim emirleri
 
         private void uretimEmirleri_Enter(object sender, EventArgs e)
@@ -95,8 +95,11 @@ namespace ERP_PROJESİ
         #region makinalar
         private void makinalar_Enter(object sender, EventArgs e)
         {
+
             AnaTabControl.ContextMenuStrip = contextMenuStrip1;
             selectedPage = "makinalar";
+            MakinaListesi();
+            
         }
 
         #endregion
@@ -177,6 +180,8 @@ namespace ERP_PROJESİ
         #endregion
 
         #endregion
+        #region işlevler (ekleme-çıkarma-arama)
+
         #region Ekleme Ekranı
         private void ekle_Click(object sender, EventArgs e)
         {
@@ -207,34 +212,101 @@ namespace ERP_PROJESİ
         {
             if (e.Control && e.KeyCode == Keys.F)
             {
-                Find find = new Find();
+                Find find = new Find(this);
                 find.ShowDialog();
             }
         }
 
         private void ara_Click(object sender, EventArgs e)
         {
-            Find find = new Find();
+            Find find = new Find(this);
             find.ShowDialog();
         }
 
         private void arabtn_Click(object sender, EventArgs e)
         {
 
-            Find find = new Find();
+            Find find = new Find(this);
             find.ShowDialog();
         }
         #endregion
+        #region Arama
+
+        private void refresh_Click(object sender, EventArgs e)
+        {
+            switch (selectedPage)
+            {
+                case "makinalar":
+                    MakinaListesi();
+                    break;
+            }
+        }
+        #endregion
+        #region Saat
+
         private void timer1_Tick(object sender, EventArgs e)
         {
 
             label2.Text = DateTime.Now.ToLongTimeString();
         }
-
+        #endregion
+        #region çıkış
         private void cikis_Click(object sender, EventArgs e)
         {
 
 
         }
+        #endregion
+        #endregion
+
+
+
+
+
+        #region SQL Listeleme
+        #region İmalat
+        #region Makinalar
+        public void MakinaListesi()
+        {
+            List<Makineler> list = SqlCon.Query<Makineler>("select * from Makineler where makineadi like '%" + arama + "%'", SqlCon).ToList<Makineler>();
+            makinadata.DataSource = list;
+            makinadata.Columns[0].Visible = false;
+            arama = null;
+        }
+        #endregion
+
+        #endregion
+
+        #region Muhasebe
+
+        #endregion
+
+        #region URUN
+
+        #endregion
+
+        #region Satış
+
+        #endregion
+
+        #region Satın Alma
+
+        #endregion
+
+        #region Raporlar
+
+        #endregion
+
+        #region Personeller
+
+        #endregion
+
+        #region Cariler
+
+        #endregion
+
+        #endregion
+
+        
     }
 }

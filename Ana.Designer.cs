@@ -335,11 +335,13 @@
             // 
             // makinadata
             // 
+            this.makinadata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.makinadata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.makinadata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.makinadata.Location = new System.Drawing.Point(0, 0);
             this.makinadata.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.makinadata.Name = "makinadata";
+            this.makinadata.ReadOnly = true;
             this.makinadata.RowHeadersWidth = 51;
             this.makinadata.RowTemplate.Height = 24;
             this.makinadata.Size = new System.Drawing.Size(1524, 666);
@@ -1112,6 +1114,7 @@
             this.refresh.Size = new System.Drawing.Size(75, 43);
             this.refresh.TabIndex = 3;
             this.refresh.UseVisualStyleBackColor = false;
+            this.refresh.Click += new System.EventHandler(this.refresh_Click);
             // 
             // update
             // 

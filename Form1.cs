@@ -14,6 +14,7 @@ namespace ERP_PROJESİ
 {
     public partial class Form1 : Form
     {
+
         class _kullanıcı
         {
             public int id { get; set; }

@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.aramatxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // textBox1
+            // aramatxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(155, 82);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(165, 22);
-            this.textBox1.TabIndex = 0;
-            this.textBox1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
+            this.aramatxt.Location = new System.Drawing.Point(155, 82);
+            this.aramatxt.Name = "aramatxt";
+            this.aramatxt.Size = new System.Drawing.Size(165, 22);
+            this.aramatxt.TabIndex = 0;
+            this.aramatxt.TextChanged += new System.EventHandler(this.aramatxt_TextChanged);
+            this.aramatxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
             // 
             // label1
             // 
@@ -55,11 +56,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(496, 168);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.aramatxt);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Find";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Find";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Find_FormClosing);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -67,7 +69,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox aramatxt;
         private System.Windows.Forms.Label label1;
     }
 }
