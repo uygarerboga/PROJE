@@ -34,9 +34,10 @@
             // 
             // aramatxt
             // 
-            this.aramatxt.Location = new System.Drawing.Point(155, 82);
+            this.aramatxt.Location = new System.Drawing.Point(116, 67);
+            this.aramatxt.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.aramatxt.Name = "aramatxt";
-            this.aramatxt.Size = new System.Drawing.Size(165, 22);
+            this.aramatxt.Size = new System.Drawing.Size(125, 20);
             this.aramatxt.TabIndex = 0;
             this.aramatxt.TextChanged += new System.EventHandler(this.aramatxt_TextChanged);
             this.aramatxt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.textBox1_KeyDown);
@@ -44,24 +45,27 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(142, 33);
+            this.label1.Location = new System.Drawing.Point(106, 27);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 16);
+            this.label1.Size = new System.Drawing.Size(146, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Aramak istediğiniz şeyi yazınız";
             // 
             // Find
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(496, 168);
+            this.ClientSize = new System.Drawing.Size(372, 136);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.aramatxt);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "Find";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Find";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Find_FormClosing);
+            this.Load += new System.EventHandler(this.Find_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

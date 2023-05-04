@@ -15,7 +15,7 @@ namespace ERP_PROJESİ
 
     public partial class Find : Form
     {
-
+        public string urunturu;
         SqlConnection SqlCon = new SqlConnection(@"Data Source=DESKTOP-PRMBC7J; initial Catalog = ERP; Integrated Security = True");
 
         Ana Ana;
@@ -52,7 +52,28 @@ namespace ERP_PROJESİ
                 case "makinalar":
                     Ana.MakinaListesi();
                     break;
+                case "imalatçı":
+                    Ana.İmalatciListesi();
+                    break;
+                case "personeller":
+                    Ana.personelListele();
+                    break;
+                case "cariler":
+                    Ana.CarileriListele();
+                    break;
+                case "ürünler":
+                    Ana.urunlistele(urunturu);
+                    break;
+                case "operasyonekle":
+                    Ana.OperasyonListesi();
+                    break;
+
             }
+        }
+
+        private void Find_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

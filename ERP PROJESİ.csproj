@@ -76,7 +76,12 @@
     <Compile Include="Ana.Designer.cs">
       <DependentUpon>Ana.cs</DependentUpon>
     </Compile>
-    <Compile Include="Classes\Class1.cs" />
+    <Compile Include="Classes\Cariler.cs" />
+    <Compile Include="Classes\Ürünler\ürünler.cs" />
+    <Compile Include="Classes\İmalat\makinalar.cs" />
+    <Compile Include="Classes\Personel.cs" />
+    <Compile Include="Classes\İmalat\Operasyonlar.cs" />
+    <Compile Include="Classes\İmalat\İmalatçı.cs" />
     <Compile Include="EklemeEkranı.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +167,9 @@
       <ProductName>.NET Framework 3.5 SP1 </ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes\Muhasebe\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
