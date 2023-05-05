@@ -192,15 +192,15 @@
             this.AnaTabControl.Controls.Add(this.personeller);
             this.AnaTabControl.Controls.Add(this.cariler);
             this.AnaTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AnaTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AnaTabControl.Font = new System.Drawing.Font("Montserrat Thin", 11.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.AnaTabControl.ItemSize = new System.Drawing.Size(150, 70);
             this.AnaTabControl.Location = new System.Drawing.Point(0, 0);
-            this.AnaTabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AnaTabControl.Margin = new System.Windows.Forms.Padding(2);
             this.AnaTabControl.Multiline = true;
             this.AnaTabControl.Name = "AnaTabControl";
             this.AnaTabControl.Padding = new System.Drawing.Point(15, 3);
             this.AnaTabControl.SelectedIndex = 0;
-            this.AnaTabControl.Size = new System.Drawing.Size(1443, 822);
+            this.AnaTabControl.Size = new System.Drawing.Size(1684, 949);
             this.AnaTabControl.TabIndex = 0;
             this.AnaTabControl.KeyDown += new System.Windows.Forms.KeyEventHandler(this.AnaTabControl_KeyDown);
             this.AnaTabControl.Leave += new System.EventHandler(this.AnaTabControl_Leave);
@@ -210,9 +210,9 @@
             // 
             this.AnaSayfa.Controls.Add(this.anaSayfaPaneli);
             this.AnaSayfa.Location = new System.Drawing.Point(4, 74);
-            this.AnaSayfa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AnaSayfa.Margin = new System.Windows.Forms.Padding(2);
             this.AnaSayfa.Name = "AnaSayfa";
-            this.AnaSayfa.Size = new System.Drawing.Size(1435, 744);
+            this.AnaSayfa.Size = new System.Drawing.Size(1676, 871);
             this.AnaSayfa.TabIndex = 2;
             this.AnaSayfa.Text = "Ana Sayfa";
             // 
@@ -222,9 +222,9 @@
             this.anaSayfaPaneli.Controls.Add(this.label3);
             this.anaSayfaPaneli.Dock = System.Windows.Forms.DockStyle.Fill;
             this.anaSayfaPaneli.Location = new System.Drawing.Point(0, 0);
-            this.anaSayfaPaneli.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.anaSayfaPaneli.Margin = new System.Windows.Forms.Padding(2);
             this.anaSayfaPaneli.Name = "anaSayfaPaneli";
-            this.anaSayfaPaneli.Size = new System.Drawing.Size(1435, 744);
+            this.anaSayfaPaneli.Size = new System.Drawing.Size(1676, 871);
             this.anaSayfaPaneli.TabIndex = 0;
             this.anaSayfaPaneli.MouseHover += new System.EventHandler(this.cariler_Leave);
             // 
@@ -234,24 +234,23 @@
             this.label3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label3.Location = new System.Drawing.Point(514, 191);
+            this.label3.Location = new System.Drawing.Point(600, 220);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(407, 73);
             this.label3.TabIndex = 0;
             this.label3.Text = "Hoş Geldiniz";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // İmalat
             // 
             this.İmalat.BackColor = System.Drawing.SystemColors.Control;
             this.İmalat.Controls.Add(this.imalatTabPage);
             this.İmalat.Location = new System.Drawing.Point(4, 74);
-            this.İmalat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.İmalat.Margin = new System.Windows.Forms.Padding(2);
             this.İmalat.Name = "İmalat";
             this.İmalat.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.İmalat.Size = new System.Drawing.Size(1435, 744);
+            this.İmalat.Size = new System.Drawing.Size(1676, 871);
             this.İmalat.TabIndex = 0;
             this.İmalat.Text = "İmalat";
             // 
@@ -268,12 +267,12 @@
             this.imalatTabPage.HotTrack = true;
             this.imalatTabPage.ItemSize = new System.Drawing.Size(50, 26);
             this.imalatTabPage.Location = new System.Drawing.Point(0, 0);
-            this.imalatTabPage.Margin = new System.Windows.Forms.Padding(11, 12, 11, 12);
+            this.imalatTabPage.Margin = new System.Windows.Forms.Padding(13, 14, 13, 14);
             this.imalatTabPage.Multiline = true;
             this.imalatTabPage.Name = "imalatTabPage";
             this.imalatTabPage.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.imalatTabPage.SelectedIndex = 0;
-            this.imalatTabPage.Size = new System.Drawing.Size(1435, 744);
+            this.imalatTabPage.Size = new System.Drawing.Size(1676, 871);
             this.imalatTabPage.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.imalatTabPage.TabIndex = 0;
             // 
@@ -282,10 +281,10 @@
             this.uretimEmirleri.BackColor = System.Drawing.Color.White;
             this.uretimEmirleri.Controls.Add(this.uretimemridata);
             this.uretimEmirleri.Location = new System.Drawing.Point(4, 30);
-            this.uretimEmirleri.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uretimEmirleri.Margin = new System.Windows.Forms.Padding(2);
             this.uretimEmirleri.Name = "uretimEmirleri";
-            this.uretimEmirleri.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.uretimEmirleri.Size = new System.Drawing.Size(1427, 710);
+            this.uretimEmirleri.Padding = new System.Windows.Forms.Padding(2);
+            this.uretimEmirleri.Size = new System.Drawing.Size(1668, 837);
             this.uretimEmirleri.TabIndex = 0;
             this.uretimEmirleri.Text = "Üretim Emirleri";
             this.uretimEmirleri.Enter += new System.EventHandler(this.uretimEmirleri_Enter);
@@ -297,22 +296,21 @@
             this.uretimemridata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.uretimemridata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.uretimemridata.Location = new System.Drawing.Point(2, 2);
-            this.uretimemridata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.uretimemridata.Margin = new System.Windows.Forms.Padding(2);
             this.uretimemridata.Name = "uretimemridata";
             this.uretimemridata.RowHeadersWidth = 51;
             this.uretimemridata.RowTemplate.Height = 24;
-            this.uretimemridata.Size = new System.Drawing.Size(1423, 706);
+            this.uretimemridata.Size = new System.Drawing.Size(1664, 833);
             this.uretimemridata.TabIndex = 1;
-            this.uretimemridata.Click += new System.EventHandler(this.uretimemridata_Click);
             this.uretimemridata.DoubleClick += new System.EventHandler(this.uretimemridata_DoubleClick);
             // 
             // imalatcı
             // 
             this.imalatcı.Controls.Add(this.imalatdata);
             this.imalatcı.Location = new System.Drawing.Point(4, 30);
-            this.imalatcı.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.imalatcı.Margin = new System.Windows.Forms.Padding(2);
             this.imalatcı.Name = "imalatcı";
-            this.imalatcı.Size = new System.Drawing.Size(1429, 725);
+            this.imalatcı.Size = new System.Drawing.Size(1666, 824);
             this.imalatcı.TabIndex = 2;
             this.imalatcı.Text = "İmalatçılar";
             this.imalatcı.UseVisualStyleBackColor = true;
@@ -325,20 +323,20 @@
             this.imalatdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.imalatdata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.imalatdata.Location = new System.Drawing.Point(0, 0);
-            this.imalatdata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.imalatdata.Margin = new System.Windows.Forms.Padding(2);
             this.imalatdata.Name = "imalatdata";
             this.imalatdata.RowHeadersWidth = 51;
             this.imalatdata.RowTemplate.Height = 24;
-            this.imalatdata.Size = new System.Drawing.Size(1429, 725);
+            this.imalatdata.Size = new System.Drawing.Size(1665, 819);
             this.imalatdata.TabIndex = 0;
             // 
             // makinalar
             // 
             this.makinalar.Controls.Add(this.makinadata);
             this.makinalar.Location = new System.Drawing.Point(4, 30);
-            this.makinalar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.makinalar.Margin = new System.Windows.Forms.Padding(2);
             this.makinalar.Name = "makinalar";
-            this.makinalar.Size = new System.Drawing.Size(1429, 725);
+            this.makinalar.Size = new System.Drawing.Size(1666, 824);
             this.makinalar.TabIndex = 3;
             this.makinalar.Text = "Makinalar";
             this.makinalar.UseVisualStyleBackColor = true;
@@ -351,21 +349,21 @@
             this.makinadata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.makinadata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.makinadata.Location = new System.Drawing.Point(0, 0);
-            this.makinadata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.makinadata.Margin = new System.Windows.Forms.Padding(2);
             this.makinadata.Name = "makinadata";
             this.makinadata.ReadOnly = true;
             this.makinadata.RowHeadersWidth = 51;
             this.makinadata.RowTemplate.Height = 24;
-            this.makinadata.Size = new System.Drawing.Size(1429, 725);
+            this.makinadata.Size = new System.Drawing.Size(1665, 819);
             this.makinadata.TabIndex = 0;
             // 
             // gunlukRapor
             // 
             this.gunlukRapor.Controls.Add(this.gunlukdata);
             this.gunlukRapor.Location = new System.Drawing.Point(4, 30);
-            this.gunlukRapor.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunlukRapor.Margin = new System.Windows.Forms.Padding(2);
             this.gunlukRapor.Name = "gunlukRapor";
-            this.gunlukRapor.Size = new System.Drawing.Size(1429, 725);
+            this.gunlukRapor.Size = new System.Drawing.Size(1666, 824);
             this.gunlukRapor.TabIndex = 5;
             this.gunlukRapor.Text = "Günlük Üretim Raporları";
             this.gunlukRapor.UseVisualStyleBackColor = true;
@@ -378,20 +376,20 @@
             this.gunlukdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gunlukdata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunlukdata.Location = new System.Drawing.Point(0, 0);
-            this.gunlukdata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gunlukdata.Margin = new System.Windows.Forms.Padding(2);
             this.gunlukdata.Name = "gunlukdata";
             this.gunlukdata.RowHeadersWidth = 51;
             this.gunlukdata.RowTemplate.Height = 24;
-            this.gunlukdata.Size = new System.Drawing.Size(1429, 725);
+            this.gunlukdata.Size = new System.Drawing.Size(1665, 819);
             this.gunlukdata.TabIndex = 0;
             // 
             // operasyonlar
             // 
             this.operasyonlar.Controls.Add(this.operasyondata);
             this.operasyonlar.Location = new System.Drawing.Point(4, 30);
-            this.operasyonlar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.operasyonlar.Margin = new System.Windows.Forms.Padding(2);
             this.operasyonlar.Name = "operasyonlar";
-            this.operasyonlar.Size = new System.Drawing.Size(1429, 725);
+            this.operasyonlar.Size = new System.Drawing.Size(1666, 824);
             this.operasyonlar.TabIndex = 6;
             this.operasyonlar.Text = "Operasyonlar";
             this.operasyonlar.UseVisualStyleBackColor = true;
@@ -404,20 +402,20 @@
             this.operasyondata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.operasyondata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.operasyondata.Location = new System.Drawing.Point(0, 0);
-            this.operasyondata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.operasyondata.Margin = new System.Windows.Forms.Padding(2);
             this.operasyondata.Name = "operasyondata";
             this.operasyondata.RowHeadersWidth = 51;
             this.operasyondata.RowTemplate.Height = 24;
-            this.operasyondata.Size = new System.Drawing.Size(1429, 725);
+            this.operasyondata.Size = new System.Drawing.Size(1665, 819);
             this.operasyondata.TabIndex = 0;
             // 
             // rotalar
             // 
             this.rotalar.Controls.Add(this.rotadata);
             this.rotalar.Location = new System.Drawing.Point(4, 30);
-            this.rotalar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rotalar.Margin = new System.Windows.Forms.Padding(2);
             this.rotalar.Name = "rotalar";
-            this.rotalar.Size = new System.Drawing.Size(1429, 725);
+            this.rotalar.Size = new System.Drawing.Size(1666, 824);
             this.rotalar.TabIndex = 9;
             this.rotalar.Text = "Rotalar";
             this.rotalar.UseVisualStyleBackColor = true;
@@ -430,20 +428,20 @@
             this.rotadata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.rotadata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rotadata.Location = new System.Drawing.Point(0, 0);
-            this.rotadata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rotadata.Margin = new System.Windows.Forms.Padding(2);
             this.rotadata.Name = "rotadata";
             this.rotadata.RowHeadersWidth = 51;
             this.rotadata.RowTemplate.Height = 24;
-            this.rotadata.Size = new System.Drawing.Size(1429, 725);
+            this.rotadata.Size = new System.Drawing.Size(1665, 819);
             this.rotadata.TabIndex = 0;
             // 
             // Muhasebe
             // 
             this.Muhasebe.Controls.Add(this.muhasebeTabControl);
             this.Muhasebe.Location = new System.Drawing.Point(4, 74);
-            this.Muhasebe.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Muhasebe.Margin = new System.Windows.Forms.Padding(2);
             this.Muhasebe.Name = "Muhasebe";
-            this.Muhasebe.Size = new System.Drawing.Size(1435, 744);
+            this.Muhasebe.Size = new System.Drawing.Size(1676, 871);
             this.Muhasebe.TabIndex = 1;
             this.Muhasebe.Text = "Muhasebe";
             this.Muhasebe.UseVisualStyleBackColor = true;
@@ -459,20 +457,20 @@
             this.muhasebeTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.muhasebeTabControl.ItemSize = new System.Drawing.Size(60, 26);
             this.muhasebeTabControl.Location = new System.Drawing.Point(0, 0);
-            this.muhasebeTabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.muhasebeTabControl.Margin = new System.Windows.Forms.Padding(2);
             this.muhasebeTabControl.Multiline = true;
             this.muhasebeTabControl.Name = "muhasebeTabControl";
             this.muhasebeTabControl.SelectedIndex = 0;
-            this.muhasebeTabControl.Size = new System.Drawing.Size(1435, 744);
+            this.muhasebeTabControl.Size = new System.Drawing.Size(1676, 871);
             this.muhasebeTabControl.TabIndex = 0;
             // 
             // hakedisler
             // 
             this.hakedisler.Controls.Add(this.hakedisdata);
             this.hakedisler.Location = new System.Drawing.Point(4, 30);
-            this.hakedisler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.hakedisler.Margin = new System.Windows.Forms.Padding(2);
             this.hakedisler.Name = "hakedisler";
-            this.hakedisler.Size = new System.Drawing.Size(1427, 710);
+            this.hakedisler.Size = new System.Drawing.Size(1668, 837);
             this.hakedisler.TabIndex = 2;
             this.hakedisler.Text = "Hakedişler";
             this.hakedisler.UseVisualStyleBackColor = true;
@@ -484,11 +482,11 @@
             this.hakedisdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.hakedisdata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.hakedisdata.Location = new System.Drawing.Point(0, 0);
-            this.hakedisdata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.hakedisdata.Margin = new System.Windows.Forms.Padding(2);
             this.hakedisdata.Name = "hakedisdata";
             this.hakedisdata.RowHeadersWidth = 51;
             this.hakedisdata.RowTemplate.Height = 24;
-            this.hakedisdata.Size = new System.Drawing.Size(1427, 710);
+            this.hakedisdata.Size = new System.Drawing.Size(1668, 837);
             this.hakedisdata.TabIndex = 0;
             this.hakedisdata.MouseHover += new System.EventHandler(this.hakedisler_Enter);
             // 
@@ -496,9 +494,9 @@
             // 
             this.satinalimfaturası.Controls.Add(this.satinalimfaturasidata);
             this.satinalimfaturası.Location = new System.Drawing.Point(4, 30);
-            this.satinalimfaturası.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.satinalimfaturası.Margin = new System.Windows.Forms.Padding(2);
             this.satinalimfaturası.Name = "satinalimfaturası";
-            this.satinalimfaturası.Size = new System.Drawing.Size(1429, 725);
+            this.satinalimfaturası.Size = new System.Drawing.Size(1666, 824);
             this.satinalimfaturası.TabIndex = 4;
             this.satinalimfaturası.Text = "Satın Alım Faturaları";
             this.satinalimfaturası.UseVisualStyleBackColor = true;
@@ -510,20 +508,20 @@
             this.satinalimfaturasidata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.satinalimfaturasidata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.satinalimfaturasidata.Location = new System.Drawing.Point(0, 0);
-            this.satinalimfaturasidata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.satinalimfaturasidata.Margin = new System.Windows.Forms.Padding(2);
             this.satinalimfaturasidata.Name = "satinalimfaturasidata";
             this.satinalimfaturasidata.RowHeadersWidth = 51;
             this.satinalimfaturasidata.RowTemplate.Height = 24;
-            this.satinalimfaturasidata.Size = new System.Drawing.Size(1429, 725);
+            this.satinalimfaturasidata.Size = new System.Drawing.Size(1665, 819);
             this.satinalimfaturasidata.TabIndex = 0;
             // 
             // satinalimiadefaturasi
             // 
             this.satinalimiadefaturasi.Controls.Add(this.satinaidedata);
             this.satinalimiadefaturasi.Location = new System.Drawing.Point(4, 30);
-            this.satinalimiadefaturasi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.satinalimiadefaturasi.Margin = new System.Windows.Forms.Padding(2);
             this.satinalimiadefaturasi.Name = "satinalimiadefaturasi";
-            this.satinalimiadefaturasi.Size = new System.Drawing.Size(1429, 725);
+            this.satinalimiadefaturasi.Size = new System.Drawing.Size(1666, 824);
             this.satinalimiadefaturasi.TabIndex = 6;
             this.satinalimiadefaturasi.Text = "Satın Alım İade";
             this.satinalimiadefaturasi.UseVisualStyleBackColor = true;
@@ -533,20 +531,20 @@
             this.satinaidedata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.satinaidedata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.satinaidedata.Location = new System.Drawing.Point(0, 0);
-            this.satinaidedata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.satinaidedata.Margin = new System.Windows.Forms.Padding(2);
             this.satinaidedata.Name = "satinaidedata";
             this.satinaidedata.RowHeadersWidth = 51;
             this.satinaidedata.RowTemplate.Height = 24;
-            this.satinaidedata.Size = new System.Drawing.Size(1429, 725);
+            this.satinaidedata.Size = new System.Drawing.Size(1665, 819);
             this.satinaidedata.TabIndex = 0;
             // 
             // satısfaturaları
             // 
             this.satısfaturaları.Controls.Add(this.satisfaturalaridata);
             this.satısfaturaları.Location = new System.Drawing.Point(4, 30);
-            this.satısfaturaları.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.satısfaturaları.Margin = new System.Windows.Forms.Padding(2);
             this.satısfaturaları.Name = "satısfaturaları";
-            this.satısfaturaları.Size = new System.Drawing.Size(1429, 725);
+            this.satısfaturaları.Size = new System.Drawing.Size(1666, 824);
             this.satısfaturaları.TabIndex = 5;
             this.satısfaturaları.Text = "Satış Faturaları";
             this.satısfaturaları.UseVisualStyleBackColor = true;
@@ -558,20 +556,20 @@
             this.satisfaturalaridata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.satisfaturalaridata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.satisfaturalaridata.Location = new System.Drawing.Point(0, 0);
-            this.satisfaturalaridata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.satisfaturalaridata.Margin = new System.Windows.Forms.Padding(2);
             this.satisfaturalaridata.Name = "satisfaturalaridata";
             this.satisfaturalaridata.RowHeadersWidth = 51;
             this.satisfaturalaridata.RowTemplate.Height = 24;
-            this.satisfaturalaridata.Size = new System.Drawing.Size(1429, 725);
+            this.satisfaturalaridata.Size = new System.Drawing.Size(1665, 819);
             this.satisfaturalaridata.TabIndex = 0;
             // 
             // satisiade
             // 
             this.satisiade.Controls.Add(this.satisiadedata);
             this.satisiade.Location = new System.Drawing.Point(4, 30);
-            this.satisiade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.satisiade.Margin = new System.Windows.Forms.Padding(2);
             this.satisiade.Name = "satisiade";
-            this.satisiade.Size = new System.Drawing.Size(1429, 725);
+            this.satisiade.Size = new System.Drawing.Size(1666, 824);
             this.satisiade.TabIndex = 7;
             this.satisiade.Text = "Satış İade";
             this.satisiade.UseVisualStyleBackColor = true;
@@ -581,20 +579,20 @@
             this.satisiadedata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.satisiadedata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.satisiadedata.Location = new System.Drawing.Point(0, 0);
-            this.satisiadedata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.satisiadedata.Margin = new System.Windows.Forms.Padding(2);
             this.satisiadedata.Name = "satisiadedata";
             this.satisiadedata.RowHeadersWidth = 51;
             this.satisiadedata.RowTemplate.Height = 24;
-            this.satisiadedata.Size = new System.Drawing.Size(1429, 725);
+            this.satisiadedata.Size = new System.Drawing.Size(1665, 819);
             this.satisiadedata.TabIndex = 0;
             // 
             // Urunler
             // 
             this.Urunler.Controls.Add(this.satınAlmaTabControl);
             this.Urunler.Location = new System.Drawing.Point(4, 74);
-            this.Urunler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Urunler.Margin = new System.Windows.Forms.Padding(2);
             this.Urunler.Name = "Urunler";
-            this.Urunler.Size = new System.Drawing.Size(1435, 744);
+            this.Urunler.Size = new System.Drawing.Size(1676, 871);
             this.Urunler.TabIndex = 3;
             this.Urunler.Text = "Ürünler";
             this.Urunler.UseVisualStyleBackColor = true;
@@ -612,20 +610,20 @@
             this.satınAlmaTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.satınAlmaTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.satınAlmaTabControl.Location = new System.Drawing.Point(0, 0);
-            this.satınAlmaTabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.satınAlmaTabControl.Margin = new System.Windows.Forms.Padding(2);
             this.satınAlmaTabControl.Name = "satınAlmaTabControl";
             this.satınAlmaTabControl.SelectedIndex = 0;
-            this.satınAlmaTabControl.Size = new System.Drawing.Size(1435, 744);
+            this.satınAlmaTabControl.Size = new System.Drawing.Size(1676, 871);
             this.satınAlmaTabControl.TabIndex = 0;
             // 
             // ticariurunler
             // 
             this.ticariurunler.Controls.Add(this.Ticaridata);
             this.ticariurunler.Location = new System.Drawing.Point(4, 24);
-            this.ticariurunler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ticariurunler.Margin = new System.Windows.Forms.Padding(2);
             this.ticariurunler.Name = "ticariurunler";
-            this.ticariurunler.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.ticariurunler.Size = new System.Drawing.Size(1427, 716);
+            this.ticariurunler.Padding = new System.Windows.Forms.Padding(2);
+            this.ticariurunler.Size = new System.Drawing.Size(1668, 843);
             this.ticariurunler.TabIndex = 0;
             this.ticariurunler.Text = "Ticari Ürünler";
             this.ticariurunler.UseVisualStyleBackColor = true;
@@ -638,11 +636,11 @@
             this.Ticaridata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Ticaridata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Ticaridata.Location = new System.Drawing.Point(2, 2);
-            this.Ticaridata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Ticaridata.Margin = new System.Windows.Forms.Padding(2);
             this.Ticaridata.Name = "Ticaridata";
             this.Ticaridata.RowHeadersWidth = 51;
             this.Ticaridata.RowTemplate.Height = 24;
-            this.Ticaridata.Size = new System.Drawing.Size(1423, 712);
+            this.Ticaridata.Size = new System.Drawing.Size(1664, 839);
             this.Ticaridata.TabIndex = 0;
             this.Ticaridata.MouseHover += new System.EventHandler(this.urunler_Enter1);
             // 
@@ -650,10 +648,10 @@
             // 
             this.mamuller.Controls.Add(this.mamuldata);
             this.mamuller.Location = new System.Drawing.Point(4, 24);
-            this.mamuller.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mamuller.Margin = new System.Windows.Forms.Padding(2);
             this.mamuller.Name = "mamuller";
-            this.mamuller.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.mamuller.Size = new System.Drawing.Size(1429, 731);
+            this.mamuller.Padding = new System.Windows.Forms.Padding(2);
+            this.mamuller.Size = new System.Drawing.Size(1666, 830);
             this.mamuller.TabIndex = 1;
             this.mamuller.Text = "Mamüller";
             this.mamuller.UseVisualStyleBackColor = true;
@@ -666,20 +664,20 @@
             this.mamuldata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.mamuldata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mamuldata.Location = new System.Drawing.Point(2, 2);
-            this.mamuldata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.mamuldata.Margin = new System.Windows.Forms.Padding(2);
             this.mamuldata.Name = "mamuldata";
             this.mamuldata.RowHeadersWidth = 51;
             this.mamuldata.RowTemplate.Height = 24;
-            this.mamuldata.Size = new System.Drawing.Size(1425, 727);
+            this.mamuldata.Size = new System.Drawing.Size(1660, 822);
             this.mamuldata.TabIndex = 0;
             // 
             // yarimamul
             // 
             this.yarimamul.Controls.Add(this.ymamuldata);
             this.yarimamul.Location = new System.Drawing.Point(4, 24);
-            this.yarimamul.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.yarimamul.Margin = new System.Windows.Forms.Padding(2);
             this.yarimamul.Name = "yarimamul";
-            this.yarimamul.Size = new System.Drawing.Size(1429, 731);
+            this.yarimamul.Size = new System.Drawing.Size(1666, 830);
             this.yarimamul.TabIndex = 2;
             this.yarimamul.Text = "Yarı Mamüller";
             this.yarimamul.UseVisualStyleBackColor = true;
@@ -692,20 +690,20 @@
             this.ymamuldata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ymamuldata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ymamuldata.Location = new System.Drawing.Point(0, 0);
-            this.ymamuldata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.ymamuldata.Margin = new System.Windows.Forms.Padding(2);
             this.ymamuldata.Name = "ymamuldata";
             this.ymamuldata.RowHeadersWidth = 51;
             this.ymamuldata.RowTemplate.Height = 24;
-            this.ymamuldata.Size = new System.Drawing.Size(1429, 731);
+            this.ymamuldata.Size = new System.Drawing.Size(1665, 826);
             this.ymamuldata.TabIndex = 0;
             // 
             // hammadeler
             // 
             this.hammadeler.Controls.Add(this.hammaddedata);
             this.hammadeler.Location = new System.Drawing.Point(4, 24);
-            this.hammadeler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.hammadeler.Margin = new System.Windows.Forms.Padding(2);
             this.hammadeler.Name = "hammadeler";
-            this.hammadeler.Size = new System.Drawing.Size(1429, 731);
+            this.hammadeler.Size = new System.Drawing.Size(1666, 830);
             this.hammadeler.TabIndex = 3;
             this.hammadeler.Text = "Hammaddeler";
             this.hammadeler.UseVisualStyleBackColor = true;
@@ -718,20 +716,20 @@
             this.hammaddedata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.hammaddedata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.hammaddedata.Location = new System.Drawing.Point(0, 0);
-            this.hammaddedata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.hammaddedata.Margin = new System.Windows.Forms.Padding(2);
             this.hammaddedata.Name = "hammaddedata";
             this.hammaddedata.RowHeadersWidth = 51;
             this.hammaddedata.RowTemplate.Height = 24;
-            this.hammaddedata.Size = new System.Drawing.Size(1429, 731);
+            this.hammaddedata.Size = new System.Drawing.Size(1665, 826);
             this.hammaddedata.TabIndex = 0;
             // 
             // gelenirsaliye
             // 
             this.gelenirsaliye.Controls.Add(this.gelenirsaliyedata);
             this.gelenirsaliye.Location = new System.Drawing.Point(4, 24);
-            this.gelenirsaliye.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gelenirsaliye.Margin = new System.Windows.Forms.Padding(2);
             this.gelenirsaliye.Name = "gelenirsaliye";
-            this.gelenirsaliye.Size = new System.Drawing.Size(1429, 731);
+            this.gelenirsaliye.Size = new System.Drawing.Size(1666, 830);
             this.gelenirsaliye.TabIndex = 5;
             this.gelenirsaliye.Text = "Gelen İrsaliye";
             this.gelenirsaliye.UseVisualStyleBackColor = true;
@@ -741,20 +739,20 @@
             this.gelenirsaliyedata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gelenirsaliyedata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gelenirsaliyedata.Location = new System.Drawing.Point(0, 0);
-            this.gelenirsaliyedata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gelenirsaliyedata.Margin = new System.Windows.Forms.Padding(2);
             this.gelenirsaliyedata.Name = "gelenirsaliyedata";
             this.gelenirsaliyedata.RowHeadersWidth = 51;
             this.gelenirsaliyedata.RowTemplate.Height = 24;
-            this.gelenirsaliyedata.Size = new System.Drawing.Size(1429, 731);
+            this.gelenirsaliyedata.Size = new System.Drawing.Size(1665, 826);
             this.gelenirsaliyedata.TabIndex = 0;
             // 
             // gelenirsaliyeiade
             // 
             this.gelenirsaliyeiade.Controls.Add(this.gelenirsaliyeiadedata);
             this.gelenirsaliyeiade.Location = new System.Drawing.Point(4, 24);
-            this.gelenirsaliyeiade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gelenirsaliyeiade.Margin = new System.Windows.Forms.Padding(2);
             this.gelenirsaliyeiade.Name = "gelenirsaliyeiade";
-            this.gelenirsaliyeiade.Size = new System.Drawing.Size(1429, 731);
+            this.gelenirsaliyeiade.Size = new System.Drawing.Size(1666, 830);
             this.gelenirsaliyeiade.TabIndex = 7;
             this.gelenirsaliyeiade.Text = "Gelen İrsaliye İade";
             this.gelenirsaliyeiade.UseVisualStyleBackColor = true;
@@ -764,20 +762,20 @@
             this.gelenirsaliyeiadedata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gelenirsaliyeiadedata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gelenirsaliyeiadedata.Location = new System.Drawing.Point(0, 0);
-            this.gelenirsaliyeiadedata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gelenirsaliyeiadedata.Margin = new System.Windows.Forms.Padding(2);
             this.gelenirsaliyeiadedata.Name = "gelenirsaliyeiadedata";
             this.gelenirsaliyeiadedata.RowHeadersWidth = 51;
             this.gelenirsaliyeiadedata.RowTemplate.Height = 24;
-            this.gelenirsaliyeiadedata.Size = new System.Drawing.Size(1429, 731);
+            this.gelenirsaliyeiadedata.Size = new System.Drawing.Size(1665, 826);
             this.gelenirsaliyeiadedata.TabIndex = 0;
             // 
             // gidenirsaliye
             // 
             this.gidenirsaliye.Controls.Add(this.gidenirsaliyedata);
             this.gidenirsaliye.Location = new System.Drawing.Point(4, 24);
-            this.gidenirsaliye.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gidenirsaliye.Margin = new System.Windows.Forms.Padding(2);
             this.gidenirsaliye.Name = "gidenirsaliye";
-            this.gidenirsaliye.Size = new System.Drawing.Size(1429, 731);
+            this.gidenirsaliye.Size = new System.Drawing.Size(1666, 830);
             this.gidenirsaliye.TabIndex = 6;
             this.gidenirsaliye.Text = "Giden İrsaliye";
             this.gidenirsaliye.UseVisualStyleBackColor = true;
@@ -787,20 +785,20 @@
             this.gidenirsaliyedata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gidenirsaliyedata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gidenirsaliyedata.Location = new System.Drawing.Point(0, 0);
-            this.gidenirsaliyedata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gidenirsaliyedata.Margin = new System.Windows.Forms.Padding(2);
             this.gidenirsaliyedata.Name = "gidenirsaliyedata";
             this.gidenirsaliyedata.RowHeadersWidth = 51;
             this.gidenirsaliyedata.RowTemplate.Height = 24;
-            this.gidenirsaliyedata.Size = new System.Drawing.Size(1429, 731);
+            this.gidenirsaliyedata.Size = new System.Drawing.Size(1665, 826);
             this.gidenirsaliyedata.TabIndex = 1;
             // 
             // gidenirsaliyeiade
             // 
             this.gidenirsaliyeiade.Controls.Add(this.gidenirsaliyeiadedata);
             this.gidenirsaliyeiade.Location = new System.Drawing.Point(4, 24);
-            this.gidenirsaliyeiade.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gidenirsaliyeiade.Margin = new System.Windows.Forms.Padding(2);
             this.gidenirsaliyeiade.Name = "gidenirsaliyeiade";
-            this.gidenirsaliyeiade.Size = new System.Drawing.Size(1429, 731);
+            this.gidenirsaliyeiade.Size = new System.Drawing.Size(1666, 830);
             this.gidenirsaliyeiade.TabIndex = 8;
             this.gidenirsaliyeiade.Text = "Giden İrsaliye İade";
             this.gidenirsaliyeiade.UseVisualStyleBackColor = true;
@@ -810,20 +808,20 @@
             this.gidenirsaliyeiadedata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gidenirsaliyeiadedata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gidenirsaliyeiadedata.Location = new System.Drawing.Point(0, 0);
-            this.gidenirsaliyeiadedata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gidenirsaliyeiadedata.Margin = new System.Windows.Forms.Padding(2);
             this.gidenirsaliyeiadedata.Name = "gidenirsaliyeiadedata";
             this.gidenirsaliyeiadedata.RowHeadersWidth = 51;
             this.gidenirsaliyeiadedata.RowTemplate.Height = 24;
-            this.gidenirsaliyeiadedata.Size = new System.Drawing.Size(1429, 731);
+            this.gidenirsaliyeiadedata.Size = new System.Drawing.Size(1665, 826);
             this.gidenirsaliyeiadedata.TabIndex = 1;
             // 
             // Satış
             // 
             this.Satış.Controls.Add(this.satısTabControl);
             this.Satış.Location = new System.Drawing.Point(4, 74);
-            this.Satış.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Satış.Margin = new System.Windows.Forms.Padding(2);
             this.Satış.Name = "Satış";
-            this.Satış.Size = new System.Drawing.Size(1435, 744);
+            this.Satış.Size = new System.Drawing.Size(1676, 871);
             this.Satış.TabIndex = 4;
             this.Satış.Text = "Satış";
             this.Satış.UseVisualStyleBackColor = true;
@@ -835,10 +833,10 @@
             this.satısTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.satısTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.satısTabControl.Location = new System.Drawing.Point(0, 0);
-            this.satısTabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.satısTabControl.Margin = new System.Windows.Forms.Padding(2);
             this.satısTabControl.Name = "satısTabControl";
             this.satısTabControl.SelectedIndex = 0;
-            this.satısTabControl.Size = new System.Drawing.Size(1435, 744);
+            this.satısTabControl.Size = new System.Drawing.Size(1676, 871);
             this.satısTabControl.TabIndex = 0;
             this.satısTabControl.Enter += new System.EventHandler(this.satısTabControl_Enter);
             this.satısTabControl.Leave += new System.EventHandler(this.cariler_Leave);
@@ -847,10 +845,10 @@
             // 
             this.satısSiparisleri.Controls.Add(this.Satıssiparisdata);
             this.satısSiparisleri.Location = new System.Drawing.Point(4, 24);
-            this.satısSiparisleri.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.satısSiparisleri.Margin = new System.Windows.Forms.Padding(2);
             this.satısSiparisleri.Name = "satısSiparisleri";
-            this.satısSiparisleri.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.satısSiparisleri.Size = new System.Drawing.Size(1427, 716);
+            this.satısSiparisleri.Padding = new System.Windows.Forms.Padding(2);
+            this.satısSiparisleri.Size = new System.Drawing.Size(1668, 843);
             this.satısSiparisleri.TabIndex = 0;
             this.satısSiparisleri.Text = "Satış Siparişleri";
             this.satısSiparisleri.UseVisualStyleBackColor = true;
@@ -861,21 +859,21 @@
             this.Satıssiparisdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Satıssiparisdata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Satıssiparisdata.Location = new System.Drawing.Point(2, 2);
-            this.Satıssiparisdata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Satıssiparisdata.Margin = new System.Windows.Forms.Padding(2);
             this.Satıssiparisdata.Name = "Satıssiparisdata";
             this.Satıssiparisdata.RowHeadersWidth = 51;
             this.Satıssiparisdata.RowTemplate.Height = 24;
-            this.Satıssiparisdata.Size = new System.Drawing.Size(1423, 712);
+            this.Satıssiparisdata.Size = new System.Drawing.Size(1664, 839);
             this.Satıssiparisdata.TabIndex = 0;
             // 
             // onteklif
             // 
             this.onteklif.Controls.Add(this.onteklifdata);
             this.onteklif.Location = new System.Drawing.Point(4, 24);
-            this.onteklif.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.onteklif.Margin = new System.Windows.Forms.Padding(2);
             this.onteklif.Name = "onteklif";
-            this.onteklif.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.onteklif.Size = new System.Drawing.Size(1429, 731);
+            this.onteklif.Padding = new System.Windows.Forms.Padding(2);
+            this.onteklif.Size = new System.Drawing.Size(1668, 843);
             this.onteklif.TabIndex = 1;
             this.onteklif.Text = "Ön Teklifler";
             this.onteklif.UseVisualStyleBackColor = true;
@@ -885,20 +883,20 @@
             this.onteklifdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.onteklifdata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.onteklifdata.Location = new System.Drawing.Point(2, 2);
-            this.onteklifdata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.onteklifdata.Margin = new System.Windows.Forms.Padding(2);
             this.onteklifdata.Name = "onteklifdata";
             this.onteklifdata.RowHeadersWidth = 51;
             this.onteklifdata.RowTemplate.Height = 24;
-            this.onteklifdata.Size = new System.Drawing.Size(1425, 727);
+            this.onteklifdata.Size = new System.Drawing.Size(1664, 839);
             this.onteklifdata.TabIndex = 0;
             // 
             // SatınAlma
             // 
             this.SatınAlma.Controls.Add(this.urunlerTabControl);
             this.SatınAlma.Location = new System.Drawing.Point(4, 74);
-            this.SatınAlma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SatınAlma.Margin = new System.Windows.Forms.Padding(2);
             this.SatınAlma.Name = "SatınAlma";
-            this.SatınAlma.Size = new System.Drawing.Size(1435, 744);
+            this.SatınAlma.Size = new System.Drawing.Size(1676, 871);
             this.SatınAlma.TabIndex = 5;
             this.SatınAlma.Text = "Satın Alma";
             this.SatınAlma.UseVisualStyleBackColor = true;
@@ -910,19 +908,19 @@
             this.urunlerTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.urunlerTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.urunlerTabControl.Location = new System.Drawing.Point(0, 0);
-            this.urunlerTabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.urunlerTabControl.Margin = new System.Windows.Forms.Padding(2);
             this.urunlerTabControl.Name = "urunlerTabControl";
             this.urunlerTabControl.SelectedIndex = 0;
-            this.urunlerTabControl.Size = new System.Drawing.Size(1435, 744);
+            this.urunlerTabControl.Size = new System.Drawing.Size(1676, 871);
             this.urunlerTabControl.TabIndex = 0;
             // 
             // tabPage15
             // 
             this.tabPage15.Location = new System.Drawing.Point(4, 24);
-            this.tabPage15.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage15.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage15.Name = "tabPage15";
-            this.tabPage15.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage15.Size = new System.Drawing.Size(1427, 716);
+            this.tabPage15.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage15.Size = new System.Drawing.Size(1668, 843);
             this.tabPage15.TabIndex = 0;
             this.tabPage15.Text = "tabPage15";
             this.tabPage15.UseVisualStyleBackColor = true;
@@ -930,10 +928,10 @@
             // tabPage16
             // 
             this.tabPage16.Location = new System.Drawing.Point(4, 24);
-            this.tabPage16.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage16.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage16.Name = "tabPage16";
-            this.tabPage16.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage16.Size = new System.Drawing.Size(1429, 731);
+            this.tabPage16.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage16.Size = new System.Drawing.Size(1666, 830);
             this.tabPage16.TabIndex = 1;
             this.tabPage16.Text = "tabPage16";
             this.tabPage16.UseVisualStyleBackColor = true;
@@ -942,9 +940,9 @@
             // 
             this.Raporlar.Controls.Add(this.raporlarTabControl);
             this.Raporlar.Location = new System.Drawing.Point(4, 74);
-            this.Raporlar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Raporlar.Margin = new System.Windows.Forms.Padding(2);
             this.Raporlar.Name = "Raporlar";
-            this.Raporlar.Size = new System.Drawing.Size(1435, 744);
+            this.Raporlar.Size = new System.Drawing.Size(1676, 871);
             this.Raporlar.TabIndex = 6;
             this.Raporlar.Text = "Raporlar";
             this.Raporlar.UseVisualStyleBackColor = true;
@@ -956,19 +954,19 @@
             this.raporlarTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.raporlarTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.raporlarTabControl.Location = new System.Drawing.Point(0, 0);
-            this.raporlarTabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.raporlarTabControl.Margin = new System.Windows.Forms.Padding(2);
             this.raporlarTabControl.Name = "raporlarTabControl";
             this.raporlarTabControl.SelectedIndex = 0;
-            this.raporlarTabControl.Size = new System.Drawing.Size(1435, 744);
+            this.raporlarTabControl.Size = new System.Drawing.Size(1676, 871);
             this.raporlarTabControl.TabIndex = 0;
             // 
             // tabPage17
             // 
             this.tabPage17.Location = new System.Drawing.Point(4, 24);
-            this.tabPage17.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage17.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage17.Name = "tabPage17";
-            this.tabPage17.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage17.Size = new System.Drawing.Size(1427, 716);
+            this.tabPage17.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage17.Size = new System.Drawing.Size(1668, 843);
             this.tabPage17.TabIndex = 0;
             this.tabPage17.Text = "tabPage17";
             this.tabPage17.UseVisualStyleBackColor = true;
@@ -976,10 +974,10 @@
             // tabPage18
             // 
             this.tabPage18.Location = new System.Drawing.Point(4, 24);
-            this.tabPage18.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage18.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage18.Name = "tabPage18";
-            this.tabPage18.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.tabPage18.Size = new System.Drawing.Size(1429, 731);
+            this.tabPage18.Padding = new System.Windows.Forms.Padding(2);
+            this.tabPage18.Size = new System.Drawing.Size(1666, 830);
             this.tabPage18.TabIndex = 1;
             this.tabPage18.Text = "tabPage18";
             this.tabPage18.UseVisualStyleBackColor = true;
@@ -988,9 +986,9 @@
             // 
             this.personeller.Controls.Add(this.personelTabControl);
             this.personeller.Location = new System.Drawing.Point(4, 74);
-            this.personeller.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.personeller.Margin = new System.Windows.Forms.Padding(2);
             this.personeller.Name = "personeller";
-            this.personeller.Size = new System.Drawing.Size(1435, 744);
+            this.personeller.Size = new System.Drawing.Size(1676, 871);
             this.personeller.TabIndex = 7;
             this.personeller.Text = "Personeller";
             this.personeller.UseVisualStyleBackColor = true;
@@ -1003,20 +1001,20 @@
             this.personelTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.personelTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.personelTabControl.Location = new System.Drawing.Point(0, 0);
-            this.personelTabControl.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.personelTabControl.Margin = new System.Windows.Forms.Padding(2);
             this.personelTabControl.Name = "personelTabControl";
             this.personelTabControl.SelectedIndex = 0;
-            this.personelTabControl.Size = new System.Drawing.Size(1435, 744);
+            this.personelTabControl.Size = new System.Drawing.Size(1676, 871);
             this.personelTabControl.TabIndex = 0;
             // 
             // personel
             // 
             this.personel.Controls.Add(this.personeldata);
             this.personel.Location = new System.Drawing.Point(4, 24);
-            this.personel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.personel.Margin = new System.Windows.Forms.Padding(2);
             this.personel.Name = "personel";
-            this.personel.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.personel.Size = new System.Drawing.Size(1427, 716);
+            this.personel.Padding = new System.Windows.Forms.Padding(2);
+            this.personel.Size = new System.Drawing.Size(1668, 843);
             this.personel.TabIndex = 0;
             this.personel.Text = "Personeller";
             this.personel.UseVisualStyleBackColor = true;
@@ -1027,20 +1025,20 @@
             this.personeldata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.personeldata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.personeldata.Location = new System.Drawing.Point(2, 2);
-            this.personeldata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.personeldata.Margin = new System.Windows.Forms.Padding(2);
             this.personeldata.Name = "personeldata";
             this.personeldata.RowHeadersWidth = 51;
             this.personeldata.RowTemplate.Height = 24;
-            this.personeldata.Size = new System.Drawing.Size(1423, 712);
+            this.personeldata.Size = new System.Drawing.Size(1664, 839);
             this.personeldata.TabIndex = 0;
             // 
             // cariler
             // 
             this.cariler.Controls.Add(this.carihesapdata);
             this.cariler.Location = new System.Drawing.Point(4, 74);
-            this.cariler.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cariler.Margin = new System.Windows.Forms.Padding(2);
             this.cariler.Name = "cariler";
-            this.cariler.Size = new System.Drawing.Size(1435, 744);
+            this.cariler.Size = new System.Drawing.Size(1676, 871);
             this.cariler.TabIndex = 8;
             this.cariler.Text = "Cari Hesaplar";
             this.cariler.UseVisualStyleBackColor = true;
@@ -1053,11 +1051,11 @@
             this.carihesapdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.carihesapdata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.carihesapdata.Location = new System.Drawing.Point(0, 0);
-            this.carihesapdata.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.carihesapdata.Margin = new System.Windows.Forms.Padding(2);
             this.carihesapdata.Name = "carihesapdata";
             this.carihesapdata.RowHeadersWidth = 51;
             this.carihesapdata.RowTemplate.Height = 24;
-            this.carihesapdata.Size = new System.Drawing.Size(1435, 744);
+            this.carihesapdata.Size = new System.Drawing.Size(1676, 871);
             this.carihesapdata.TabIndex = 0;
             // 
             // label1
@@ -1067,10 +1065,10 @@
             this.label1.BackColor = System.Drawing.Color.DimGray;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(1255, 7);
+            this.label1.Location = new System.Drawing.Point(1464, 8);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(285, 19);
+            this.label1.Size = new System.Drawing.Size(332, 22);
             this.label1.TabIndex = 2;
             this.label1.Text = "label1";
             // 
@@ -1081,10 +1079,10 @@
             this.label2.BackColor = System.Drawing.Color.DimGray;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(1310, 41);
+            this.label2.Location = new System.Drawing.Point(1528, 47);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(288, 19);
+            this.label2.Size = new System.Drawing.Size(336, 22);
             this.label2.TabIndex = 3;
             this.label2.Text = "label2";
             // 
@@ -1098,10 +1096,10 @@
             this.panel1.Controls.Add(this.delete);
             this.panel1.Controls.Add(this.eklebtn);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 822);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Location = new System.Drawing.Point(0, 949);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1443, 35);
+            this.panel1.Size = new System.Drawing.Size(1684, 40);
             this.panel1.TabIndex = 1;
             // 
             // cikis
@@ -1112,9 +1110,10 @@
             this.cikis.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.cikis.FlatAppearance.BorderSize = 0;
             this.cikis.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cikis.Location = new System.Drawing.Point(1377, 0);
+            this.cikis.Location = new System.Drawing.Point(1606, 0);
+            this.cikis.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.cikis.Name = "cikis";
-            this.cikis.Size = new System.Drawing.Size(56, 35);
+            this.cikis.Size = new System.Drawing.Size(65, 40);
             this.cikis.TabIndex = 5;
             this.cikis.UseVisualStyleBackColor = false;
             this.cikis.Click += new System.EventHandler(this.cikis_Click);
@@ -1126,9 +1125,10 @@
             this.arabtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.arabtn.FlatAppearance.BorderSize = 0;
             this.arabtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.arabtn.Location = new System.Drawing.Point(251, 0);
+            this.arabtn.Location = new System.Drawing.Point(293, 0);
+            this.arabtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.arabtn.Name = "arabtn";
-            this.arabtn.Size = new System.Drawing.Size(56, 35);
+            this.arabtn.Size = new System.Drawing.Size(65, 40);
             this.arabtn.TabIndex = 4;
             this.arabtn.UseVisualStyleBackColor = false;
             this.arabtn.Click += new System.EventHandler(this.arabtn_Click);
@@ -1140,9 +1140,10 @@
             this.refresh.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.refresh.FlatAppearance.BorderSize = 0;
             this.refresh.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.refresh.Location = new System.Drawing.Point(189, 0);
+            this.refresh.Location = new System.Drawing.Point(220, 0);
+            this.refresh.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.refresh.Name = "refresh";
-            this.refresh.Size = new System.Drawing.Size(56, 35);
+            this.refresh.Size = new System.Drawing.Size(65, 40);
             this.refresh.TabIndex = 3;
             this.refresh.UseVisualStyleBackColor = false;
             this.refresh.Click += new System.EventHandler(this.refresh_Click);
@@ -1154,9 +1155,10 @@
             this.update.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.update.FlatAppearance.BorderSize = 0;
             this.update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.update.Location = new System.Drawing.Point(127, 0);
+            this.update.Location = new System.Drawing.Point(148, 0);
+            this.update.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.update.Name = "update";
-            this.update.Size = new System.Drawing.Size(56, 35);
+            this.update.Size = new System.Drawing.Size(65, 40);
             this.update.TabIndex = 2;
             this.update.UseVisualStyleBackColor = false;
             this.update.Click += new System.EventHandler(this.update_Click);
@@ -1168,9 +1170,10 @@
             this.delete.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.delete.FlatAppearance.BorderSize = 0;
             this.delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.delete.Location = new System.Drawing.Point(65, 0);
+            this.delete.Location = new System.Drawing.Point(76, 0);
+            this.delete.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.delete.Name = "delete";
-            this.delete.Size = new System.Drawing.Size(56, 35);
+            this.delete.Size = new System.Drawing.Size(65, 40);
             this.delete.TabIndex = 1;
             this.delete.UseVisualStyleBackColor = false;
             // 
@@ -1182,9 +1185,10 @@
             this.eklebtn.FlatAppearance.BorderSize = 0;
             this.eklebtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.eklebtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.eklebtn.Location = new System.Drawing.Point(3, 0);
+            this.eklebtn.Location = new System.Drawing.Point(4, 0);
+            this.eklebtn.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.eklebtn.Name = "eklebtn";
-            this.eklebtn.Size = new System.Drawing.Size(56, 35);
+            this.eklebtn.Size = new System.Drawing.Size(65, 40);
             this.eklebtn.TabIndex = 0;
             this.eklebtn.UseVisualStyleBackColor = false;
             this.eklebtn.Click += new System.EventHandler(this.eklebtn_Click);
@@ -1239,19 +1243,20 @@
             // 
             // Ana
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.ClientSize = new System.Drawing.Size(1443, 857);
+            this.ClientSize = new System.Drawing.Size(1684, 989);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AnaTabControl);
             this.Controls.Add(this.panel1);
+            this.Font = new System.Drawing.Font("Montserrat Thin Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.HelpButton = true;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Ana";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Erp Programı";

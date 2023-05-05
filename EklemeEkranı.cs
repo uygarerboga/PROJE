@@ -24,13 +24,13 @@ namespace ERP_PROJESİ
         #endregion
         public List<TextBox> textBoxes = new List<TextBox>();
         public List<ComboBox> ComboBoxes = new List<ComboBox>(); 
-        public List<String> Names = new List<String>();
-        public List<uretimemirleri> uretimemirleri = new List<uretimemirleri>();
         public string selectedPage { get; set; }
         string giriskelimesi;
-        public EklemeEkranı()
+        Ana ana = new Ana();
+        public EklemeEkranı(Ana ana)
         {
             InitializeComponent();
+            this.ana = ana; 
         }
 
         public EklemeEkranı(string selectedPage)
@@ -41,10 +41,8 @@ namespace ERP_PROJESİ
 
         public void EklemeEkranı_Load(object sender, EventArgs e)
         {
-            Font font = new Font("Montserrat", 9f, FontStyle.Bold);
-            this.Font = font;
-            this.Size = new Size(1000, 600);
-            
+
+            this.Text = selectedPage;
             BackColor = ColorTranslator.FromHtml("#eeeeee");
             switch (selectedPage)
             {
@@ -107,9 +105,9 @@ namespace ERP_PROJESİ
                     adettxt.Location = new Point(250, 300);
                     adettxt.Size = new Size(250, 50);
                     Controls.Add(adettxt);
-                    ListBox hammadelistesi = new ListBox();
+                    DataGridView hammadelistesi = new DataGridView();
                     hammadelistesi.Location = new Point(600,50);
-                    hammadelistesi.Size = new Size(300,280);
+                    hammadelistesi.Size = new Size(200,250);
                     hammadelistesi.Location = new Point(600, 50);
                     hammadelistesi.Size = new Size(300, 280);
                     Controls.Add(hammadelistesi);
@@ -666,14 +664,10 @@ namespace ERP_PROJESİ
             this.Close();
             
         }
-        private void EklemeEkranı_FormClosing(object sender, FormClosingEventArgs e)
+        public void EklemeEkranı_FormClosing(object sender, FormClosingEventArgs e)
         {
-
+            ana.Enabled = true;
         }
 
-        public void debugid()
-        {
-            MessageBox.Show(selectedid.ToString());
-        }
     }
 }

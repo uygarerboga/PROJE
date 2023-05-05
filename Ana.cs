@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Drawing;
+using System.Drawing.Text;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,13 +37,86 @@ namespace ERP_PROJESİ
             InitializeComponent();
             UretimEmriListesi();
             satissiparisleriListesi();
-            
+
         }
         #region form load
 
         private void Ana_Load(object sender, EventArgs e)
         {
+            #region Font ekleme
 
+            PrivateFontCollection pfc = new PrivateFontCollection();
+            pfc.AddFontFile(@"..\..\Icons\Montserrat-VariableFont_wght.ttf");
+            foreach (Control c in this.Controls)
+            {
+                c.Font = new Font(pfc.Families[0], 12, FontStyle.Bold);
+                
+            }
+
+            imalatTabPage.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            muhasebeTabControl.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            urunlerTabControl.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            satınAlmaTabControl.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            satısTabControl.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            personelTabControl.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            cariler.Font = new Font(pfc.Families[0], 10, FontStyle.Regular);
+            raporlarTabControl.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            label3.Font = new Font(pfc.Families[0], 48, FontStyle.Bold);
+
+            foreach (Control a in imalatTabPage.TabPages)
+            {
+                a.Font = new Font(pfc.Families[0], 10, FontStyle.Regular);
+            }
+            foreach (Control a in urunlerTabControl.TabPages)
+            {
+                a.Font = new Font(pfc.Families[0], 10, FontStyle.Regular);
+            }
+            foreach (Control a in muhasebeTabControl.TabPages)
+            {
+                a.Font = new Font(pfc.Families[0], 10, FontStyle.Regular);
+            }
+            foreach (Control a in satınAlmaTabControl.TabPages)
+            {
+                a.Font = new Font(pfc.Families[0], 10, FontStyle.Regular);
+            }
+            foreach (Control a in satısTabControl.TabPages)
+            {
+                a.Font = new Font(pfc.Families[0], 10, FontStyle.Regular);
+            }
+            foreach (Control a in raporlarTabControl.TabPages)
+            {
+                a.Font = new Font(pfc.Families[0], 10, FontStyle.Regular);
+            }
+            foreach (Control a in personelTabControl.TabPages)
+            {
+                a.Font = new Font(pfc.Families[0], 10, FontStyle.Regular);
+            }
+
+            uretimemridata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            imalatdata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            makinadata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            gunlukdata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            operasyondata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            rotadata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            hakedisdata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            satinalimfaturasidata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            satinaidedata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            satisfaturalaridata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            satisiadedata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            Ticaridata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            mamuldata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            ymamuldata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            hammaddedata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            gelenirsaliyedata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            gidenirsaliyedata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            gelenirsaliyeiadedata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            gidenirsaliyedata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            Satıssiparisdata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            onteklifdata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            personeldata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+            carihesapdata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
+
+            #endregion
             timer1.Start();
             BackColor = ColorTranslator.FromHtml("#626262");
             AnaTabControl.Dock = DockStyle.Fill;
@@ -57,15 +131,15 @@ namespace ERP_PROJESİ
             iconsList.TransparentColor = Color.Blue;
             iconsList.ColorDepth = ColorDepth.Depth32Bit;
             iconsList.ImageSize = new Size(25, 25);
-            iconsList.Images.Add(Image.FromFile(@"C:\Users\mehme\OneDrive\Masaüstü\Projeler\ERP PROJESİ\Icons\home.png"));
-            iconsList.Images.Add(Image.FromFile(@"C:\Users\mehme\OneDrive\Masaüstü\Projeler\ERP PROJESİ\Icons\tool.png"));
-            iconsList.Images.Add(Image.FromFile(@"C:\Users\mehme\OneDrive\Masaüstü\Projeler\ERP PROJESİ\Icons\dollar.png"));
-            iconsList.Images.Add(Image.FromFile(@"C:\Users\mehme\OneDrive\Masaüstü\Projeler\ERP PROJESİ\Icons\cubes.png"));
-            iconsList.Images.Add(Image.FromFile(@"C:\Users\mehme\OneDrive\Masaüstü\Projeler\ERP PROJESİ\Icons\checkout.png"));
-            iconsList.Images.Add(Image.FromFile(@"C:\Users\mehme\OneDrive\Masaüstü\Projeler\ERP PROJESİ\Icons\delivery-box.png"));
-            iconsList.Images.Add(Image.FromFile(@"C:\Users\mehme\OneDrive\Masaüstü\Projeler\ERP PROJESİ\Icons\report.png"));
-            iconsList.Images.Add(Image.FromFile(@"C:\Users\mehme\OneDrive\Masaüstü\Projeler\ERP PROJESİ\Icons\employees.png"));
-            iconsList.Images.Add(Image.FromFile(@"C:\Users\mehme\OneDrive\Masaüstü\Projeler\ERP PROJESİ\Icons\customer-feedback.png"));
+            iconsList.Images.Add(Image.FromFile(@"..\..\Icons\home.png"));
+            iconsList.Images.Add(Image.FromFile(@"..\..\Icons\tool.png"));
+            iconsList.Images.Add(Image.FromFile(@"..\..\Icons\dollar.png"));
+            iconsList.Images.Add(Image.FromFile(@"..\..\Icons\cubes.png"));
+            iconsList.Images.Add(Image.FromFile(@"..\..\Icons\checkout.png"));
+            iconsList.Images.Add(Image.FromFile(@"..\..\Icons\delivery-box.png"));
+            iconsList.Images.Add(Image.FromFile(@"..\..\Icons\report.png"));
+            iconsList.Images.Add(Image.FromFile(@"..\..\Icons\employees.png"));
+            iconsList.Images.Add(Image.FromFile(@"..\..\Icons\customer-feedback.png"));
 
             #region Üst NavBar
             //yukarda eklenme sırasına göre görselleri koyuyor
@@ -276,7 +350,7 @@ namespace ERP_PROJESİ
             if (selectedPage != "")
             {
 
-                EklemeEkranı ekleekran = new EklemeEkranı();
+                EklemeEkranı ekleekran = new EklemeEkranı(this);
                 ekleekran.selectedPage = selectedPage;
                 ekleekran.ShowDialog();
                 
@@ -289,7 +363,7 @@ namespace ERP_PROJESİ
             if (selectedPage != "")
             {
 
-                EklemeEkranı ekleekran = new EklemeEkranı();
+                EklemeEkranı ekleekran = new EklemeEkranı(this);
                 ekleekran.selectedPage = selectedPage;
                 ekleekran.ShowDialog();
             }
@@ -397,6 +471,10 @@ namespace ERP_PROJESİ
         #region Üretim Emri
         public void UretimEmriListesi()
         {
+            if (SqlCon.State == ConnectionState.Closed)
+            {
+                SqlCon.Open();
+            }
             List<uretimemirleri> list = SqlCon.Query<uretimemirleri>("select * from Uretim_Emirleri u inner join Calisanlar_ c on c.calisanid = u.calısanID inner join Urun_Tablosu urun on urun.urunID = u.cıkanurunID where uretimemriID like '%" + arama + "%'", SqlCon).ToList<uretimemirleri>();
             uretimemridata.DataSource = list;
             uretimemirlerilist = list;
@@ -412,11 +490,19 @@ namespace ERP_PROJESİ
             uretimemridata.Columns[9].HeaderText = "Üretimin Durumu";
             uretimemridata.Columns[10].Visible = false;
             arama = null;
+            if (SqlCon.State == ConnectionState.Open)
+            {
+                SqlCon.Close();
+            }
         }
         #endregion
         #region Makinalar
         public void MakinaListesi()
         {
+            if (SqlCon.State == ConnectionState.Closed)
+            {
+                SqlCon.Open();
+            }
             List<Makineler> list = SqlCon.Query<Makineler>("select * from Makineler where makineadi like '%" + arama + "%'", SqlCon).ToList<Makineler>();
             makinadata.DataSource = list;
             makinadata.Columns[0].Visible = false;
@@ -426,11 +512,19 @@ namespace ERP_PROJESİ
             makinadata.Columns[3].HeaderText = "Makinanın Bakım Tarihi";
             makinadata.Columns[4].HeaderText = "Makinanın Açıklaması";
             arama = null;
+            if (SqlCon.State == ConnectionState.Open)
+            {
+                SqlCon.Close();
+            }
         }
         #endregion
         #region imalatçı
         public void İmalatciListesi()
         {
+            if (SqlCon.State == ConnectionState.Closed)
+            {
+                SqlCon.Open();
+            }
             List<İmalatçı> list = SqlCon.Query<İmalatçı>("select * from Calisanlar_ where ünvanID = 2 and calisanadi Like '%" + arama +"%'", SqlCon).ToList<İmalatçı>();
             imalatdata.DataSource = list;
             imalatdata.Columns[0].Visible = false;
@@ -440,22 +534,38 @@ namespace ERP_PROJESİ
             imalatdata.Columns[3].HeaderText = "İşe Giriş Tarihi";
             imalatdata.Columns[4].HeaderText = "Telefon";
             arama = null;
+            if (SqlCon.State == ConnectionState.Open)
+            {
+                SqlCon.Close();
+            }
         }
         #endregion
         #region Operasyon
         public void OperasyonListesi()
         {
+            if (SqlCon.State == ConnectionState.Closed)
+            {
+                SqlCon.Open();
+            }
             List<Operasyonlar> list = SqlCon.Query<Operasyonlar>("select * from Operasyon where OperasyonAdi Like '%" + arama + "%'", SqlCon).ToList<Operasyonlar>();
             operasyondata.DataSource = list;
             operasyondata.Columns[0].Visible = false;
             operasyondata.Columns[1].HeaderText = "Operasyon Adı";
             operasyondata.Columns[2].Visible = false;
             arama = null;
+            if (SqlCon.State == ConnectionState.Open)
+            {
+                SqlCon.Close();
+            }
         }
         #endregion
         #region Rota
         public void rotaListele()
         {
+            if (SqlCon.State == ConnectionState.Closed)
+            {
+                SqlCon.Open();
+            }
             List<Rota> list = SqlCon.Query<Rota>("select * from Rota where rotaID Like '%" + arama + "%'", SqlCon).ToList<Rota>();
 
             rotadata.DataSource = list;
@@ -464,11 +574,19 @@ namespace ERP_PROJESİ
             rotadata.Columns[1].HeaderText = "Rotanın Açıklaması";
 
             arama = null;
+            if (SqlCon.State == ConnectionState.Open)
+            {
+                SqlCon.Close();
+            }
         }
         #endregion
         #region Günlük işlem Raporları
         public void gunlukislemListesi()
         {
+            if (SqlCon.State == ConnectionState.Closed)
+            {
+                SqlCon.Open();
+            }
             List<gunlukislemraporları> list = SqlCon.Query<gunlukislemraporları>("select * from [İSLEM RAPORU] ir \r\ninner join Urun_Tablosu urun on urun.urunID = ir.kullanılanmalzemeID \r\ninner join Calisanlar_ c on c.calisanid = ir.calisanid where islemID Like '%" + arama + "%'", SqlCon).ToList<gunlukislemraporları>();
 
             gunlukdata.DataSource = list;
@@ -480,6 +598,10 @@ namespace ERP_PROJESİ
             gunlukdata.Columns[5].Visible = false;
 
             arama = null;
+            if (SqlCon.State == ConnectionState.Open)
+            {
+                SqlCon.Close();
+            }
         }
         #endregion
 
@@ -492,6 +614,10 @@ namespace ERP_PROJESİ
         #region URUN
         public void urunlistele(string tür)
         {
+            if (SqlCon.State == ConnectionState.Closed)
+            {
+                SqlCon.Open();
+            }
             List<ürünler> list = SqlCon.Query<ürünler>("select * from Urun_Tablosu where urunturu = '" + tür + "' and urunadi Like '%" + arama + "%'", SqlCon).ToList<ürünler>();
             if (urunturu == "Ticari")
             {
@@ -536,6 +662,10 @@ namespace ERP_PROJESİ
                 hammaddedata.Columns[5].Visible = false;
             }
                 arama = null;
+            if (SqlCon.State == ConnectionState.Open)
+            {
+                SqlCon.Close();
+            }
         }
         #endregion
 
@@ -543,9 +673,18 @@ namespace ERP_PROJESİ
         #region Satış siparisleri
         public void satissiparisleriListesi()
         {
+            if (SqlCon.State == ConnectionState.Closed)
+            {
+                SqlCon.Open();
+            }
             List<Satışsipariş> list = SqlCon.Query<Satışsipariş>("select * from Satis_Siparisleri where gidenSiparisID Like '%" + arama + "%'", SqlCon).ToList<Satışsipariş>();
             Satıssiparisdata.DataSource = list;
             Satıssiparisdata.Columns[0].HeaderText = "";
+
+            if(SqlCon.State== ConnectionState.Open)
+            {
+                SqlCon.Close();
+            }
 
         }
         #endregion
@@ -562,9 +701,12 @@ namespace ERP_PROJESİ
         #region Personeller
         public void personelListele()
         {
-            
-            
-                List<Personel> list = SqlCon.Query<Personel>("select calisanid,calisanadi, calisansoyadi , u.unvanadi as [Ünvanı],isegiris, telefon  from Calisanlar_ c inner join Unvan u on u.UnvanID = c.ünvanID where calisanadi Like '%" + arama + "%'", SqlCon).ToList<Personel>();
+            if (SqlCon.State == ConnectionState.Closed)
+            {
+                SqlCon.Open();
+            }
+
+            List<Personel> list = SqlCon.Query<Personel>("select calisanid,calisanadi, calisansoyadi , u.unvanadi as [Ünvanı],isegiris, telefon  from Calisanlar_ c inner join Unvan u on u.UnvanID = c.ünvanID where calisanadi Like '%" + arama + "%'", SqlCon).ToList<Personel>();
                
                 personeldata.DataSource = list;
                 personeldata.Columns[1].HeaderText = "Çalışanın Adı";
@@ -576,7 +718,10 @@ namespace ERP_PROJESİ
                 personeldata.Columns[6].Visible = false;
 
             arama = null;
-            
+            if (SqlCon.State == ConnectionState.Open)
+            {
+                SqlCon.Close();
+            }
 
         }
         #endregion  
@@ -584,6 +729,10 @@ namespace ERP_PROJESİ
         #region Cariler
         public void CarileriListele()
         {
+            if (SqlCon.State == ConnectionState.Closed)
+            {
+                SqlCon.Open();
+            }
             List<Cariler> list = SqlCon.Query<Cariler>("select * from Cari_Hesaplar where CariAdi Like '%" + arama + "%'", SqlCon).ToList<Cariler>();
             carihesapdata.DataSource = list;
             carihesapdata.Columns[0].Visible = false;
@@ -597,56 +746,52 @@ namespace ERP_PROJESİ
             carihesapdata.Columns[8].HeaderText = "Carinin Türü";
             carihesapdata.Columns[9].Visible = false;
             arama = null;
+            if (SqlCon.State == ConnectionState.Open)
+            {
+                SqlCon.Close();
+            }
         }
         #endregion
 
         //Cariler tamam
         #endregion
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void uretimemridata_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-            
-        }
-
-        private void uretimemridata_Click(object sender, EventArgs e)
-        {
-           
-        }
 
         #region güncelleme ekranı
+        #region uretimemri
 
         private void uretimemridata_DoubleClick(object sender, EventArgs e)
         {
             //selected id öbür tarafa geçmiyor anasını sikim
             selectedid = int.Parse(uretimemridata.CurrentRow.Cells[0].Value.ToString());
-            EklemeEkranı ekleekran = new EklemeEkranı();
+            EklemeEkranı ekleekran = new EklemeEkranı(this);
             ekleekran.selectedPage = selectedPage;
             ekleekran.selectedid = selectedid;
             ekleekran.Show();
-            ekleekran.EklemeEkranı_Load(this, null);
+            this.Enabled = false;
             ekleekran.textBoxes[0].Text = uretimemridata.CurrentRow.Cells[1].Value.ToString();
-            ekleekran.debugid();
         }
-
-
         #endregion
+
+
 
         private void update_Click(object sender, EventArgs e)
         {
-            selectedid = int.Parse(uretimemridata.CurrentRow.Cells[0].Value.ToString());
-            EklemeEkranı ekleekran = new EklemeEkranı();
-            ekleekran.selectedPage = selectedPage;
-            ekleekran.selectedid = selectedid;
-            ekleekran.Show();
-            ekleekran.EklemeEkranı_Load(this, null);
-            ekleekran.textBoxes[0].Text = uretimemridata.CurrentRow.Cells[1].Value.ToString();
-            ekleekran.debugid();
+            switch (selectedPage)
+            {
+                case "üretimemri":
+                    selectedid = int.Parse(uretimemridata.CurrentRow.Cells[0].Value.ToString());
+                    EklemeEkranı ekleekran = new EklemeEkranı(this);
+                    ekleekran.selectedPage = selectedPage;
+                    ekleekran.selectedid = selectedid;
+                    ekleekran.ShowDialog();
+                    ekleekran.EklemeEkranı_Load(this, null);
+                    ekleekran.textBoxes[0].Text = uretimemridata.CurrentRow.Cells[1].Value.ToString();
+                    break;
+                default:
+                    break;
+            }
         }
+        #endregion
     }
 }
