@@ -70,6 +70,9 @@ namespace ERP_PROJESİ
                 case "satissipariş":
                     Ana.satissiparisleriListesi();
                     break;
+                case "kategori":
+                    Ana.kategoriListele();
+                    break;
             }
             }
         public Find(Ana ana)

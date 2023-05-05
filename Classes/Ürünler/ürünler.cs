@@ -14,10 +14,18 @@ namespace ERP_PROJESİ.Classes.Ürünler
 
         public string urunacıklaması { get; set; }
 
-        public int urunkategoriID { get; set; }
+        public string kategori { get; set; }
+        
+        
 
         public string urunturu { get; set; }
 
+        public int rafkodu { get; set; }
+
+        public int stok_miktarı { get; set; }
+
         public bool sil { get; set; }
+
+        public int urunkategoriID { get; set; }
     }
 }

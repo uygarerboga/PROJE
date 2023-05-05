@@ -81,16 +81,11 @@ namespace ERP_PROJESİ
                 reader = SqlCon.ExecuteReader("Parola", param, commandType: CommandType.StoredProcedure);
                 if (reader.Read())
                 {
-                    if (reader.GetString(0) == username)
-                    {
-                        if (reader.GetString(1) == password)
-                        {
+                   
                             Ana anaa = new Ana();
                             this.Hide();
                             anaa.ShowDialog();
-                        }
-
-                    }
+                  
 
 
                 }else { MessageBox.Show("Şifre hatalı"); }

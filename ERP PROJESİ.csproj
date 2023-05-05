@@ -78,6 +78,7 @@
     </Compile>
     <Compile Include="Classes\Cariler.cs" />
     <Compile Include="Classes\Satış\Satışsipariş.cs" />
+    <Compile Include="Classes\Ürünler\kategori.cs" />
     <Compile Include="Classes\Ürünler\ürünler.cs" />
     <Compile Include="Classes\İmalat\gunlukislemraporları.cs" />
     <Compile Include="Classes\İmalat\makinalar.cs" />
