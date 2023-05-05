@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using Dapper;
 using ERP_PROJESİ.Classes;
 using ERP_PROJESİ.Classes.İmalat;
+using ERP_PROJESİ.Classes.Satış;
 using ERP_PROJESİ.Classes.Ürünler;
 
 namespace ERP_PROJESİ
@@ -22,13 +23,19 @@ namespace ERP_PROJESİ
         SqlConnection SqlCon = new SqlConnection(@"Data Source=DESKTOP-PRMBC7J; initial Catalog = ERP; Integrated Security = True");
         public string selectedPage { get; set; }
 
+        public int selectedid { get; set; }
+
         public string arama;
 
         public string urunturu;
 
+        EklemeEkranı Eklemeekranı = new EklemeEkranı();
+        List<uretimemirleri> uretimemirlerilist = new List<uretimemirleri>();
         public Ana()
         {
             InitializeComponent();
+            UretimEmriListesi();
+            satissiparisleriListesi();
         }
         #region form load
 
@@ -100,6 +107,7 @@ namespace ERP_PROJESİ
         {
             AnaTabControl.ContextMenuStrip = contextMenuStrip1;
             selectedPage = "üretimemri";
+            UretimEmriListesi();
         }
 
 
@@ -130,6 +138,7 @@ namespace ERP_PROJESİ
         {
             AnaTabControl.ContextMenuStrip = contextMenuStrip1;
             selectedPage = "günlükraporekle";
+            gunlukislemListesi();
         }
         #endregion
         #region operasyon
@@ -146,7 +155,7 @@ namespace ERP_PROJESİ
         
         private void imalatcı_Enter(object sender, EventArgs e)
         {
-            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
+            AnaTabControl.ContextMenuStrip = null;
             selectedPage = "imalatçı";
             İmalatciListesi();
         }
@@ -247,6 +256,14 @@ namespace ERP_PROJESİ
             AnaTabControl.ContextMenuStrip = null;
         }
         #endregion
+        #region Satış siparişleri
+        private void satısTabControl_Enter(object sender, EventArgs e)
+        {
+            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
+            selectedPage = "satissipariş";
+            satissiparisleriListesi();
+        }
+        #endregion
 
         #endregion
         #region işlevler (ekleme-çıkarma-arama)
@@ -256,9 +273,12 @@ namespace ERP_PROJESİ
         {
             if (selectedPage != "")
             {
-                EklemeEkranı ekle = new EklemeEkranı();
-                ekle.selectedPage = selectedPage;   
-                ekle.ShowDialog();
+
+                Eklemeekranı.selectedid = selectedid;
+                Eklemeekranı.selectedPage = selectedPage;
+                Eklemeekranı.ShowDialog();
+                Eklemeekranı.uretimemirleri = uretimemirlerilist;
+                
             }
 
 
@@ -267,13 +287,18 @@ namespace ERP_PROJESİ
         {
             if (selectedPage != "")
             {
-                EklemeEkranı ekle = new EklemeEkranı();
-                ekle.selectedPage = selectedPage;
-                ekle.ShowDialog();
-
+                
+                Eklemeekranı.selectedid = selectedid;
+                Eklemeekranı.selectedPage = selectedPage;
+                Eklemeekranı.ShowDialog();
+                Eklemeekranı.uretimemirleri = uretimemirlerilist;
             }
 
         }
+
+        #region veri seçme
+
+        #endregion
         #endregion
         #region find ekranı
         //find ekranını açar
@@ -329,6 +354,16 @@ namespace ERP_PROJESİ
                 case "rotalar":
                     rotaListele();
                     break;
+                case "üretimemri":
+                    UretimEmriListesi();
+                    break;
+                case "günlükraporekle":
+                    gunlukislemListesi();
+                    break;
+                case "satissipariş":
+                    satissiparisleriListesi();
+                    break;
+
 
 
 
@@ -360,7 +395,24 @@ namespace ERP_PROJESİ
         #region SQL Listeleme
         #region İmalat
         #region Üretim Emri
-        
+        public void UretimEmriListesi()
+        {
+            List<uretimemirleri> list = SqlCon.Query<uretimemirleri>("select * from Uretim_Emirleri u inner join Calisanlar_ c on c.calisanid = u.calısanID inner join Urun_Tablosu urun on urun.urunID = u.cıkanurunID where uretimemriID like '%" + arama + "%'", SqlCon).ToList<uretimemirleri>();
+            uretimemridata.DataSource = list;
+            uretimemirlerilist = list;
+            uretimemridata.Columns[0].HeaderText = "Kodu";
+            uretimemridata.Columns[1].HeaderText = "Çalışan";
+            uretimemridata.Columns[2].HeaderText = "Veriliş Tarihi";
+            uretimemridata.Columns[3].HeaderText = "Başlangıç Tarihi";
+            uretimemridata.Columns[4].HeaderText = "Bitiş Tarihi";
+            uretimemridata.Columns[5].HeaderText = "Planlanan Bitiş Tarihi";
+            uretimemridata.Columns[6].HeaderText = "Siparişin ID'si";
+            uretimemridata.Columns[7].HeaderText = "Ürün Adı";
+            uretimemridata.Columns[8].HeaderText = "Rotanın ID'si";
+            uretimemridata.Columns[9].HeaderText = "Üretimin Durumu";
+            uretimemridata.Columns[10].Visible = false;
+            arama = null;
+        }
         #endregion
         #region Makinalar
         public void MakinaListesi()
@@ -414,7 +466,22 @@ namespace ERP_PROJESİ
             arama = null;
         }
         #endregion
+        #region Günlük işlem Raporları
+        public void gunlukislemListesi()
+        {
+            List<gunlukislemraporları> list = SqlCon.Query<gunlukislemraporları>("select * from [İSLEM RAPORU] ir \r\ninner join Urun_Tablosu urun on urun.urunID = ir.kullanılanmalzemeID \r\ninner join Calisanlar_ c on c.calisanid = ir.calisanid where islemID Like '%" + arama + "%'", SqlCon).ToList<gunlukislemraporları>();
 
+            gunlukdata.DataSource = list;
+            gunlukdata.Columns[0].HeaderText = "İşlem ID'si";
+            gunlukdata.Columns[1].HeaderText = "Operasyon ID'si";
+            gunlukdata.Columns[2].HeaderText = "Kullanılan Makina";
+            gunlukdata.Columns[3].HeaderText = "Ürün Adı";
+            gunlukdata.Columns[4].HeaderText = "Çalışan";
+            gunlukdata.Columns[5].Visible = false;
+
+            arama = null;
+        }
+        #endregion
 
         #endregion
 
@@ -473,7 +540,15 @@ namespace ERP_PROJESİ
         #endregion
 
         #region Satış
+        #region Satış siparisleri
+        public void satissiparisleriListesi()
+        {
+            List<Satışsipariş> list = SqlCon.Query<Satışsipariş>("select * from Satis_Siparisleri where gidenSiparisID Like '%" + arama + "%'", SqlCon).ToList<Satışsipariş>();
+            Satıssiparisdata.DataSource = list;
+            Satıssiparisdata.Columns[0].HeaderText = "";
 
+        }
+        #endregion
         #endregion
 
         #region Satın Alma
@@ -533,6 +608,32 @@ namespace ERP_PROJESİ
 
         }
 
+        private void uretimemridata_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+            
+        }
+
+        private void uretimemridata_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void uretimemridata_DoubleClick(object sender, EventArgs e)
+        {
+            //selected id öbür tarafa geçmiyor anasını sikim
+
+            selectedid = int.Parse(uretimemridata.CurrentRow.Cells[0].Value.ToString());
+
+            if (selectedPage != "")
+            {
+                EklemeEkranı aa = new EklemeEkranı();
+                aa.selectedid = selectedid;
+                aa.selectedPage = selectedPage;
+                aa.ShowDialog();
+                aa.uretimemirleri = uretimemirlerilist;
+                
+            }
+        }
     }
 }

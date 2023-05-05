@@ -37,15 +37,6 @@ namespace ERP_PROJESİ
 
         private void aramatxt_TextChanged(object sender, EventArgs e)
         {
-
-        }
-        public Find(Ana ana)
-        {
-            this.Ana = ana;
-            InitializeComponent();
-        }
-        private void Find_FormClosing(object sender, FormClosingEventArgs e)
-        {
             Ana.arama = aramatxt.Text;
             switch (Ana.selectedPage)
             {
@@ -70,8 +61,27 @@ namespace ERP_PROJESİ
                 case "rotalar":
                     Ana.rotaListele();
                     break;
-
+                case "üretimemri":
+                    Ana.UretimEmriListesi();
+                    break;
+                case "günlükraporekle":
+                    Ana.gunlukislemListesi();
+                    break;
+                case "satissipariş":
+                    Ana.satissiparisleriListesi();
+                    break;
             }
+            }
+        public Find(Ana ana)
+        {
+            this.Ana = ana;
+            InitializeComponent();
+        }
+        private void Find_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
+
+
         }
 
         private void Find_Load(object sender, EventArgs e)

@@ -36,6 +36,7 @@
             this.İmalat = new System.Windows.Forms.TabPage();
             this.imalatTabPage = new System.Windows.Forms.TabControl();
             this.uretimEmirleri = new System.Windows.Forms.TabPage();
+            this.uretimemridata = new System.Windows.Forms.DataGridView();
             this.imalatcı = new System.Windows.Forms.TabPage();
             this.imalatdata = new System.Windows.Forms.DataGridView();
             this.makinalar = new System.Windows.Forms.TabPage();
@@ -112,13 +113,13 @@
             this.güncelle = new System.Windows.Forms.ToolStripMenuItem();
             this.yenile = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.wewew = new System.Windows.Forms.DataGridView();
             this.AnaTabControl.SuspendLayout();
             this.AnaSayfa.SuspendLayout();
             this.anaSayfaPaneli.SuspendLayout();
             this.İmalat.SuspendLayout();
             this.imalatTabPage.SuspendLayout();
             this.uretimEmirleri.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.uretimemridata)).BeginInit();
             this.imalatcı.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imalatdata)).BeginInit();
             this.makinalar.SuspendLayout();
@@ -177,7 +178,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.carihesapdata)).BeginInit();
             this.panel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.wewew)).BeginInit();
             this.SuspendLayout();
             // 
             // AnaTabControl
@@ -275,12 +275,11 @@
             this.imalatTabPage.Size = new System.Drawing.Size(1916, 934);
             this.imalatTabPage.SizeMode = System.Windows.Forms.TabSizeMode.FillToRight;
             this.imalatTabPage.TabIndex = 0;
-            this.imalatTabPage.Click += new System.EventHandler(this.uretimEmirleri_Enter);
             // 
             // uretimEmirleri
             // 
             this.uretimEmirleri.BackColor = System.Drawing.Color.White;
-            this.uretimEmirleri.Controls.Add(this.wewew);
+            this.uretimEmirleri.Controls.Add(this.uretimemridata);
             this.uretimEmirleri.Location = new System.Drawing.Point(4, 30);
             this.uretimEmirleri.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.uretimEmirleri.Name = "uretimEmirleri";
@@ -290,6 +289,21 @@
             this.uretimEmirleri.Text = "Üretim Emirleri";
             this.uretimEmirleri.Enter += new System.EventHandler(this.uretimEmirleri_Enter);
             this.uretimEmirleri.Leave += new System.EventHandler(this.cariler_Leave);
+            // 
+            // uretimemridata
+            // 
+            this.uretimemridata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.uretimemridata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.uretimemridata.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.uretimemridata.Location = new System.Drawing.Point(3, 2);
+            this.uretimemridata.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.uretimemridata.Name = "uretimemridata";
+            this.uretimemridata.RowHeadersWidth = 51;
+            this.uretimemridata.RowTemplate.Height = 24;
+            this.uretimemridata.Size = new System.Drawing.Size(1902, 896);
+            this.uretimemridata.TabIndex = 1;
+            this.uretimemridata.Click += new System.EventHandler(this.uretimemridata_Click);
+            this.uretimemridata.DoubleClick += new System.EventHandler(this.uretimemridata_DoubleClick);
             // 
             // imalatcı
             // 
@@ -359,6 +373,7 @@
             // 
             // gunlukdata
             // 
+            this.gunlukdata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gunlukdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gunlukdata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gunlukdata.Location = new System.Drawing.Point(0, 0);
@@ -824,6 +839,8 @@
             this.satısTabControl.SelectedIndex = 0;
             this.satısTabControl.Size = new System.Drawing.Size(1916, 934);
             this.satısTabControl.TabIndex = 0;
+            this.satısTabControl.Enter += new System.EventHandler(this.satısTabControl_Enter);
+            this.satısTabControl.Leave += new System.EventHandler(this.cariler_Leave);
             // 
             // satısSiparisleri
             // 
@@ -839,6 +856,7 @@
             // 
             // Satıssiparisdata
             // 
+            this.Satıssiparisdata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Satıssiparisdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Satıssiparisdata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Satıssiparisdata.Location = new System.Drawing.Point(3, 2);
@@ -1221,19 +1239,6 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // wewew
-            // 
-            this.wewew.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.wewew.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.wewew.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.wewew.Location = new System.Drawing.Point(3, 2);
-            this.wewew.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.wewew.Name = "wewew";
-            this.wewew.RowHeadersWidth = 51;
-            this.wewew.RowTemplate.Height = 24;
-            this.wewew.Size = new System.Drawing.Size(1902, 896);
-            this.wewew.TabIndex = 1;
-            // 
             // Ana
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -1262,6 +1267,7 @@
             this.İmalat.ResumeLayout(false);
             this.imalatTabPage.ResumeLayout(false);
             this.uretimEmirleri.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.uretimemridata)).EndInit();
             this.imalatcı.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.imalatdata)).EndInit();
             this.makinalar.ResumeLayout(false);
@@ -1320,7 +1326,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.carihesapdata)).EndInit();
             this.panel1.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.wewew)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1410,6 +1415,6 @@
 
         private System.Windows.Forms.Button arabtn;
         private System.Windows.Forms.Button cikis;
-        private System.Windows.Forms.DataGridView wewew;
+        private System.Windows.Forms.DataGridView uretimemridata;
     }
 }

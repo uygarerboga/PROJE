@@ -77,7 +77,9 @@
       <DependentUpon>Ana.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Cariler.cs" />
+    <Compile Include="Classes\Satış\Satışsipariş.cs" />
     <Compile Include="Classes\Ürünler\ürünler.cs" />
+    <Compile Include="Classes\İmalat\gunlukislemraporları.cs" />
     <Compile Include="Classes\İmalat\makinalar.cs" />
     <Compile Include="Classes\Personel.cs" />
     <Compile Include="Classes\İmalat\Operasyonlar.cs" />

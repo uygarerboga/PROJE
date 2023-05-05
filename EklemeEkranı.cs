@@ -1,23 +1,37 @@
-﻿using System;
+﻿using ERP_PROJESİ.Classes.İmalat;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dapper;
+using ERP_PROJESİ.Classes;
+using ERP_PROJESİ.Classes.Satış;
+using ERP_PROJESİ.Classes.Ürünler;
 
 namespace ERP_PROJESİ
 {
     public partial class EklemeEkranı : Form
     {
+        public int selectedid { get; set; }
 
+        #region listler classlar için
+        #endregion
+        public List<TextBox> textBoxes = new List<TextBox>();
+        public List<ComboBox> ComboBoxes = new List<ComboBox>(); 
+        public List<String> Names = new List<String>();
+        public List<uretimemirleri> uretimemirleri = new List<uretimemirleri>();
         public string selectedPage { get; set; }
         string giriskelimesi;
         public EklemeEkranı()
         {
             InitializeComponent();
+            MessageBox.Show(selectedid.ToString());
         }
 
         private void EklemeEkranı_Load(object sender, EventArgs e)
@@ -61,6 +75,7 @@ namespace ERP_PROJESİ
                     siparisidtxt.Location = new Point(250, 150);
                     siparisidtxt.Size = new Size(250, 50);
                     Controls.Add((siparisidtxt));
+                    textBoxes.Add(siparisidtxt);
                     Label rotaID = new Label();
                     rotaID.Text = "Rota";
                     rotaID.Location = new Point(50, 200);
@@ -641,6 +656,8 @@ namespace ERP_PROJESİ
 
         void ekle(object sender, EventArgs e)
         {
+
+            textBoxes[0].Text = "GG!";
             MessageBox.Show("Veri Girildi");
             this.Close();
             
