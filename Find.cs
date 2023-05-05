@@ -16,7 +16,7 @@ namespace ERP_PROJESİ
     public partial class Find : Form
     {
         public string urunturu;
-        SqlConnection SqlCon = new SqlConnection(@"Data Source=DESKTOP-PRMBC7J; initial Catalog = ERP; Integrated Security = True");
+        SqlConnection SqlCon = new SqlConnection(@"Data Source=DESKTOP-THFGP40; initial Catalog = ERP; Integrated Security = True");
 
         Ana Ana;
         public string arama { get; set; }
@@ -88,5 +88,7 @@ namespace ERP_PROJESİ
         {
 
         }
+
+        
     }
 }

@@ -20,7 +20,7 @@ namespace ERP_PROJESİ
     public partial class Ana : Form
     {
         
-        SqlConnection SqlCon = new SqlConnection(@"Data Source=DESKTOP-PRMBC7J; initial Catalog = ERP; Integrated Security = True");
+        SqlConnection SqlCon = new SqlConnection(@"Data Source=DESKTOP-THFGP40; initial Catalog = ERP; Integrated Security = True");
         public string selectedPage { get; set; }
 
         public int selectedid { get; set; }
@@ -28,19 +28,21 @@ namespace ERP_PROJESİ
         public string arama;
 
         public string urunturu;
+        
 
-        EklemeEkranı Eklemeekranı = new EklemeEkranı();
         List<uretimemirleri> uretimemirlerilist = new List<uretimemirleri>();
         public Ana()
         {
             InitializeComponent();
             UretimEmriListesi();
             satissiparisleriListesi();
+            
         }
         #region form load
 
         private void Ana_Load(object sender, EventArgs e)
         {
+
             timer1.Start();
             BackColor = ColorTranslator.FromHtml("#626262");
             AnaTabControl.Dock = DockStyle.Fill;
@@ -49,7 +51,6 @@ namespace ERP_PROJESİ
             label2.Text = DateTime.Now.ToLongTimeString();
             label1.BackColor = ColorTranslator.FromHtml("#626262");
             label2.BackColor = ColorTranslator.FromHtml("#626262");
-            
 
             #region Icon Ekleme
             ImageList iconsList = new ImageList();
@@ -107,6 +108,7 @@ namespace ERP_PROJESİ
         {
             AnaTabControl.ContextMenuStrip = contextMenuStrip1;
             selectedPage = "üretimemri";
+
             UretimEmriListesi();
         }
 
@@ -274,10 +276,9 @@ namespace ERP_PROJESİ
             if (selectedPage != "")
             {
 
-                Eklemeekranı.selectedid = selectedid;
-                Eklemeekranı.selectedPage = selectedPage;
-                Eklemeekranı.ShowDialog();
-                Eklemeekranı.uretimemirleri = uretimemirlerilist;
+                EklemeEkranı ekleekran = new EklemeEkranı();
+                ekleekran.selectedPage = selectedPage;
+                ekleekran.ShowDialog();
                 
             }
 
@@ -287,11 +288,10 @@ namespace ERP_PROJESİ
         {
             if (selectedPage != "")
             {
-                
-                Eklemeekranı.selectedid = selectedid;
-                Eklemeekranı.selectedPage = selectedPage;
-                Eklemeekranı.ShowDialog();
-                Eklemeekranı.uretimemirleri = uretimemirlerilist;
+
+                EklemeEkranı ekleekran = new EklemeEkranı();
+                ekleekran.selectedPage = selectedPage;
+                ekleekran.ShowDialog();
             }
 
         }
@@ -619,21 +619,34 @@ namespace ERP_PROJESİ
            
         }
 
+        #region güncelleme ekranı
+
         private void uretimemridata_DoubleClick(object sender, EventArgs e)
         {
             //selected id öbür tarafa geçmiyor anasını sikim
-
             selectedid = int.Parse(uretimemridata.CurrentRow.Cells[0].Value.ToString());
+            EklemeEkranı ekleekran = new EklemeEkranı();
+            ekleekran.selectedPage = selectedPage;
+            ekleekran.selectedid = selectedid;
+            ekleekran.Show();
+            ekleekran.EklemeEkranı_Load(this, null);
+            ekleekran.textBoxes[0].Text = uretimemridata.CurrentRow.Cells[1].Value.ToString();
+            ekleekran.debugid();
+        }
 
-            if (selectedPage != "")
-            {
-                EklemeEkranı aa = new EklemeEkranı();
-                aa.selectedid = selectedid;
-                aa.selectedPage = selectedPage;
-                aa.ShowDialog();
-                aa.uretimemirleri = uretimemirlerilist;
-                
-            }
+
+        #endregion
+
+        private void update_Click(object sender, EventArgs e)
+        {
+            selectedid = int.Parse(uretimemridata.CurrentRow.Cells[0].Value.ToString());
+            EklemeEkranı ekleekran = new EklemeEkranı();
+            ekleekran.selectedPage = selectedPage;
+            ekleekran.selectedid = selectedid;
+            ekleekran.Show();
+            ekleekran.EklemeEkranı_Load(this, null);
+            ekleekran.textBoxes[0].Text = uretimemridata.CurrentRow.Cells[1].Value.ToString();
+            ekleekran.debugid();
         }
     }
 }

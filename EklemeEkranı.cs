@@ -31,17 +31,21 @@ namespace ERP_PROJESİ
         public EklemeEkranı()
         {
             InitializeComponent();
-            MessageBox.Show(selectedid.ToString());
         }
 
-        private void EklemeEkranı_Load(object sender, EventArgs e)
+        public EklemeEkranı(string selectedPage)
+        {
+            InitializeComponent();
+            this.selectedPage = selectedPage;
+        }
+
+        public void EklemeEkranı_Load(object sender, EventArgs e)
         {
             Font font = new Font("Montserrat", 9f, FontStyle.Bold);
             this.Font = font;
             this.Size = new Size(1000, 600);
             
             BackColor = ColorTranslator.FromHtml("#eeeeee");
-            Ana ana = new Ana();
             switch (selectedPage)
             {
                 case "üretimemri":
@@ -665,6 +669,11 @@ namespace ERP_PROJESİ
         private void EklemeEkranı_FormClosing(object sender, FormClosingEventArgs e)
         {
 
+        }
+
+        public void debugid()
+        {
+            MessageBox.Show(selectedid.ToString());
         }
     }
 }
