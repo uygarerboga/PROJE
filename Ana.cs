@@ -19,7 +19,7 @@ namespace ERP_PROJESİ
     public partial class Ana : Form
     {
         
-        SqlConnection SqlCon = new SqlConnection(@"Data Source=DESKTOP-THFGP40; initial Catalog = ERP; Integrated Security = True");
+        SqlConnection SqlCon = new SqlConnection(@"Data Source=DESKTOP-PRMBC7J; initial Catalog = ERP; Integrated Security = True");
         public string selectedPage { get; set; }
 
         public string arama;
@@ -85,8 +85,15 @@ namespace ERP_PROJESİ
         }
         #endregion
         #region tab geçişleri
+        #region ana sayfa
+        private void AnaTabControl_Leave(object sender, EventArgs e)
+        {
+            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
+        }
+        #endregion
         // sağ click için ekrana girmesi lazım bunu geçerli sayfalarda tekrarlıcaz fakat ilk girişte afallıyabiliyor. tekrar tab seçmen lazım.
         // selected page ayarlama
+        #region İmalat
         #region üretim emirleri
 
         private void uretimEmirleri_Enter(object sender, EventArgs e)
@@ -104,7 +111,7 @@ namespace ERP_PROJESİ
             AnaTabControl.ContextMenuStrip = contextMenuStrip1;
             selectedPage = "makinalar";
             MakinaListesi();
-            
+
         }
 
         #endregion
@@ -113,6 +120,7 @@ namespace ERP_PROJESİ
         {
             AnaTabControl.ContextMenuStrip = contextMenuStrip1;
             selectedPage = "rotalar";
+            rotaListele();
         }
 
         #endregion
@@ -134,16 +142,18 @@ namespace ERP_PROJESİ
         }
 
         #endregion
-        #region personel
-
-        private void personeller_Enter(object sender, EventArgs e)
+        #region imalatçı
+        
+        private void imalatcı_Enter(object sender, EventArgs e)
         {
             AnaTabControl.ContextMenuStrip = contextMenuStrip1;
-            selectedPage = "personeller";
-            personelListele();
-            
+            selectedPage = "imalatçı";
+            İmalatciListesi();
         }
         #endregion
+        #endregion
+        #region Muhasebe
+
         #region Hakedişler
         private void hakedisler_Enter(object sender, EventArgs e)
         {
@@ -166,6 +176,64 @@ namespace ERP_PROJESİ
         }
 
         #endregion
+        #endregion
+        #region ÜRÜNLER
+        #region Ticari ürünler
+
+        private void urunler_Enter1(object sender, EventArgs e)
+        {
+            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
+            selectedPage = "ürünler";
+            urunturu = "Ticari";
+            urunlistele(urunturu);
+
+        }
+
+        #endregion
+        #region Mamul
+
+        private void urunler_Enter2(object sender, EventArgs e)
+        {
+            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
+            selectedPage = "ürünler";
+            urunturu = "Mamul";
+            urunlistele(urunturu);
+
+        }
+        #endregion
+        #region Yarı Mamul
+
+        private void urunler_Enter3(object sender, EventArgs e)
+        {
+            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
+            selectedPage = "ürünler";
+            urunturu = "YarıMamul";
+            urunlistele(urunturu);
+
+        }
+        #endregion
+        #region Hammadde
+
+        private void urunler_Enter4(object sender, EventArgs e)
+        {
+            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
+            selectedPage = "ürünler";
+            urunturu = "Hammadde";
+            urunlistele(urunturu);
+
+        }
+        #endregion
+        #endregion
+        #region personel
+
+        private void personeller_Enter(object sender, EventArgs e)
+        {
+            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
+            selectedPage = "personeller";
+            personelListele();
+            
+        }
+        #endregion
         #region CARİLER
         private void cariler_Enter(object sender, EventArgs e)
         {
@@ -177,51 +245,6 @@ namespace ERP_PROJESİ
         private void cariler_Leave(object sender, EventArgs e)
         {
             AnaTabControl.ContextMenuStrip = null;
-        }
-        #endregion
-        #region ÜRÜNLER
-        private void urunler_Enter1(object sender, EventArgs e)
-        {
-            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
-            selectedPage = "ürünler";
-            urunturu = "Ticari";
-            urunlistele(urunturu);
-            
-        }
-
-        private void urunler_Enter2(object sender, EventArgs e)
-        {
-            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
-            selectedPage = "ürünler";
-            urunturu = "Mamul";
-            urunlistele(urunturu);
-
-        }
-
-        private void urunler_Enter3(object sender, EventArgs e)
-        {
-            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
-            selectedPage = "ürünler";
-            urunturu = "YarıMamul";
-            urunlistele(urunturu);
-
-        }
-
-        private void urunler_Enter4(object sender, EventArgs e)
-        {
-            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
-            selectedPage = "ürünler";
-            urunturu = "Hammadde";
-            urunlistele(urunturu);
-
-        }
-        #endregion
-        #region imalatçı
-        private void imalatTabPage_Enter(object sender, EventArgs e)
-        {
-            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
-            selectedPage = "imalatçı";
-            İmalatciListesi();
         }
         #endregion
 
@@ -279,7 +302,7 @@ namespace ERP_PROJESİ
             find.ShowDialog();
         }
         #endregion
-        #region Arama
+        #region Yenileme
 
         private void refresh_Click(object sender, EventArgs e)
         {
@@ -302,6 +325,9 @@ namespace ERP_PROJESİ
                     break;
                 case "operasyonekle":
                     OperasyonListesi();
+                    break;
+                case "rotalar":
+                    rotaListele();
                     break;
 
 
@@ -333,6 +359,9 @@ namespace ERP_PROJESİ
 
         #region SQL Listeleme
         #region İmalat
+        #region Üretim Emri
+        
+        #endregion
         #region Makinalar
         public void MakinaListesi()
         {
@@ -369,6 +398,19 @@ namespace ERP_PROJESİ
             operasyondata.Columns[0].Visible = false;
             operasyondata.Columns[1].HeaderText = "Operasyon Adı";
             operasyondata.Columns[2].Visible = false;
+            arama = null;
+        }
+        #endregion
+        #region Rota
+        public void rotaListele()
+        {
+            List<Rota> list = SqlCon.Query<Rota>("select * from Rota where rotaID Like '%" + arama + "%'", SqlCon).ToList<Rota>();
+
+            rotadata.DataSource = list;
+            rotadata.Columns[2].Visible = false;
+            rotadata.Columns[0].HeaderText = "Rotanın ID'si";
+            rotadata.Columns[1].HeaderText = "Rotanın Açıklaması";
+
             arama = null;
         }
         #endregion
@@ -462,8 +504,8 @@ namespace ERP_PROJESİ
             
 
         }
-        #endregion
-
+        #endregion  
+        //Personeller tamam
         #region Cariler
         public void CarileriListele()
         {
@@ -483,11 +525,14 @@ namespace ERP_PROJESİ
         }
         #endregion
 
+        //Cariler tamam
         #endregion
 
         private void label3_Click(object sender, EventArgs e)
         {
 
         }
+
+
     }
 }

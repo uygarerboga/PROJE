@@ -67,6 +67,9 @@ namespace ERP_PROJESİ
                 case "operasyonekle":
                     Ana.OperasyonListesi();
                     break;
+                case "rotalar":
+                    Ana.rotaListele();
+                    break;
 
             }
         }
