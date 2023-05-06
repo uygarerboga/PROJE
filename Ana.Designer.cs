@@ -483,6 +483,7 @@
             // 
             // hakedisdata
             // 
+            this.hakedisdata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.hakedisdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.hakedisdata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.hakedisdata.Location = new System.Drawing.Point(0, 0);
@@ -509,6 +510,7 @@
             // 
             // satinalimfaturasidata
             // 
+            this.satinalimfaturasidata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.satinalimfaturasidata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.satinalimfaturasidata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.satinalimfaturasidata.Location = new System.Drawing.Point(0, 0);
@@ -529,9 +531,12 @@
             this.satinalimiadefaturasi.TabIndex = 6;
             this.satinalimiadefaturasi.Text = "Satın Alım İade";
             this.satinalimiadefaturasi.UseVisualStyleBackColor = true;
+            this.satinalimiadefaturasi.Enter += new System.EventHandler(this.satinalimiadefaturasi_Enter);
+            this.satinalimiadefaturasi.Leave += new System.EventHandler(this.cariler_Leave);
             // 
             // satinaidedata
             // 
+            this.satinaidedata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.satinaidedata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.satinaidedata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.satinaidedata.Location = new System.Drawing.Point(0, 0);
@@ -541,6 +546,7 @@
             this.satinaidedata.RowTemplate.Height = 24;
             this.satinaidedata.Size = new System.Drawing.Size(1668, 837);
             this.satinaidedata.TabIndex = 0;
+            this.satinaidedata.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.satinaidedata_CellContentClick);
             // 
             // satısfaturaları
             // 
@@ -557,6 +563,7 @@
             // 
             // satisfaturalaridata
             // 
+            this.satisfaturalaridata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.satisfaturalaridata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.satisfaturalaridata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.satisfaturalaridata.Location = new System.Drawing.Point(0, 0);
@@ -577,9 +584,12 @@
             this.satisiade.TabIndex = 7;
             this.satisiade.Text = "Satış İade";
             this.satisiade.UseVisualStyleBackColor = true;
+            this.satisiade.Enter += new System.EventHandler(this.satisiade_Enter);
+            this.satisiade.Leave += new System.EventHandler(this.cariler_Leave);
             // 
             // satisiadedata
             // 
+            this.satisiadedata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.satisiadedata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.satisiadedata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.satisiadedata.Location = new System.Drawing.Point(0, 0);

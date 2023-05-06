@@ -12,6 +12,7 @@ using System.Windows.Forms;
 using Dapper;
 using ERP_PROJESİ.Classes;
 using ERP_PROJESİ.Classes.İmalat;
+using ERP_PROJESİ.Classes.Muhasebe;
 using ERP_PROJESİ.Classes.Satış;
 using ERP_PROJESİ.Classes.Ürünler;
 
@@ -164,30 +165,54 @@ namespace ERP_PROJESİ
         #endregion
         #endregion
         #region Muhasebe
-
         #region Hakedişler
         private void hakedisler_Enter(object sender, EventArgs e)
         {
             AnaTabControl.ContextMenuStrip = contextMenuStrip1;
             selectedPage = "hakedis";
+            HakedislerListesi();
         }
 
         #endregion
-        #region Faturalar
-        private void satısfaturaları_Enter(object sender, EventArgs e)
-        {
-            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
-            selectedPage = "fatura";
-        }
+        #region Satın Alım Faturaları
 
         private void satinalimfaturası_Enter(object sender, EventArgs e)
         {
             AnaTabControl.ContextMenuStrip = contextMenuStrip1;
-            selectedPage = "fatura";
+            selectedPage = "satinalimfaturası";
+            SatınAlımFaturalarıListele();
         }
 
         #endregion
+        #region Satın Alım İade
+        private void satinalimiadefaturasi_Enter(object sender, EventArgs e)
+        {
+            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
+            selectedPage = "satinalimiade";
+            SatınAlımİadeListele();
+        }
         #endregion
+        #region Satış Faturaları
+
+        private void satısfaturaları_Enter(object sender, EventArgs e)
+        {
+
+            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
+            selectedPage = "satisfaturalari";
+            SatışFaturalarıListele();
+        }
+
+
+        #endregion
+        #region Satış İade 
+        private void satisiade_Enter(object sender, EventArgs e)
+        {
+            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
+            selectedPage = "satisiade";
+            SatışİadeListele();
+        }
+        #endregion
+        #endregion        
         #region ÜRÜNLER
         #region Ticari ürünler
 
@@ -393,6 +418,21 @@ namespace ERP_PROJESİ
                 case "kategori":
                     kategoriListele();
                      break;
+                case "hakedis":
+                    HakedislerListesi();
+                    break;
+                case "satinalimfaturası":
+                    SatınAlımFaturalarıListele();
+                    break;
+                case "satisalımiade":
+                    SatınAlımİadeListele();
+                    break;
+                case "satisfaturalari":
+                    SatışFaturalarıListele();
+                    break;
+                case "satisiade":
+                    SatışİadeListele();
+                    break;
 
 
 
@@ -515,7 +555,74 @@ namespace ERP_PROJESİ
         #endregion
 
         #region Muhasebe
-
+        #region Hakedişler
+        public void HakedislerListesi()
+        {
+            List<Hakedisler> list = SqlCon.Query<Hakedisler>("select * from Hakedis where tarih like '%" + arama + "%'", SqlCon).ToList<Hakedisler>();
+            hakedisdata.DataSource = list;
+            hakedisdata.Columns[0].Visible = false;
+            hakedisdata.Columns[1].HeaderText = "Tarih";
+            hakedisdata.Columns[2].Visible = false;
+            arama = null;
+        }
+        #endregion
+        #region Satın Alım Faturaları
+        public void SatınAlımFaturalarıListele()
+        {
+            List<satınalımfaturaları> list = SqlCon.Query<satınalımfaturaları>("select * from Satin_Alma_Faturalari where CariID like '%" + arama + "%'", SqlCon).ToList<satınalımfaturaları>();
+            satinalimfaturasidata.DataSource = list;
+            satinalimfaturasidata.Columns[0].Visible = false;
+            satinalimfaturasidata.Columns[1].HeaderText = "Sipariş ID'si";
+            satinalimfaturasidata.Columns[2].HeaderText = "Cari ID'si";
+            satinalimfaturasidata.Columns[3].HeaderText = "Tarih";
+            satinalimfaturasidata.Columns[4].HeaderText = "Tutar";
+            satinalimfaturasidata.Columns[5].HeaderText = "Odeme Bilgisi";
+            satinalimfaturasidata.Columns[6].HeaderText = "İade";
+            satinalimfaturasidata.Columns[7].Visible = false;
+            arama = null;
+        }
+        #endregion
+        #region Satın Alım İade
+        public void SatınAlımİadeListele()
+        {
+            List<satınalımiade> list = SqlCon.Query<satınalımiade>("select * from Satis_Faturalari where faturaID like '%" + arama + "%'", SqlCon).ToList<satınalımiade>();
+            satinaidedata.DataSource = list;
+            satinaidedata.Columns[0].Visible = false;
+            satinaidedata.Columns[1].HeaderText = "Cari İD'si";
+            satinaidedata.Columns[2].HeaderText = "Fatura Tarihi";
+            satinaidedata.Columns[3].HeaderText = "Tutar";
+            satinaidedata.Columns[4].HeaderText = "Odeme Bilgisi";
+            satinaidedata.Columns[5].Visible = false;
+            arama = null;
+        }
+        #endregion
+        #region Satış Faturaları
+        public void SatışFaturalarıListele()
+        {
+            List<satışfaturaları> list = SqlCon.Query<satışfaturaları>("select * from Satis_Faturalari where faturaID like '%" + arama + "%'", SqlCon).ToList<satışfaturaları>();
+            satisfaturalaridata.DataSource = list;
+            satisfaturalaridata.Columns[0].Visible = false;
+            satisfaturalaridata.Columns[1].HeaderText = "Cari ID'si";
+            satisfaturalaridata.Columns[2].HeaderText = "Fatura Tarihi";
+            satisfaturalaridata.Columns[3].HeaderText = "Tutar";
+            satisfaturalaridata.Columns[4].HeaderText = "Odeme Bilgisi";
+            satisfaturalaridata.Columns[5].Visible = false;
+            arama = null;
+        }
+        #endregion
+        #region Satış İade
+        public void SatışİadeListele()
+        {
+            List<satışiade> list = SqlCon.Query<satışiade>("select * from Satis_Iade_Irsaliyesi where satisiadeirsaliyesiID like '%" + arama + "%'", SqlCon).ToList<satışiade>();
+            satisiadedata.DataSource = list;
+            satisiadedata.Columns[0].Visible = false;
+            satisiadedata.Columns[1].HeaderText = "Fatura ID'si";
+            satisiadedata.Columns[2].HeaderText = "Tarih";
+            satisiadedata.Columns[3].HeaderText = "Kargo Firması";
+            satisiadedata.Columns[4].Visible = false;
+            arama = null;
+        }
+        #endregion
         #endregion
 
         #region URUN
@@ -899,6 +1006,7 @@ namespace ERP_PROJESİ
         {
             delete_Click(this, null);
         }
+
         #endregion
 
         #region delbutton
@@ -907,6 +1015,9 @@ namespace ERP_PROJESİ
 
         #endregion
 
+        private void satinaidedata_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
+        }
     }
 }

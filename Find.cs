@@ -73,6 +73,21 @@ namespace ERP_PROJESİ
                 case "kategori":
                     Ana.kategoriListele();
                     break;
+                case "hakedis":
+                    Ana.HakedislerListesi();
+                    break;
+                case "satinalimfaturası":
+                    Ana.SatınAlımFaturalarıListele();
+                    break;
+                case "satisalımiade":
+                    Ana.SatınAlımİadeListele();
+                    break;
+                case "satisfaturalari":
+                    Ana.SatışFaturalarıListele();
+                    break;
+                case "satisiade":
+                    Ana.SatışİadeListele();
+                    break;
             }
             }
         public Find(Ana ana)

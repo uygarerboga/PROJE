@@ -77,6 +77,11 @@
       <DependentUpon>Ana.cs</DependentUpon>
     </Compile>
     <Compile Include="Classes\Cariler.cs" />
+    <Compile Include="Classes\Muhasebe\Hakedisler.cs" />
+    <Compile Include="Classes\Muhasebe\satınalımfaturaları.cs" />
+    <Compile Include="Classes\Muhasebe\satınalımiade.cs" />
+    <Compile Include="Classes\Muhasebe\satışfaturaları.cs" />
+    <Compile Include="Classes\Muhasebe\satışiade.cs" />
     <Compile Include="Classes\Satış\Satışsipariş.cs" />
     <Compile Include="Classes\Ürünler\kategori.cs" />
     <Compile Include="Classes\Ürünler\ürünler.cs" />
@@ -173,8 +178,6 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Classes\Muhasebe\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
