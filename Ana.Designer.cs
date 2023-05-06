@@ -69,6 +69,8 @@
             this.ymamuldata = new System.Windows.Forms.DataGridView();
             this.hammadeler = new System.Windows.Forms.TabPage();
             this.hammaddedata = new System.Windows.Forms.DataGridView();
+            this.kategori = new System.Windows.Forms.TabPage();
+            this.kategoridata = new System.Windows.Forms.DataGridView();
             this.gelenirsaliye = new System.Windows.Forms.TabPage();
             this.gelenirsaliyedata = new System.Windows.Forms.DataGridView();
             this.gelenirsaliyeiade = new System.Windows.Forms.TabPage();
@@ -85,8 +87,8 @@
             this.onteklifdata = new System.Windows.Forms.DataGridView();
             this.SatınAlma = new System.Windows.Forms.TabPage();
             this.urunlerTabControl = new System.Windows.Forms.TabControl();
-            this.tabPage15 = new System.Windows.Forms.TabPage();
-            this.tabPage16 = new System.Windows.Forms.TabPage();
+            this.satinalmasiparisleri = new System.Windows.Forms.TabPage();
+            this.satinalmairsaliyesi = new System.Windows.Forms.TabPage();
             this.Raporlar = new System.Windows.Forms.TabPage();
             this.raporlarTabControl = new System.Windows.Forms.TabControl();
             this.tabPage17 = new System.Windows.Forms.TabPage();
@@ -113,8 +115,6 @@
             this.güncelle = new System.Windows.Forms.ToolStripMenuItem();
             this.yenile = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.kategori = new System.Windows.Forms.TabPage();
-            this.kategoridata = new System.Windows.Forms.DataGridView();
             this.AnaTabControl.SuspendLayout();
             this.AnaSayfa.SuspendLayout();
             this.anaSayfaPaneli.SuspendLayout();
@@ -154,6 +154,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ymamuldata)).BeginInit();
             this.hammadeler.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.hammaddedata)).BeginInit();
+            this.kategori.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.kategoridata)).BeginInit();
             this.gelenirsaliye.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gelenirsaliyedata)).BeginInit();
             this.gelenirsaliyeiade.SuspendLayout();
@@ -180,8 +182,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.carihesapdata)).BeginInit();
             this.panel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
-            this.kategori.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.kategoridata)).BeginInit();
             this.SuspendLayout();
             // 
             // AnaTabControl
@@ -241,7 +241,7 @@
             this.label3.Location = new System.Drawing.Point(600, 220);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(407, 73);
+            this.label3.Size = new System.Drawing.Size(499, 91);
             this.label3.TabIndex = 0;
             this.label3.Text = "Hoş Geldiniz";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -624,11 +624,11 @@
             // ticariurunler
             // 
             this.ticariurunler.Controls.Add(this.Ticaridata);
-            this.ticariurunler.Location = new System.Drawing.Point(4, 24);
+            this.ticariurunler.Location = new System.Drawing.Point(4, 27);
             this.ticariurunler.Margin = new System.Windows.Forms.Padding(2);
             this.ticariurunler.Name = "ticariurunler";
             this.ticariurunler.Padding = new System.Windows.Forms.Padding(2);
-            this.ticariurunler.Size = new System.Drawing.Size(1668, 843);
+            this.ticariurunler.Size = new System.Drawing.Size(1668, 840);
             this.ticariurunler.TabIndex = 0;
             this.ticariurunler.Text = "Ticari Ürünler";
             this.ticariurunler.UseVisualStyleBackColor = true;
@@ -645,7 +645,7 @@
             this.Ticaridata.Name = "Ticaridata";
             this.Ticaridata.RowHeadersWidth = 51;
             this.Ticaridata.RowTemplate.Height = 24;
-            this.Ticaridata.Size = new System.Drawing.Size(1664, 839);
+            this.Ticaridata.Size = new System.Drawing.Size(1664, 836);
             this.Ticaridata.TabIndex = 0;
             this.Ticaridata.DoubleClick += new System.EventHandler(this.Ticaridata_DoubleClick);
             this.Ticaridata.MouseHover += new System.EventHandler(this.urunler_Enter1);
@@ -653,11 +653,11 @@
             // mamuller
             // 
             this.mamuller.Controls.Add(this.mamuldata);
-            this.mamuller.Location = new System.Drawing.Point(4, 24);
+            this.mamuller.Location = new System.Drawing.Point(4, 27);
             this.mamuller.Margin = new System.Windows.Forms.Padding(2);
             this.mamuller.Name = "mamuller";
             this.mamuller.Padding = new System.Windows.Forms.Padding(2);
-            this.mamuller.Size = new System.Drawing.Size(1668, 843);
+            this.mamuller.Size = new System.Drawing.Size(1668, 840);
             this.mamuller.TabIndex = 1;
             this.mamuller.Text = "Mamüller";
             this.mamuller.UseVisualStyleBackColor = true;
@@ -674,17 +674,17 @@
             this.mamuldata.Name = "mamuldata";
             this.mamuldata.RowHeadersWidth = 51;
             this.mamuldata.RowTemplate.Height = 24;
-            this.mamuldata.Size = new System.Drawing.Size(1664, 839);
+            this.mamuldata.Size = new System.Drawing.Size(1664, 836);
             this.mamuldata.TabIndex = 0;
             this.mamuldata.DoubleClick += new System.EventHandler(this.mamuldata_DoubleClick);
             // 
             // yarimamul
             // 
             this.yarimamul.Controls.Add(this.ymamuldata);
-            this.yarimamul.Location = new System.Drawing.Point(4, 24);
+            this.yarimamul.Location = new System.Drawing.Point(4, 27);
             this.yarimamul.Margin = new System.Windows.Forms.Padding(2);
             this.yarimamul.Name = "yarimamul";
-            this.yarimamul.Size = new System.Drawing.Size(1668, 843);
+            this.yarimamul.Size = new System.Drawing.Size(1668, 840);
             this.yarimamul.TabIndex = 2;
             this.yarimamul.Text = "Yarı Mamüller";
             this.yarimamul.UseVisualStyleBackColor = true;
@@ -701,17 +701,17 @@
             this.ymamuldata.Name = "ymamuldata";
             this.ymamuldata.RowHeadersWidth = 51;
             this.ymamuldata.RowTemplate.Height = 24;
-            this.ymamuldata.Size = new System.Drawing.Size(1668, 843);
+            this.ymamuldata.Size = new System.Drawing.Size(1668, 840);
             this.ymamuldata.TabIndex = 0;
             this.ymamuldata.DoubleClick += new System.EventHandler(this.ymamuldata_DoubleClick);
             // 
             // hammadeler
             // 
             this.hammadeler.Controls.Add(this.hammaddedata);
-            this.hammadeler.Location = new System.Drawing.Point(4, 24);
+            this.hammadeler.Location = new System.Drawing.Point(4, 27);
             this.hammadeler.Margin = new System.Windows.Forms.Padding(2);
             this.hammadeler.Name = "hammadeler";
-            this.hammadeler.Size = new System.Drawing.Size(1668, 843);
+            this.hammadeler.Size = new System.Drawing.Size(1668, 840);
             this.hammadeler.TabIndex = 3;
             this.hammadeler.Text = "Hammaddeler";
             this.hammadeler.UseVisualStyleBackColor = true;
@@ -728,17 +728,44 @@
             this.hammaddedata.Name = "hammaddedata";
             this.hammaddedata.RowHeadersWidth = 51;
             this.hammaddedata.RowTemplate.Height = 24;
-            this.hammaddedata.Size = new System.Drawing.Size(1668, 843);
+            this.hammaddedata.Size = new System.Drawing.Size(1668, 840);
             this.hammaddedata.TabIndex = 0;
             this.hammaddedata.DoubleClick += new System.EventHandler(this.hammaddedata_DoubleClick);
+            // 
+            // kategori
+            // 
+            this.kategori.Controls.Add(this.kategoridata);
+            this.kategori.Location = new System.Drawing.Point(4, 27);
+            this.kategori.Name = "kategori";
+            this.kategori.Size = new System.Drawing.Size(1668, 840);
+            this.kategori.TabIndex = 9;
+            this.kategori.Text = "Kategoriler";
+            this.kategori.UseVisualStyleBackColor = true;
+            this.kategori.Enter += new System.EventHandler(this.kategori_Enter);
+            this.kategori.Leave += new System.EventHandler(this.cariler_Leave);
+            // 
+            // kategoridata
+            // 
+            this.kategoridata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.kategoridata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.kategoridata.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.kategoridata.Location = new System.Drawing.Point(0, 0);
+            this.kategoridata.Margin = new System.Windows.Forms.Padding(2);
+            this.kategoridata.Name = "kategoridata";
+            this.kategoridata.RowHeadersWidth = 51;
+            this.kategoridata.RowTemplate.Height = 24;
+            this.kategoridata.Size = new System.Drawing.Size(1668, 840);
+            this.kategoridata.TabIndex = 1;
+            this.kategoridata.Click += new System.EventHandler(this.kategoridata_Click);
+            this.kategoridata.DoubleClick += new System.EventHandler(this.kategoridata_DoubleClick);
             // 
             // gelenirsaliye
             // 
             this.gelenirsaliye.Controls.Add(this.gelenirsaliyedata);
-            this.gelenirsaliye.Location = new System.Drawing.Point(4, 24);
+            this.gelenirsaliye.Location = new System.Drawing.Point(4, 27);
             this.gelenirsaliye.Margin = new System.Windows.Forms.Padding(2);
             this.gelenirsaliye.Name = "gelenirsaliye";
-            this.gelenirsaliye.Size = new System.Drawing.Size(1668, 843);
+            this.gelenirsaliye.Size = new System.Drawing.Size(1668, 840);
             this.gelenirsaliye.TabIndex = 5;
             this.gelenirsaliye.Text = "Gelen İrsaliye";
             this.gelenirsaliye.UseVisualStyleBackColor = true;
@@ -752,16 +779,16 @@
             this.gelenirsaliyedata.Name = "gelenirsaliyedata";
             this.gelenirsaliyedata.RowHeadersWidth = 51;
             this.gelenirsaliyedata.RowTemplate.Height = 24;
-            this.gelenirsaliyedata.Size = new System.Drawing.Size(1668, 843);
+            this.gelenirsaliyedata.Size = new System.Drawing.Size(1668, 840);
             this.gelenirsaliyedata.TabIndex = 0;
             // 
             // gelenirsaliyeiade
             // 
             this.gelenirsaliyeiade.Controls.Add(this.gelenirsaliyeiadedata);
-            this.gelenirsaliyeiade.Location = new System.Drawing.Point(4, 24);
+            this.gelenirsaliyeiade.Location = new System.Drawing.Point(4, 27);
             this.gelenirsaliyeiade.Margin = new System.Windows.Forms.Padding(2);
             this.gelenirsaliyeiade.Name = "gelenirsaliyeiade";
-            this.gelenirsaliyeiade.Size = new System.Drawing.Size(1668, 843);
+            this.gelenirsaliyeiade.Size = new System.Drawing.Size(1668, 840);
             this.gelenirsaliyeiade.TabIndex = 7;
             this.gelenirsaliyeiade.Text = "Gelen İrsaliye İade";
             this.gelenirsaliyeiade.UseVisualStyleBackColor = true;
@@ -775,16 +802,16 @@
             this.gelenirsaliyeiadedata.Name = "gelenirsaliyeiadedata";
             this.gelenirsaliyeiadedata.RowHeadersWidth = 51;
             this.gelenirsaliyeiadedata.RowTemplate.Height = 24;
-            this.gelenirsaliyeiadedata.Size = new System.Drawing.Size(1668, 843);
+            this.gelenirsaliyeiadedata.Size = new System.Drawing.Size(1668, 840);
             this.gelenirsaliyeiadedata.TabIndex = 0;
             // 
             // gidenirsaliye
             // 
             this.gidenirsaliye.Controls.Add(this.gidenirsaliyedata);
-            this.gidenirsaliye.Location = new System.Drawing.Point(4, 24);
+            this.gidenirsaliye.Location = new System.Drawing.Point(4, 27);
             this.gidenirsaliye.Margin = new System.Windows.Forms.Padding(2);
             this.gidenirsaliye.Name = "gidenirsaliye";
-            this.gidenirsaliye.Size = new System.Drawing.Size(1668, 843);
+            this.gidenirsaliye.Size = new System.Drawing.Size(1668, 840);
             this.gidenirsaliye.TabIndex = 6;
             this.gidenirsaliye.Text = "Giden İrsaliye";
             this.gidenirsaliye.UseVisualStyleBackColor = true;
@@ -798,16 +825,16 @@
             this.gidenirsaliyedata.Name = "gidenirsaliyedata";
             this.gidenirsaliyedata.RowHeadersWidth = 51;
             this.gidenirsaliyedata.RowTemplate.Height = 24;
-            this.gidenirsaliyedata.Size = new System.Drawing.Size(1668, 843);
+            this.gidenirsaliyedata.Size = new System.Drawing.Size(1668, 840);
             this.gidenirsaliyedata.TabIndex = 1;
             // 
             // gidenirsaliyeiade
             // 
             this.gidenirsaliyeiade.Controls.Add(this.gidenirsaliyeiadedata);
-            this.gidenirsaliyeiade.Location = new System.Drawing.Point(4, 24);
+            this.gidenirsaliyeiade.Location = new System.Drawing.Point(4, 27);
             this.gidenirsaliyeiade.Margin = new System.Windows.Forms.Padding(2);
             this.gidenirsaliyeiade.Name = "gidenirsaliyeiade";
-            this.gidenirsaliyeiade.Size = new System.Drawing.Size(1668, 843);
+            this.gidenirsaliyeiade.Size = new System.Drawing.Size(1668, 840);
             this.gidenirsaliyeiade.TabIndex = 8;
             this.gidenirsaliyeiade.Text = "Giden İrsaliye İade";
             this.gidenirsaliyeiade.UseVisualStyleBackColor = true;
@@ -821,7 +848,7 @@
             this.gidenirsaliyeiadedata.Name = "gidenirsaliyeiadedata";
             this.gidenirsaliyeiadedata.RowHeadersWidth = 51;
             this.gidenirsaliyeiadedata.RowTemplate.Height = 24;
-            this.gidenirsaliyeiadedata.Size = new System.Drawing.Size(1668, 843);
+            this.gidenirsaliyeiadedata.Size = new System.Drawing.Size(1668, 840);
             this.gidenirsaliyeiadedata.TabIndex = 1;
             // 
             // Satış
@@ -853,11 +880,11 @@
             // satısSiparisleri
             // 
             this.satısSiparisleri.Controls.Add(this.Satıssiparisdata);
-            this.satısSiparisleri.Location = new System.Drawing.Point(4, 24);
+            this.satısSiparisleri.Location = new System.Drawing.Point(4, 27);
             this.satısSiparisleri.Margin = new System.Windows.Forms.Padding(2);
             this.satısSiparisleri.Name = "satısSiparisleri";
             this.satısSiparisleri.Padding = new System.Windows.Forms.Padding(2);
-            this.satısSiparisleri.Size = new System.Drawing.Size(1668, 843);
+            this.satısSiparisleri.Size = new System.Drawing.Size(1668, 840);
             this.satısSiparisleri.TabIndex = 0;
             this.satısSiparisleri.Text = "Satış Siparişleri";
             this.satısSiparisleri.UseVisualStyleBackColor = true;
@@ -872,17 +899,17 @@
             this.Satıssiparisdata.Name = "Satıssiparisdata";
             this.Satıssiparisdata.RowHeadersWidth = 51;
             this.Satıssiparisdata.RowTemplate.Height = 24;
-            this.Satıssiparisdata.Size = new System.Drawing.Size(1664, 839);
+            this.Satıssiparisdata.Size = new System.Drawing.Size(1664, 836);
             this.Satıssiparisdata.TabIndex = 0;
             // 
             // onteklif
             // 
             this.onteklif.Controls.Add(this.onteklifdata);
-            this.onteklif.Location = new System.Drawing.Point(4, 24);
+            this.onteklif.Location = new System.Drawing.Point(4, 27);
             this.onteklif.Margin = new System.Windows.Forms.Padding(2);
             this.onteklif.Name = "onteklif";
             this.onteklif.Padding = new System.Windows.Forms.Padding(2);
-            this.onteklif.Size = new System.Drawing.Size(1668, 843);
+            this.onteklif.Size = new System.Drawing.Size(1668, 840);
             this.onteklif.TabIndex = 1;
             this.onteklif.Text = "Ön Teklifler";
             this.onteklif.UseVisualStyleBackColor = true;
@@ -896,7 +923,7 @@
             this.onteklifdata.Name = "onteklifdata";
             this.onteklifdata.RowHeadersWidth = 51;
             this.onteklifdata.RowTemplate.Height = 24;
-            this.onteklifdata.Size = new System.Drawing.Size(1664, 839);
+            this.onteklifdata.Size = new System.Drawing.Size(1664, 836);
             this.onteklifdata.TabIndex = 0;
             // 
             // SatınAlma
@@ -912,8 +939,8 @@
             // 
             // urunlerTabControl
             // 
-            this.urunlerTabControl.Controls.Add(this.tabPage15);
-            this.urunlerTabControl.Controls.Add(this.tabPage16);
+            this.urunlerTabControl.Controls.Add(this.satinalmasiparisleri);
+            this.urunlerTabControl.Controls.Add(this.satinalmairsaliyesi);
             this.urunlerTabControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.urunlerTabControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.urunlerTabControl.Location = new System.Drawing.Point(0, 0);
@@ -923,27 +950,31 @@
             this.urunlerTabControl.Size = new System.Drawing.Size(1676, 871);
             this.urunlerTabControl.TabIndex = 0;
             // 
-            // tabPage15
+            // satinalmasiparisleri
             // 
-            this.tabPage15.Location = new System.Drawing.Point(4, 24);
-            this.tabPage15.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage15.Name = "tabPage15";
-            this.tabPage15.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage15.Size = new System.Drawing.Size(1668, 843);
-            this.tabPage15.TabIndex = 0;
-            this.tabPage15.Text = "tabPage15";
-            this.tabPage15.UseVisualStyleBackColor = true;
+            this.satinalmasiparisleri.Location = new System.Drawing.Point(4, 27);
+            this.satinalmasiparisleri.Margin = new System.Windows.Forms.Padding(2);
+            this.satinalmasiparisleri.Name = "satinalmasiparisleri";
+            this.satinalmasiparisleri.Padding = new System.Windows.Forms.Padding(2);
+            this.satinalmasiparisleri.Size = new System.Drawing.Size(1668, 840);
+            this.satinalmasiparisleri.TabIndex = 0;
+            this.satinalmasiparisleri.Text = "Satın Alma Siparişleri";
+            this.satinalmasiparisleri.UseVisualStyleBackColor = true;
+            this.satinalmasiparisleri.Enter += new System.EventHandler(this.satınalmasiparişleri_Enter);
+            this.satinalmasiparisleri.Leave += new System.EventHandler(this.cariler_Leave);
             // 
-            // tabPage16
+            // satinalmairsaliyesi
             // 
-            this.tabPage16.Location = new System.Drawing.Point(4, 24);
-            this.tabPage16.Margin = new System.Windows.Forms.Padding(2);
-            this.tabPage16.Name = "tabPage16";
-            this.tabPage16.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage16.Size = new System.Drawing.Size(1668, 843);
-            this.tabPage16.TabIndex = 1;
-            this.tabPage16.Text = "tabPage16";
-            this.tabPage16.UseVisualStyleBackColor = true;
+            this.satinalmairsaliyesi.Location = new System.Drawing.Point(4, 27);
+            this.satinalmairsaliyesi.Margin = new System.Windows.Forms.Padding(2);
+            this.satinalmairsaliyesi.Name = "satinalmairsaliyesi";
+            this.satinalmairsaliyesi.Padding = new System.Windows.Forms.Padding(2);
+            this.satinalmairsaliyesi.Size = new System.Drawing.Size(1668, 840);
+            this.satinalmairsaliyesi.TabIndex = 1;
+            this.satinalmairsaliyesi.Text = "Satın Alma İrsaliyeleri";
+            this.satinalmairsaliyesi.UseVisualStyleBackColor = true;
+            this.satinalmairsaliyesi.Enter += new System.EventHandler(this.satınalmairsaliyeleri_Enter);
+            this.satinalmairsaliyesi.Leave += new System.EventHandler(this.cariler_Leave);
             // 
             // Raporlar
             // 
@@ -971,22 +1002,22 @@
             // 
             // tabPage17
             // 
-            this.tabPage17.Location = new System.Drawing.Point(4, 24);
+            this.tabPage17.Location = new System.Drawing.Point(4, 27);
             this.tabPage17.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage17.Name = "tabPage17";
             this.tabPage17.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage17.Size = new System.Drawing.Size(1668, 843);
+            this.tabPage17.Size = new System.Drawing.Size(1668, 840);
             this.tabPage17.TabIndex = 0;
             this.tabPage17.Text = "tabPage17";
             this.tabPage17.UseVisualStyleBackColor = true;
             // 
             // tabPage18
             // 
-            this.tabPage18.Location = new System.Drawing.Point(4, 24);
+            this.tabPage18.Location = new System.Drawing.Point(4, 27);
             this.tabPage18.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage18.Name = "tabPage18";
             this.tabPage18.Padding = new System.Windows.Forms.Padding(2);
-            this.tabPage18.Size = new System.Drawing.Size(1668, 843);
+            this.tabPage18.Size = new System.Drawing.Size(1668, 840);
             this.tabPage18.TabIndex = 1;
             this.tabPage18.Text = "tabPage18";
             this.tabPage18.UseVisualStyleBackColor = true;
@@ -1019,11 +1050,11 @@
             // personel
             // 
             this.personel.Controls.Add(this.personeldata);
-            this.personel.Location = new System.Drawing.Point(4, 24);
+            this.personel.Location = new System.Drawing.Point(4, 27);
             this.personel.Margin = new System.Windows.Forms.Padding(2);
             this.personel.Name = "personel";
             this.personel.Padding = new System.Windows.Forms.Padding(2);
-            this.personel.Size = new System.Drawing.Size(1668, 843);
+            this.personel.Size = new System.Drawing.Size(1668, 840);
             this.personel.TabIndex = 0;
             this.personel.Text = "Personeller";
             this.personel.UseVisualStyleBackColor = true;
@@ -1038,7 +1069,7 @@
             this.personeldata.Name = "personeldata";
             this.personeldata.RowHeadersWidth = 51;
             this.personeldata.RowTemplate.Height = 24;
-            this.personeldata.Size = new System.Drawing.Size(1664, 839);
+            this.personeldata.Size = new System.Drawing.Size(1664, 836);
             this.personeldata.TabIndex = 0;
             // 
             // cariler
@@ -1185,6 +1216,7 @@
             this.delete.Size = new System.Drawing.Size(65, 40);
             this.delete.TabIndex = 1;
             this.delete.UseVisualStyleBackColor = false;
+            this.delete.Click += new System.EventHandler(this.delete_Click);
             // 
             // eklebtn
             // 
@@ -1212,72 +1244,48 @@
             this.güncelle,
             this.yenile});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(170, 114);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(199, 124);
             // 
             // ekle
             // 
             this.ekle.Name = "ekle";
-            this.ekle.Size = new System.Drawing.Size(169, 22);
+            this.ekle.Size = new System.Drawing.Size(198, 24);
             this.ekle.Text = "Ekle - Add";
             this.ekle.Click += new System.EventHandler(this.ekle_Click);
             // 
             // ara
             // 
             this.ara.Name = "ara";
-            this.ara.Size = new System.Drawing.Size(169, 22);
+            this.ara.Size = new System.Drawing.Size(198, 24);
             this.ara.Text = "Ara - Find";
             this.ara.Click += new System.EventHandler(this.ara_Click);
             // 
             // sil
             // 
             this.sil.Name = "sil";
-            this.sil.Size = new System.Drawing.Size(169, 22);
+            this.sil.Size = new System.Drawing.Size(198, 24);
             this.sil.Text = "Sil - Delete";
+            this.sil.Click += new System.EventHandler(this.sil_Click);
             // 
             // güncelle
             // 
             this.güncelle.Name = "güncelle";
-            this.güncelle.Size = new System.Drawing.Size(169, 22);
+            this.güncelle.Size = new System.Drawing.Size(198, 24);
             this.güncelle.Text = "Güncelle - Update";
             // 
             // yenile
             // 
             this.yenile.Name = "yenile";
-            this.yenile.Size = new System.Drawing.Size(169, 22);
+            this.yenile.Size = new System.Drawing.Size(198, 24);
             this.yenile.Text = "Yenile - Refresh";
             // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // kategori
-            // 
-            this.kategori.Controls.Add(this.kategoridata);
-            this.kategori.Location = new System.Drawing.Point(4, 24);
-            this.kategori.Name = "kategori";
-            this.kategori.Size = new System.Drawing.Size(1668, 843);
-            this.kategori.TabIndex = 9;
-            this.kategori.Text = "Kategoriler";
-            this.kategori.UseVisualStyleBackColor = true;
-            this.kategori.Enter += new System.EventHandler(this.kategori_Enter);
-            this.kategori.Leave += new System.EventHandler(this.cariler_Leave);
-            // 
-            // kategoridata
-            // 
-            this.kategoridata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.kategoridata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.kategoridata.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.kategoridata.Location = new System.Drawing.Point(0, 0);
-            this.kategoridata.Margin = new System.Windows.Forms.Padding(2);
-            this.kategoridata.Name = "kategoridata";
-            this.kategoridata.RowHeadersWidth = 51;
-            this.kategoridata.RowTemplate.Height = 24;
-            this.kategoridata.Size = new System.Drawing.Size(1668, 843);
-            this.kategoridata.TabIndex = 1;
-            // 
             // Ana
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gray;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
@@ -1286,7 +1294,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AnaTabControl);
             this.Controls.Add(this.panel1);
-            this.Font = new System.Drawing.Font("Montserrat Thin Medium", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.HelpButton = true;
@@ -1337,6 +1345,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.ymamuldata)).EndInit();
             this.hammadeler.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.hammaddedata)).EndInit();
+            this.kategori.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.kategoridata)).EndInit();
             this.gelenirsaliye.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gelenirsaliyedata)).EndInit();
             this.gelenirsaliyeiade.ResumeLayout(false);
@@ -1363,8 +1373,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.carihesapdata)).EndInit();
             this.panel1.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
-            this.kategori.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.kategoridata)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1399,8 +1407,8 @@
         private System.Windows.Forms.TabPage satısSiparisleri;
         private System.Windows.Forms.TabPage onteklif;
         private System.Windows.Forms.TabControl urunlerTabControl;
-        private System.Windows.Forms.TabPage tabPage15;
-        private System.Windows.Forms.TabPage tabPage16;
+        private System.Windows.Forms.TabPage satinalmasiparisleri;
+        private System.Windows.Forms.TabPage satinalmairsaliyesi;
         private System.Windows.Forms.TabControl raporlarTabControl;
         private System.Windows.Forms.TabPage tabPage17;
         private System.Windows.Forms.TabPage tabPage18;

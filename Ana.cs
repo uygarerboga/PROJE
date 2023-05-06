@@ -20,8 +20,8 @@ namespace ERP_PROJESİ
     
     public partial class Ana : Form
     {
-        
-        SqlConnection SqlCon = new SqlConnection(@"Data Source=DESKTOP-THFGP40; initial Catalog = ERP; Integrated Security = True");
+
+        SqlConnection SqlCon = new SqlConnection(@"Data Source=DESKTOP-PRMBC7J; initial Catalog = ERP; Integrated Security = True");
         public string selectedPage { get; set; }
 
         public int selectedid { get; set; }
@@ -41,83 +41,8 @@ namespace ERP_PROJESİ
         }
         #region form load
 
-        private void Ana_Load(object sender, EventArgs e)
+        public void Ana_Load(object sender, EventArgs e)
         {
-            #region Font ekleme
-
-            PrivateFontCollection pfc = new PrivateFontCollection();
-            pfc.AddFontFile(@"..\..\Icons\Montserrat-VariableFont_wght.ttf");
-            foreach (Control c in this.Controls)
-            {
-                c.Font = new Font(pfc.Families[0], 12, FontStyle.Bold);
-                
-            }
-
-            imalatTabPage.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            muhasebeTabControl.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            urunlerTabControl.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            urunlerrtabctrl.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            satısTabControl.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            personelTabControl.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            cariler.Font = new Font(pfc.Families[0], 10, FontStyle.Regular);
-            raporlarTabControl.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            label3.Font = new Font(pfc.Families[0], 48, FontStyle.Bold);
-
-            foreach (Control a in imalatTabPage.TabPages)
-            {
-                a.Font = new Font(pfc.Families[0], 10, FontStyle.Regular);
-            }
-            foreach (Control a in urunlerTabControl.TabPages)
-            {
-                a.Font = new Font(pfc.Families[0], 10, FontStyle.Regular);
-            }
-            foreach (Control a in muhasebeTabControl.TabPages)
-            {
-                a.Font = new Font(pfc.Families[0], 10, FontStyle.Regular);
-            }
-            foreach (Control a in urunlerrtabctrl.TabPages)
-            {
-                a.Font = new Font(pfc.Families[0], 10, FontStyle.Regular);
-            }
-            foreach (Control a in satısTabControl.TabPages)
-            {
-                a.Font = new Font(pfc.Families[0], 10, FontStyle.Regular);
-            }
-            foreach (Control a in raporlarTabControl.TabPages)
-            {
-                a.Font = new Font(pfc.Families[0], 10, FontStyle.Regular);
-            }
-            foreach (Control a in personelTabControl.TabPages)
-            {
-                a.Font = new Font(pfc.Families[0], 10, FontStyle.Regular);
-            }
-
-            uretimemridata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            imalatdata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            makinadata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            gunlukdata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            operasyondata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            rotadata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            hakedisdata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            satinalimfaturasidata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            satinaidedata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            satisfaturalaridata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            satisiadedata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            Ticaridata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            mamuldata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            ymamuldata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            hammaddedata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            gelenirsaliyedata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            gidenirsaliyedata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            gelenirsaliyeiadedata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            gidenirsaliyedata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            Satıssiparisdata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            onteklifdata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            personeldata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            carihesapdata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-            kategoridata.ColumnHeadersDefaultCellStyle.Font = new Font(pfc.Families[0], 10, FontStyle.Bold);
-
-            #endregion
             timer1.Start();
             BackColor = ColorTranslator.FromHtml("#626262");
             AnaTabControl.Dock = DockStyle.Fill;
@@ -349,6 +274,20 @@ namespace ERP_PROJESİ
             satissiparisleriListesi();
         }
         #endregion
+        #region Satın Alma Siparişleri
+        private void satınalmasiparişleri_Enter(object sender, EventArgs e)
+        {
+            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
+            selectedPage = "satınalmasiparişleri";
+        }
+        #endregion
+        #region Satın Alma İrsaliyeleri
+        private void satınalmairsaliyeleri_Enter(object sender, EventArgs e)
+        {
+            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
+            selectedPage = "satınalmairsaliyeleri";
+        }
+        #endregion
 
         #endregion
         #region işlevler (ekleme-çıkarma-arama)
@@ -392,6 +331,11 @@ namespace ERP_PROJESİ
                 Find find = new Find(this);
                 find.urunturu = urunturu;
                 find.ShowDialog();
+            }
+
+            if (e.KeyCode == Keys.Delete)
+            {
+                delete_Click(this, null);
             }
         }
 
@@ -745,13 +689,14 @@ namespace ERP_PROJESİ
             ekleekran.selectedPage = selectedPage;
             ekleekran.selectedid = selectedid;
             ekleekran.Show();
-            this.Enabled = false;
             ekleekran.textBoxes[0].Text = Ticaridata.CurrentRow.Cells[1].Value.ToString(); //ad
             ekleekran.textBoxes[1].Text = Ticaridata.CurrentRow.Cells[2].Value.ToString(); //aciklama
             ekleekran.textBoxes[2].Text = Ticaridata.CurrentRow.Cells[5].Value.ToString(); //raf kodu
             ekleekran.ComboBoxes[0].SelectedIndex = (int.Parse(Ticaridata.CurrentRow.Cells[8].Value.ToString())-1); //kategori id
             ekleekran.textBoxes[3].Text = Ticaridata.CurrentRow.Cells[6].Value.ToString(); //miktar
             ekleekran.radioButtons[0].Select(); //urunun türü
+            ekleekran.Visible = false;
+            ekleekran.ShowDialog();
         }
         #endregion
         #region mamul urun double
@@ -762,13 +707,14 @@ namespace ERP_PROJESİ
             ekleekran.selectedPage = selectedPage;
             ekleekran.selectedid = selectedid;
             ekleekran.Show();
-            this.Enabled = false;
             ekleekran.textBoxes[0].Text = mamuldata.CurrentRow.Cells[1].Value.ToString(); //ad
             ekleekran.textBoxes[1].Text = mamuldata.CurrentRow.Cells[2].Value.ToString(); //aciklama
             ekleekran.textBoxes[2].Text = mamuldata.CurrentRow.Cells[5].Value.ToString(); //raf kodu
             ekleekran.ComboBoxes[0].SelectedIndex = (int.Parse(mamuldata.CurrentRow.Cells[8].Value.ToString()) - 1); //kategori id
             ekleekran.textBoxes[3].Text = mamuldata.CurrentRow.Cells[6].Value.ToString(); //miktar
             ekleekran.radioButtons[1].Select(); //urunun türü
+            ekleekran.Visible = false;
+            ekleekran.ShowDialog();
         }
         #endregion
 
@@ -780,13 +726,14 @@ namespace ERP_PROJESİ
             ekleekran.selectedPage = selectedPage;
             ekleekran.selectedid = selectedid;
             ekleekran.Show();
-            this.Enabled = false;
             ekleekran.textBoxes[0].Text = ymamuldata.CurrentRow.Cells[1].Value.ToString(); //ad
             ekleekran.textBoxes[1].Text = ymamuldata.CurrentRow.Cells[2].Value.ToString(); //aciklama
             ekleekran.textBoxes[2].Text = ymamuldata.CurrentRow.Cells[5].Value.ToString(); //raf kodu
             ekleekran.ComboBoxes[0].SelectedIndex = (int.Parse(ymamuldata.CurrentRow.Cells[8].Value.ToString()) - 1); //kategori id
             ekleekran.textBoxes[3].Text = ymamuldata.CurrentRow.Cells[6].Value.ToString(); //miktar
             ekleekran.radioButtons[2].Select(); //urunun türü
+            ekleekran.Visible = false;
+            ekleekran.ShowDialog();
         }
         #endregion
         #region hammadde double
@@ -798,14 +745,30 @@ namespace ERP_PROJESİ
             ekleekran.selectedPage = selectedPage;
             ekleekran.selectedid = selectedid;
             ekleekran.Show();
-            this.Enabled = false;
             ekleekran.textBoxes[0].Text = hammaddedata.CurrentRow.Cells[1].Value.ToString(); //ad
             ekleekran.textBoxes[1].Text = hammaddedata.CurrentRow.Cells[2].Value.ToString(); //aciklama
             ekleekran.textBoxes[2].Text = hammaddedata.CurrentRow.Cells[5].Value.ToString(); //raf kodu
             ekleekran.ComboBoxes[0].SelectedIndex = (int.Parse(hammaddedata.CurrentRow.Cells[8].Value.ToString()) - 1); //kategori id
             ekleekran.textBoxes[3].Text = hammaddedata.CurrentRow.Cells[6].Value.ToString(); //miktar
             
-            ekleekran.radioButtons[2].Select(); //urunun türü
+            ekleekran.radioButtons[3].Select(); //urunun türü
+            ekleekran.Visible = false;
+            ekleekran.ShowDialog();
+        }
+        #endregion
+        #region kategori double click
+        private void kategoridata_DoubleClick(object sender, EventArgs e)
+        {
+            selectedid = int.Parse(kategoridata.CurrentRow.Cells[0].Value.ToString());
+            EklemeEkranı ekleekran = new EklemeEkranı(this);
+            ekleekran.selectedPage = selectedPage;
+            ekleekran.selectedid = selectedid;
+            ekleekran.Show();
+            ekleekran.textBoxes[0].Text = kategoridata.CurrentRow.Cells[1].Value.ToString(); //ad
+            ekleekran.textBoxes[1].Text = kategoridata.CurrentRow.Cells[2].Value.ToString(); //aciklama
+            ekleekran.Visible = false;
+            ekleekran.ShowDialog();
+
         }
         #endregion
         #endregion
@@ -866,6 +829,81 @@ namespace ERP_PROJESİ
 
 
 
+
+
+
+
+        #endregion
+
+        #region silme
+        #region Ürünler
+        #region kategoriler
+
+
+        private void kategoridata_Click(object sender, EventArgs e)
+        {
+
+            selectedid = int.Parse(kategoridata.CurrentRow.Cells[0].Value.ToString());
+        }
+
+        public void kategorisilme()
+        {
+
+            
+            DynamicParameters param = new DynamicParameters();
+            param.Add("@kategoriid", selectedid);
+            param.Add("@sil", "False");
+            SqlCon.Execute("kategorisil", param, commandType: CommandType.StoredProcedure);
+
+
+            
+        }
+
+        #endregion
+
+        #endregion
+
+        #region silme düğmesi
+        public void delete_Click(object sender, EventArgs e)
+        {
+            if (SqlCon.State == ConnectionState.Closed)
+            {
+                SqlCon.Open();
+            }
+            switch (selectedPage)
+            {
+                case "kategori":
+                    kategorisilme();
+                    break;
+                case "ürünler":
+                    switch (urunturu)
+                    {
+                        default:
+                            break;
+                    }
+                    break;
+                default:
+                    break;
+            }
+            if (SqlCon.State == ConnectionState.Open)
+            {
+                SqlCon.Close();
+            }
+
+            refresh_Click(this, null);
+        }
+        #endregion
+
+        #region silme sağclick
+        private void sil_Click(object sender, EventArgs e)
+        {
+            delete_Click(this, null);
+        }
+        #endregion
+
+        #region delbutton
+
+        #endregion
 
         #endregion
 

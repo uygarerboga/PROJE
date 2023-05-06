@@ -21,7 +21,7 @@ namespace ERP_PROJESİ
         public int selectedid { get; set; }
 
         ComboBox gizlicombo = new ComboBox();
-        SqlConnection SqlCon = new SqlConnection(@"Data Source=DESKTOP-THFGP40; initial Catalog = ERP; Integrated Security = True");
+        SqlConnection SqlCon = new SqlConnection(@"Data Source=DESKTOP-PRMBC7J; initial Catalog = ERP; Integrated Security = True");
 
         #region listler classlar için
         #endregion
@@ -165,7 +165,7 @@ namespace ERP_PROJESİ
                     Controls.Add((makinaacıklamatxt));
                     #endregion
                     break;
-                #region rotalar
+                    #region rotalar
 
                 case "rotalar":
                     #region Rota
@@ -579,6 +579,7 @@ namespace ERP_PROJESİ
 
                     break;
                 #endregion
+                    //ürünler ekleme düzenleme tamam - combobox çift olarak veriyor
                 case "ürünler":
                     #region ürünler
                     giriskelimesi = "ürünler";
@@ -659,6 +660,133 @@ namespace ERP_PROJESİ
                     Controls.Add(ürüntürüRD3);
                     urunlercombobox();
                     break;
+                #endregion 
+                    //kategori ekleme tamam değiştirirken hata veriyor
+                case "kategori":
+                    #region kategoriler
+                    giriskelimesi = "Kategori";
+                    Label kategoriadıLBL = new Label();
+                    kategoriadıLBL.Text = "Adı";
+                    kategoriadıLBL.Location = new Point(50, 50);
+                    kategoriadıLBL.Size = new Size(150, 25);
+                    Controls.Add(kategoriadıLBL);
+                    TextBox kategoriadıTXT = new TextBox();
+                    kategoriadıTXT.Location = new Point(250, 50);
+                    kategoriadıTXT.Size = new Size(250, 25);
+                    textBoxes.Add(kategoriadıTXT); //1
+                    Controls.Add(kategoriadıTXT);
+                    Label kategoriacıklamaLBL = new Label();
+                    kategoriacıklamaLBL.Text = "Acıklama";
+                    kategoriacıklamaLBL.Location = new Point(50, 75);
+                    kategoriacıklamaLBL.Size = new Size(150, 25);
+                    Controls.Add(kategoriacıklamaLBL);
+                    TextBox kategoriacıklamaTXT = new TextBox();
+                    kategoriacıklamaTXT.Location = new Point(250, 75);
+                    kategoriacıklamaTXT.Size = new Size(250, 100);
+                    kategoriacıklamaTXT.Multiline = true;
+                    textBoxes.Add(kategoriacıklamaTXT); //2
+                    Controls.Add(kategoriacıklamaTXT);
+                    #endregion
+                    break;
+                case "satınalmasiparişleri":
+                    #region Satın Alma Siparişleri
+                    giriskelimesi = "Satın Alma Siparişleri";
+                    Label Stnalmalbl = new Label();
+                    Stnalmalbl.Text = "Cari Adı";
+                    Stnalmalbl.Location = new Point(50, 50);
+                    Stnalmalbl.Size = new Size(150, 25);
+                    Controls.Add(Stnalmalbl);
+                    TextBox stnalmatxt = new TextBox();
+                    stnalmatxt.Location = new Point(250, 50);
+                    stnalmatxt.Size = new Size(200, 25);
+                    Controls.Add(stnalmatxt);
+                    Label urunadı = new Label();
+                    urunadı.Text = "Ürün Adı";
+                    urunadı.Location = new Point(50, 100);
+                    urunadı.Size = new Size(150, 25);
+                    Controls.Add(urunadı);
+                    ComboBox urunadtxt = new ComboBox();
+                    urunadtxt.Location = new Point(250, 100);
+                    urunadtxt.Size = new Size(200, 25);
+                    Controls.Add(urunadtxt);
+                    Label birimfiyatlbl = new Label();
+                    birimfiyatlbl.Text = "Birim Fiyat";
+                    birimfiyatlbl.Location = new Point(50, 150);
+                    birimfiyatlbl.Size = new Size(150, 25);
+                    Controls.Add(birimfiyatlbl);
+                    TextBox birimfiyattxt = new TextBox();
+                    birimfiyattxt.Location = new Point(250, 150);
+                    birimfiyattxt.Size = new Size(200, 25);
+                    Controls.Add(birimfiyattxt);
+                    Label miktarlbl = new Label();
+                    miktarlbl.Text = "Miktar";
+                    miktarlbl.Location = new Point(50, 200);
+                    miktarlbl.Size = new Size(150, 25);
+                    Controls.Add(miktarlbl);
+                    TextBox miktarattxt = new TextBox();
+                    miktarattxt.Location = new Point(250, 200);
+                    miktarattxt.Size = new Size(200, 25);
+                    Controls.Add(miktarattxt);
+                    Label indirimoranilbl = new Label();
+                    indirimoranilbl.Text = "İndirim Oranı";
+                    indirimoranilbl.Location = new Point(50, 250);
+                    indirimoranilbl.Size = new Size(150, 25);
+                    Controls.Add(indirimoranilbl);
+                    TextBox indirimoranitxt = new TextBox();
+                    indirimoranitxt.Location = new Point(250, 250);
+                    indirimoranitxt.Size = new Size(200, 25);
+                    Controls.Add(indirimoranitxt);
+                    DataGridView Satinalmadetaydatagrid = new DataGridView();
+                    Satinalmadetaydatagrid.Location = new Point(600, 50);
+                    Satinalmadetaydatagrid.Size = new Size(300, 400);
+                    Controls.Add(Satinalmadetaydatagrid);
+                    break;
+
+                #endregion
+                case "satınalmairsaliyeleri":
+                    #region satın alma irsaliyesi
+
+                    giriskelimesi = "Satın Alma İrsaliyesi";
+                    Label cariadilbl = new Label();
+                    cariadilbl.Text = "Cari Adı";
+                    cariadilbl.Location = new Point(50, 50);
+                    cariadilbl.Size = new Size(150, 25);
+                    Controls.Add(cariadilbl);
+                    TextBox cariaditxt = new TextBox();
+                    cariaditxt.Location = new Point(250, 50);
+                    cariaditxt.Size = new Size(200, 25);
+                    Controls.Add(cariaditxt);
+                    Label siparisIDlbl = new Label();
+                    siparisIDlbl.Text = "SiparişID";
+                    siparisIDlbl.Location = new Point(50, 100);
+                    siparisIDlbl.Size = new Size(150, 25);
+                    Controls.Add(siparisIDlbl);
+                    ComboBox siparisIDcombo = new ComboBox();
+                    siparisIDcombo.Location = new Point(250, 100);
+                    siparisIDcombo.Size = new Size(200, 25);
+                    Controls.Add(siparisIDcombo);
+                    Button irsaliyeyeeklebtn = new Button();
+                    irsaliyeyeeklebtn.Location = new Point(665, 265);
+                    irsaliyeyeeklebtn.Size = new Size(20, 20);
+                    Controls.Add(irsaliyeyeeklebtn);
+                    Button İrsaliyedencikarbtn = new Button();
+                    İrsaliyedencikarbtn.Location = new Point(825, 265);
+                    İrsaliyedencikarbtn.Size = new Size(20, 20);
+                    Controls.Add(İrsaliyedencikarbtn);
+                    TextBox miktartxt = new TextBox();
+                    miktartxt.Location = new Point(705, 265);
+                    miktartxt.Size = new Size(100, 25);
+                    Controls.Add(miktartxt);
+                    DataGridView siparisdatagrid = new DataGridView();
+                    siparisdatagrid.Location = new Point(600, 50);
+                    siparisdatagrid.Size = new Size(300, 200);
+                    Controls.Add(siparisdatagrid);
+                    DataGridView irsaliyedatagrid = new DataGridView();
+                    irsaliyedatagrid.Location = new Point(600, 300);
+                    irsaliyedatagrid.Size = new Size(300, 200);
+                    Controls.Add(irsaliyedatagrid);
+
+                    break;
                 #endregion
                 default:
                     break;
@@ -685,21 +813,27 @@ namespace ERP_PROJESİ
                 case "ürünler":
                     Urunekleduzenle();
                     break;
+                case "kategori":
+                    kategoriguncelleme();
+                    break;
                 default:
                     break;
             }
-            ana.refresh_Click(this,null);
+            
             MessageBox.Show("Veri Girildi");
+            ana.refresh_Click(this,null);
         }
 
 
         public void EklemeEkranı_FormClosing(object sender, FormClosingEventArgs e)
         {
-            ana.Enabled = true;
+
         }
 
 
         #region EklemeDüzenleme Methodları
+        #region urunler tab control
+
         public void Urunekleduzenle()
         {
             string secilenurun = "";
@@ -736,6 +870,29 @@ namespace ERP_PROJESİ
             }
         }
         #endregion
+        #region kategori
+        public void kategoriguncelleme()
+        {
+            if (SqlCon.State == ConnectionState.Closed)
+            {
+                SqlCon.Open();
+            }
+
+            DynamicParameters param = new DynamicParameters();
+            param.Add("@kategoriid", selectedid);
+            param.Add("@kategoriadi", textBoxes[0].Text);
+            param.Add("@kategoriaciklamasi", textBoxes[1].Text);
+            param.Add("@sil", "True");
+            SqlCon.Execute("kategoriekleveduzenle", param, commandType: CommandType.StoredProcedure);
+
+
+            if (SqlCon.State == ConnectionState.Open)
+            {
+                SqlCon.Close();
+            }
+        }
+        #endregion
+        #endregion
 
 
         #region ürünler kategori kombobox
@@ -760,5 +917,10 @@ namespace ERP_PROJESİ
             }
         }
         #endregion
+
+        private void EklemeEkranı_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
+        }
     }
 }
