@@ -579,7 +579,7 @@ namespace ERP_PROJESİ
 
                     break;
                 #endregion
-                    //ürünler ekleme düzenleme tamam - combobox çift olarak veriyor
+                //ürünler ekleme düzenleme tamam - combobox çift olarak veriyor
                 case "ürünler":
                     #region ürünler
                     giriskelimesi = "ürünler";
@@ -787,6 +787,93 @@ namespace ERP_PROJESİ
                     Controls.Add(irsaliyedatagrid);
 
                     break;
+                #endregion
+                #region SATIŞ
+                case "satissiparisleri":
+                    #region Satış Siparişleri
+                    giriskelimesi = "Satış Siparişleri";
+                    Label gidensiparisLBL = new Label();
+                    gidensiparisLBL.Text = "Giden Sipariş";
+                    gidensiparisLBL.Location = new Point(50, 50);
+                    gidensiparisLBL.Size = new Size(150, 25);
+                    Controls.Add(gidensiparisLBL);
+                    TextBox gidensiparisTXT = new TextBox();
+                    gidensiparisTXT.Location = new Point(250, 50);
+                    gidensiparisTXT.Size = new Size(150, 25);
+                    Controls.Add(gidensiparisTXT);
+                    Label cariidLBL0 = new Label();
+                    cariidLBL0.Text = "Cari";
+                    cariidLBL0.Location = new Point(50, 75);
+                    cariidLBL0.Size = new Size(150, 25);
+                    Controls.Add(cariidLBL0);
+                    TextBox cariidTXT0 = new TextBox();
+                    cariidTXT0.Location = new Point(250, 75);
+                    cariidTXT0.Size = new Size(150, 25);
+                    Controls.Add(cariidTXT0);
+                    Label calısanidLBL = new Label();
+                    calısanidLBL.Text = "Calısan";
+                    calısanidLBL.Location = new Point(50, 100);
+                    calısanidLBL.Size = new Size(150, 25);
+                    Controls.Add(calısanidLBL);
+                    ComboBox calısanidCB = new ComboBox();
+                    calısanidCB.Location = new Point(250, 100);
+                    calısanidCB.Size = new Size(150, 25);
+                    Controls.Add(calısanidCB);
+                    
+                    #endregion
+                    break;
+
+                case "onteklif":
+                    #region Ön Teklif
+                    giriskelimesi = "Ön Teklif";
+                    Label onteklifıdLBL = new Label();
+                    onteklifıdLBL.Text = "On Teklif";
+                    onteklifıdLBL.Location = new Point(50, 50);
+                    onteklifıdLBL.Size = new Size(150, 25);
+                    Controls.Add(onteklifıdLBL);
+                    TextBox onteklifıdTXT = new TextBox();
+                    onteklifıdTXT.Location = new Point(250, 50);
+                    onteklifıdTXT.Size = new Size(150, 25);
+                    Controls.Add(onteklifıdTXT);
+                    Label cariidLBL= new Label();
+                    cariidLBL.Text = "Cari";
+                    cariidLBL.Location = new Point(50, 75);
+                    cariidLBL.Size = new Size(150, 25);
+                    Controls.Add(cariidLBL);
+                    TextBox cariidTXT = new TextBox();
+                    cariidTXT.Location = new Point(250, 75);
+                    cariidTXT.Size = new Size(150, 25);
+                    Controls.Add(cariidTXT);
+                    Label tarihLBL = new Label();
+                    tarihLBL.Text = "Tarih";
+                    tarihLBL.Location = new Point(50, 100);
+                    tarihLBL.Size = new Size(150, 25);
+                    Controls.Add(tarihLBL);
+                    DateTimePicker tarihDT = new DateTimePicker();
+                    tarihDT.Location = new Point(250, 100);
+                    tarihDT.Size = new Size(150, 25);
+                    Controls.Add(tarihDT);
+                    Label totaltutarLBL = new Label();
+                    totaltutarLBL.Text = "Total Tutar";
+                    totaltutarLBL.Location = new Point(50, 125);
+                    totaltutarLBL.Size = new Size(150, 25);
+                    Controls.Add(totaltutarLBL);
+                    TextBox totaltutarTXT = new TextBox();
+                    totaltutarTXT.Location = new Point(250, 125);
+                    totaltutarTXT.Size = new Size(150, 25);
+                    Controls.Add(totaltutarTXT);
+                    Label onaydurumuLBL = new Label();
+                    onaydurumuLBL.Text = "Onay Durumu";
+                    onaydurumuLBL.Location = new Point(50, 150);
+                    onaydurumuLBL.Size = new Size(150, 25);
+                    Controls.Add(onaydurumuLBL);
+                    ComboBox onaydurumuCB = new ComboBox();
+                    onaydurumuCB.Location = new Point(250, 150);
+                    onaydurumuCB.Size = new Size(150, 25);
+                    Controls.Add(onaydurumuCB);
+                    #endregion
+                    break;
+
                 #endregion
                 default:
                     break;

@@ -22,7 +22,7 @@ namespace ERP_PROJESİ
     public partial class Ana : Form
     {
 
-        SqlConnection SqlCon = new SqlConnection(@"Data Source=DESKTOP-PRMBC7J; initial Catalog = ERP; Integrated Security = True");
+        SqlConnection SqlCon = new SqlConnection(@"Data Source=UYGARERBOGA\UYGARERBOGA; initial Catalog = ERP; Integrated Security = True");
         public string selectedPage { get; set; }
 
         public int selectedid { get; set; }
@@ -37,7 +37,7 @@ namespace ERP_PROJESİ
         {
             InitializeComponent();
             UretimEmriListesi();
-            satissiparisleriListesi();
+            SatisSiparisleriListesi();
 
         }
         #region form load
@@ -268,6 +268,24 @@ namespace ERP_PROJESİ
         }
         #endregion
         #endregion
+        #region satış
+        #region satış şiparişleri
+        private void satısSiparisleri_Enter(object sender, EventArgs e)
+        {
+            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
+            selectedPage = "satissiparisleri";
+            SatisSiparisleriListesi();
+        }
+        #endregion
+        #region onteklif
+        private void onteklif_Enter(object sender, EventArgs e)
+        {
+            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
+            selectedPage = "onteklif";
+            ÖnTeklifListele();
+        }
+        #endregion
+        #endregion
         #region personel
 
         private void personeller_Enter(object sender, EventArgs e)
@@ -291,13 +309,8 @@ namespace ERP_PROJESİ
             AnaTabControl.ContextMenuStrip = null;
         }
         #endregion
-        #region Satış siparişleri
-        private void satısTabControl_Enter(object sender, EventArgs e)
-        {
-            AnaTabControl.ContextMenuStrip = contextMenuStrip1;
-            selectedPage = "satissipariş";
-            satissiparisleriListesi();
-        }
+   
+    
         #endregion
         #region Satın Alma Siparişleri
         private void satınalmasiparişleri_Enter(object sender, EventArgs e)
@@ -314,7 +327,7 @@ namespace ERP_PROJESİ
         }
         #endregion
 
-        #endregion
+      
         #region işlevler (ekleme-çıkarma-arama)
 
         #region Ekleme Ekranı
@@ -413,7 +426,10 @@ namespace ERP_PROJESİ
                     gunlukislemListesi();
                     break;
                 case "satissipariş":
-                    satissiparisleriListesi();
+                    SatisSiparisleriListesi();
+                    break;
+                case "onteklif":
+                    ÖnTeklifListele();
                     break;
                 case "kategori":
                     kategoriListele();
@@ -703,11 +719,22 @@ namespace ERP_PROJESİ
 
         #region Satış
         #region Satış siparisleri
-        public void satissiparisleriListesi()
+        public void SatisSiparisleriListesi()
         {
             List<Satışsipariş> list = SqlCon.Query<Satışsipariş>("select * from Satis_Siparisleri where gidenSiparisID Like '%" + arama + "%'", SqlCon).ToList<Satışsipariş>();
             Satıssiparisdata.DataSource = list;
             Satıssiparisdata.Columns[0].HeaderText = "";
+
+
+
+        }
+        #endregion
+        #region Ön Teklif
+        public void ÖnTeklifListele()
+        {
+            List<Önteklif> list = SqlCon.Query<Önteklif>("select * from On_Teklif where onteklifID Like '%" + arama + "%'", SqlCon).ToList<Önteklif>();
+            onteklifdata.DataSource = list;
+            onteklifdata.Columns[0].HeaderText = "";
 
 
 
@@ -1019,5 +1046,7 @@ namespace ERP_PROJESİ
         {
 
         }
+
+      
     }
 }

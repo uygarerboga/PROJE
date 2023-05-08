@@ -68,7 +68,10 @@ namespace ERP_PROJESİ
                     Ana.gunlukislemListesi();
                     break;
                 case "satissipariş":
-                    Ana.satissiparisleriListesi();
+                    Ana.SatisSiparisleriListesi();
+                    break;
+                case "onteklif":
+                    Ana.ÖnTeklifListele();
                     break;
                 case "kategori":
                     Ana.kategoriListele();

@@ -115,6 +115,8 @@
             this.güncelle = new System.Windows.Forms.ToolStripMenuItem();
             this.yenile = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.AnaTabControl.SuspendLayout();
             this.AnaSayfa.SuspendLayout();
             this.anaSayfaPaneli.SuspendLayout();
@@ -172,6 +174,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.onteklifdata)).BeginInit();
             this.SatınAlma.SuspendLayout();
             this.urunlerTabControl.SuspendLayout();
+            this.satinalmasiparisleri.SuspendLayout();
+            this.satinalmairsaliyesi.SuspendLayout();
             this.Raporlar.SuspendLayout();
             this.raporlarTabControl.SuspendLayout();
             this.personeller.SuspendLayout();
@@ -182,6 +186,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.carihesapdata)).BeginInit();
             this.panel1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // AnaTabControl
@@ -884,7 +890,6 @@
             this.satısTabControl.SelectedIndex = 0;
             this.satısTabControl.Size = new System.Drawing.Size(1676, 871);
             this.satısTabControl.TabIndex = 0;
-            this.satısTabControl.Enter += new System.EventHandler(this.satısTabControl_Enter);
             this.satısTabControl.Leave += new System.EventHandler(this.cariler_Leave);
             // 
             // satısSiparisleri
@@ -898,6 +903,8 @@
             this.satısSiparisleri.TabIndex = 0;
             this.satısSiparisleri.Text = "Satış Siparişleri";
             this.satısSiparisleri.UseVisualStyleBackColor = true;
+            this.satısSiparisleri.Enter += new System.EventHandler(this.satısSiparisleri_Enter);
+            this.satısSiparisleri.Leave += new System.EventHandler(this.cariler_Leave);
             // 
             // Satıssiparisdata
             // 
@@ -923,9 +930,12 @@
             this.onteklif.TabIndex = 1;
             this.onteklif.Text = "Ön Teklifler";
             this.onteklif.UseVisualStyleBackColor = true;
+            this.onteklif.Enter += new System.EventHandler(this.onteklif_Enter);
+            this.onteklif.Leave += new System.EventHandler(this.cariler_Leave);
             // 
             // onteklifdata
             // 
+            this.onteklifdata.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.onteklifdata.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.onteklifdata.Dock = System.Windows.Forms.DockStyle.Fill;
             this.onteklifdata.Location = new System.Drawing.Point(2, 2);
@@ -962,6 +972,7 @@
             // 
             // satinalmasiparisleri
             // 
+            this.satinalmasiparisleri.Controls.Add(this.dataGridView1);
             this.satinalmasiparisleri.Location = new System.Drawing.Point(4, 27);
             this.satinalmasiparisleri.Margin = new System.Windows.Forms.Padding(2);
             this.satinalmasiparisleri.Name = "satinalmasiparisleri";
@@ -975,6 +986,7 @@
             // 
             // satinalmairsaliyesi
             // 
+            this.satinalmairsaliyesi.Controls.Add(this.dataGridView2);
             this.satinalmairsaliyesi.Location = new System.Drawing.Point(4, 27);
             this.satinalmairsaliyesi.Margin = new System.Windows.Forms.Padding(2);
             this.satinalmairsaliyesi.Name = "satinalmairsaliyesi";
@@ -1293,6 +1305,30 @@
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView1.Location = new System.Drawing.Point(2, 2);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(1664, 836);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridView2.Location = new System.Drawing.Point(2, 2);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(1664, 836);
+            this.dataGridView2.TabIndex = 0;
+            // 
             // Ana
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 17F);
@@ -1373,6 +1409,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.onteklifdata)).EndInit();
             this.SatınAlma.ResumeLayout(false);
             this.urunlerTabControl.ResumeLayout(false);
+            this.satinalmasiparisleri.ResumeLayout(false);
+            this.satinalmairsaliyesi.ResumeLayout(false);
             this.Raporlar.ResumeLayout(false);
             this.raporlarTabControl.ResumeLayout(false);
             this.personeller.ResumeLayout(false);
@@ -1383,6 +1421,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.carihesapdata)).EndInit();
             this.panel1.ResumeLayout(false);
             this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1475,5 +1515,7 @@
         private System.Windows.Forms.DataGridView uretimemridata;
         private System.Windows.Forms.TabPage kategori;
         private System.Windows.Forms.DataGridView kategoridata;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView2;
     }
 }

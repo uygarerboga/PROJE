@@ -23,7 +23,7 @@ namespace ERP_PROJESİ
             public int ünvan { get; set; }
         }
 
-        SqlConnection SqlCon = new SqlConnection(@"Data Source=DESKTOP-PRMBC7J; initial Catalog = ERP; Integrated Security = True");
+        SqlConnection SqlCon = new SqlConnection(@"Data Source=UYGARERBOGA\UYGARERBOGA; initial Catalog = ERP; Integrated Security = True");
 
         public Form1()
         {
